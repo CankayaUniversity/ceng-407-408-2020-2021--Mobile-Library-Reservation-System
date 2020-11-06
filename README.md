@@ -5,7 +5,7 @@
  
  Dr. Instructor Serdar ARSLAN
  
- GRUP ÜYELERİ
+ GRUP ÜYELERİ:
 
  Beyza YÜKSEL - 201611066
  BURCU BİTER - 20152015
