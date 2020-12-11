@@ -2,7 +2,7 @@
 
 # MOBILE LIBRARY RESERVATION SYSTEM
  
-## Advisor:
+## Advisor
  
  - Dr. Instructor Serdar ARSLAN
  
