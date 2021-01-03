@@ -2,7 +2,7 @@
  
 ## Advisor
  
- - Dr. Instructor Serdar ARSLAN
+ - Dr. Serdar ARSLAN
  
 ## Group Members
 
