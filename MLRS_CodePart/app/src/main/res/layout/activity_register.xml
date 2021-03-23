@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:textAlignment="inherit">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/common_google_signin_btn_text_light_normal"
+        android:backgroundTint="@color/mlrs_blue">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="25dp">
+
+
+            <EditText
+                android:id="@+id/et_input_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageView2"
+                android:layout_marginTop="28dp"
+                android:background="@drawable/common_google_signin_btn_text_light_normal_background"
+                android:hint="@string/prompt_email"
+                android:inputType="textEmailAddress"
+                android:textAlignment="center"
+                android:textColor="@color/mlrs_lightBlue"
+                android:textColorHint="@color/mlrs_lightBlue"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/et_input_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/et_input_email"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:textAlignment="center"
+                android:textColor="@color/mlrs_lightBlue"
+                android:textColorHint="@color/mlrs_lightBlue"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/et_input_confirm_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/et_input_password"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
+                android:hint="@string/confirm_password"
+                android:inputType="textPassword"
+                android:textAlignment="center"
+                android:textColor="@color/mlrs_lightBlue"
+                android:textColorHint="@color/mlrs_lightBlue"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/et_input_confirm_password"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/common_google_signin_btn_text_light_focused"
+                android:text="SIGN UP"
+                android:textColorHint="@color/colorPrimary"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="420dp"
+                android:layout_height="211dp"
+                app:srcCompat="@drawable/register_logo_mlrs" />
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        android:visibility="invisible" />
+
+</RelativeLayout>
