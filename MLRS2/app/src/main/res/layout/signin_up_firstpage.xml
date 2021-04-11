@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:id="@+id/login_form"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"
+            android:backgroundTint="@color/mlrs_blue">
+
+            <LinearLayout
+                android:id="@+id/email_login_form"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+
+                <ImageView
+                    android:layout_width="368dp"
+                    android:layout_height="356dp"
+                    android:layout_marginLeft="10px"
+                    android:layout_marginRight="15dp"
+                    android:contentDescription="@string/mlrs_login_logo"
+                    android:src="@drawable/mlrs_login_logo" />
+
+                <Button
+                    android:id="@+id/btnEmail_sign_in_button"
+                    style="?android:textAppearanceSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:backgroundTint="@color/mlrs_white_button"
+                    android:text="SIGN IN"
+                    android:textColor="@color/Black"
+                    android:textColorHint="@color/Black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnEmail_sign_up_button"
+                    style="?android:textAppearanceSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:backgroundTint="@color/mlrs_white_button"
+                    android:text="SIGN UP"
+                    android:textColor="@color/Black"
+                    android:textColorHint="@color/Black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+
+
+            </LinearLayout>
+
+        </ScrollView>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
