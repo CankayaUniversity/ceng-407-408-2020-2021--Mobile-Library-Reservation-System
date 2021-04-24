@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".LoginActivity">
 
-
     <LinearLayout
         android:id="@+id/email_login_form"
         android:layout_width="411dp"
