@@ -6,64 +6,58 @@
     android:layout_height="match_parent"
     tools:context=".LoginActivity">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
-        <ScrollView
-            android:id="@+id/login_form"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#FFFFFF"
-            android:backgroundTint="@color/mlrs_blue">
-
-            <LinearLayout
-                android:id="@+id/email_login_form"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="20dp"
-                android:orientation="vertical"
-                android:padding="20dp">
+    <LinearLayout
+        android:id="@+id/email_login_form"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="0dp"
+        tools:layout_editor_absoluteY="0dp"
+        tools:ignore="MissingConstraints"
+        android:background="#2D9CDB">
 
 
-                <ImageView
-                    android:layout_width="368dp"
-                    android:layout_height="356dp"
-                    android:layout_marginLeft="10px"
-                    android:layout_marginRight="15dp"
-                    android:contentDescription="@string/mlrs_login_logo"
-                    android:src="@drawable/mlrs_login_logo" />
+        <ImageView
+            android:layout_width="411dp"
+            android:layout_height="398dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:contentDescription="@string/mlrs_login_logo"
+            android:src="@drawable/mlrs_login_logo" />
 
-                <Button
-                    android:id="@+id/btnEmail_sign_in_button"
-                    style="?android:textAppearanceSmall"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:backgroundTint="@color/mlrs_white_button"
-                    android:text="SIGN IN"
-                    android:textColor="@color/Black"
-                    android:textColorHint="@color/Black"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
+        <Button
+            android:id="@+id/btnEmail_sign_in_button"
+            style="?android:textAppearanceSmall"
+            android:layout_width="285dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="18dp"
+            android:backgroundTint="@color/mlrs_white_button"
+            android:radius="50dp"
+            android:text="SIGN IN"
+            android:textColor="#2D9CDB"
+            android:textColorHint="#2D9CDB"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:cornerRadius="50dp" />
 
-                <Button
-                    android:id="@+id/btnEmail_sign_up_button"
-                    style="?android:textAppearanceSmall"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:backgroundTint="@color/mlrs_white_button"
-                    android:text="SIGN UP"
-                    android:textColor="@color/Black"
-                    android:textColorHint="@color/Black"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
+        <Button
+            android:id="@+id/btnEmail_sign_up_button"
+            style="?android:textAppearanceSmall"
+            android:layout_width="285dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="@color/mlrs_white_button"
+            android:radius="15dp"
+            android:text="SIGN UP"
+            android:textColor="#2D9CDB"
+            android:textColorHint="#2D9CDB"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:cornerRadius="50dp" />
 
+    </LinearLayout>
 
-
-            </LinearLayout>
-
-        </ScrollView>
-    </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
