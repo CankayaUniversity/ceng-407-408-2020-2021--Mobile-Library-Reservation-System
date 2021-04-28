@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:accessibilityHeading="true"
+    android:background="#C2C2C2"
+    android:backgroundTint="@color/mlrs_mlrs_mainpageBlue"
+    android:scrollbarThumbHorizontal="@drawable/ic_launcher_foreground"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="355dp"
+        android:layout_height="318dp"
+        android:layout_marginStart="29dp">
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="96dp"
+            android:layout_height="55dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="-3dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="262dp"
+            android:layout_marginBottom="238dp"
+            app:srcCompat="@drawable/read_book"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="340dp"></ImageView>
+
+        <TextView
+            android:layout_width="276dp"
+            android:layout_height="55dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="71dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="238dp"
+            android:background="@color/mlrs_lightBlue"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:lineSpacingExtra="8sp"
+            android:paddingTop="10dp"
+            android:text="LIBRARY LIST"
+            android:textAlignment="center"
+            android:textColor="@color/mlrs_white_button"
+            android:textSize="30sp"
+            app:cornerRadius="?android:attr/buttonCornerRadius"></TextView>
+
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="352dp"
+        android:layout_height="550dp"
+        android:layout_above="@+id/btn_admin_menu_edit_profile"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="67dp"
+        android:orientation="vertical">
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
