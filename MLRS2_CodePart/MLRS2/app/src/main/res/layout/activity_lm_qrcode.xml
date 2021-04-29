@@ -15,10 +15,7 @@
         android:layout_height="318dp"
         android:layout_marginStart="29dp"
         >
-        <RelativeLayout
-            android:layout_height="match_parent" android:layout_width="match_parent">
 
-        </RelativeLayout>
         <ImageView
             android:id="@+id/imageView10"
             android:layout_width="96dp"
@@ -61,26 +58,28 @@
 
 
     <RelativeLayout
-        android:layout_width="352dp"
-        android:layout_height="550dp"
-        android:layout_above="@+id/btn_admin_menu_edit_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="25dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="31dp"
-        android:orientation="vertical" >
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="104dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="-10dp"
+        android:orientation="vertical">
 
         <RelativeLayout
-            android:layout_width="349dp"
-            android:layout_height="876dp"
+            android:layout_width="364dp"
+            android:layout_height="477dp"
+            android:layout_alignParentStart="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="25dp"
+
+            android:layout_marginStart="16dp"
 
             android:layout_marginTop="3dp"
-
-            android:layout_marginBottom="84dp"
+            android:layout_marginBottom="159dp"
             android:background="@drawable/sekil"
             android:orientation="vertical">
 
@@ -150,6 +149,12 @@
                     android:text="15:30-16:30     T16"
                     android:textColor="@color/Black"
                     android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </RelativeLayout>
             </RelativeLayout>
 
             <ImageView
@@ -159,9 +164,9 @@
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginTop="161dp"
-                android:layout_marginEnd="26dp"
-                android:layout_marginBottom="136dp"
+                android:layout_marginTop="167dp"
+                android:layout_marginEnd="62dp"
+                android:layout_marginBottom="138dp"
                 app:srcCompat="@drawable/qrkoddd_foreground" />
 
             <TextView
@@ -170,12 +175,13 @@
                 android:layout_height="50dp"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginEnd="9dp"
-                android:layout_marginBottom="54dp"
+                android:layout_marginEnd="46dp"
+                android:layout_marginBottom="57dp"
                 android:text="Scan the QR code to QR code reader!"
                 android:textAlignment="viewStart"
                 android:textColor="@color/Black"
                 android:textStyle="bold" />
+
         </RelativeLayout>
 
     </RelativeLayout>
