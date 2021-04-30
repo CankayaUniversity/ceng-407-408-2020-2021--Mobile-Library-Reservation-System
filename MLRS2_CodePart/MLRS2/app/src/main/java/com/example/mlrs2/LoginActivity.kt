@@ -33,7 +33,6 @@ class LoginActivity : AppCompatActivity() {
             if (etEmail.text.isNotEmpty() && etPassword.text.isNotEmpty()) {
 
                 showProgressbar()
-
                 FirebaseAuth.getInstance().signInWithEmailAndPassword(etEmail.text.toString(), etPassword.text.toString())
                     .addOnCompleteListener(object : OnCompleteListener<AuthResult> {
                         override fun onComplete(p0: Task<AuthResult>) {
