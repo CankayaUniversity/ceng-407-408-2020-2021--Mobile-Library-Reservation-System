@@ -36,4 +36,14 @@
     <string name="current_password">Current Password</string>
     <string name="new_password">New Password</string>
     <string name="confirm_new_password">Confirm New Password</string>
+    <string name="cebeci_public_library">CEBECI PUBLIC LIBRARY</string>
+    <string name="for_your_reservation">for your reservation.</string>
+    <string name="date">Date:</string>
+    <string name="please_select_date_and_time_slot">Please, select DATE and TIME SLOT</string>
+    <string name="make_reservation">MAKE RESERVATION</string>
+    <string name="time_slot">Time Slot:</string>
+    <string name="from">From</string>
+    <string name="to">To</string>
+    <string name="search_table">SEARCH TABLE</string>
+    <string name="todo">TODO</string>
 </resources>
