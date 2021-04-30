@@ -46,4 +46,13 @@
     <string name="to">To</string>
     <string name="search_table">SEARCH TABLE</string>
     <string name="todo">TODO</string>
+    <string name="make_reservation">MAKE RESERVATION</string>
+    <string name="date">Date:</string>
+    <string name="to">To</string>
+    <string name="from">From</string>
+    <string name="make_reservation">MAKE RESERVATION</string>
+    <string name="reserved">Reserved</string>
+    <string name="selected">Selected</string>
+    <string name="avaible">Avaible</string>
+    <string name="todo">TODO</string>
 </resources>
