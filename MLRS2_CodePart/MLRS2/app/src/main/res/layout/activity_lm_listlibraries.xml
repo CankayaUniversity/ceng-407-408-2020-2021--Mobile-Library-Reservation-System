@@ -13,7 +13,9 @@
     <RelativeLayout
         android:layout_width="355dp"
         android:layout_height="318dp"
-        android:layout_marginStart="29dp">
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="23dp"
+        android:layout_marginEnd="23dp">
 
         <ImageView
             android:id="@+id/imageView10"
@@ -52,23 +54,27 @@
             android:textSize="30sp"
             app:cornerRadius="?android:attr/buttonCornerRadius"></TextView>
 
-
-
     </RelativeLayout>
 
 
     <RelativeLayout
-        android:layout_width="352dp"
-        android:layout_height="500dp"
+        android:layout_width="wrap_content"
+        android:layout_height="495dp"
         android:layout_above="@+id/btn_admin_menu_edit_profile"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="22dp"
+        android:layout_marginStart="23dp"
         android:layout_marginEnd="23dp"
-        android:layout_marginBottom="109dp"
+        android:layout_marginBottom="105dp"
         android:orientation="vertical">
 
+        <Spinner
+            android:id="@+id/spinner3"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="335dp" />
     </RelativeLayout>
 
     <Button
@@ -84,7 +90,6 @@
         android:layout_marginBottom="30dp"
         android:backgroundTint="@color/mlrs_white_button"
         android:fontFamily="sans-serif-black"
-        android:radius="15dp"
         android:text="CONTINUE"
         android:textColor="@color/Black"
         android:textSize="30sp"

@@ -64,8 +64,8 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="19dp"
-        android:layout_marginEnd="26dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginEnd="23dp"
         android:layout_marginBottom="67dp"
         android:orientation="vertical">
 
