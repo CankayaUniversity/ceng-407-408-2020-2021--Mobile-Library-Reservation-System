@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:accessibilityHeading="true"
+    android:background="#C2C2C2"
+    android:backgroundTint="@color/mlrs_mlrs_mainpageBlue"
+    android:scrollbarThumbHorizontal="@drawable/ic_launcher_foreground"
+    tools:context=".MainActivity">
+
+
+    <Button
+        android:id="@+id/btn_make_reservation_last_step"
+        style="?android:textAppearanceSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="63dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="62dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="93dp"
+        android:layout_marginBottom="70dp"
+        android:backgroundTint="@color/mlrs_white_button"
+        android:text="@string/make_reservation"
+        android:textColor="@color/Black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="94dp">
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="275dp"
+            android:layout_height="48dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:background="@color/mlrs_lightBlue"
+            android:fontFamily="sans-serif-condensed-light"
+            android:lineSpacingExtra="0sp"
+            android:paddingTop="0dp"
+            android:text="@string/make_reservation"
+            android:textAlignment="center"
+            android:textColor="@color/mlrs_white_button"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:cornerRadius="?android:attr/buttonCornerRadius"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.698"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.659"></TextView>
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="60dp"
+            android:layout_height="48dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.122"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.652"
+            app:srcCompat="@drawable/read_book"
+            android:contentDescription="@string/todo" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="344dp"
+        android:layout_height="458dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="150dp"
+        android:background="@color/mlrs_lightBlue"><![CDATA[
+
+        />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        ]]>
+
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="24dp"
+            android:layout_height="20dp"
+            android:background="#EDDE54"
+            tools:layout_editor_absoluteX="224dp"
+            tools:layout_editor_absoluteY="205dp" />
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="24dp"
+            android:layout_height="20dp"
+            android:background="#EF1A0A"
+            tools:layout_editor_absoluteX="106dp"
+            tools:layout_editor_absoluteY="205dp" />
+
+        <EditText
+            android:id="@+id/et_choose_table_to"
+            android:layout_width="105dp"
+            android:layout_height="34dp"
+            android:background="#C2C2C2"
+            android:ems="10"
+            android:inputType="date"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.81"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.358"
+            android:autofillHints="" />
+
+        <TextView
+            android:id="@+id/textView33"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/reserved"
+            android:textColor="#0B0B0B"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView34"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/avaible"
+            android:textColor="#0B0B0B"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.134"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView35"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/selected"
+            android:textColor="#0B0B0B"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.941"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.495" />
+
+        <TextView
+            android:id="@+id/textView32"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/to"
+            android:textColor="#0B0B0B"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.594"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.29" />
+
+        <TextView
+            android:id="@+id/textView30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="@string/from"
+            android:textColor="#0B0B0B"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.126"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView29"
+            app:layout_constraintVertical_bias="0.023" />
+
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="275dp"
+            android:layout_height="42dp"
+            android:fontFamily="sans-serif-condensed"
+            android:paddingStart="15dp"
+            android:paddingLeft="1000dp"
+            android:text="@string/cebeci_public_library"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.036" />
+
+        <TextView
+            android:id="@+id/textView29"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/date"
+            android:textColor="#0B0B0B"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.126"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView23" />
+
+        <EditText
+            android:id="@+id/et_choose_table_date"
+            android:layout_width="105dp"
+            android:layout_height="34dp"
+            android:background="#C2C2C2"
+            android:ems="10"
+            android:inputType="date"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.447"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.169" /><![CDATA[
+
+        />
+
+
+
+        ]]>
+
+        <EditText
+            android:id="@+id/et_choose_table_from"
+            android:layout_width="107dp"
+            android:layout_height="35dp"
+            android:background="#C2C2C2"
+            android:ems="10"
+            android:inputType="time"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.161"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.359"
+            android:autofillHints="" />
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="24dp"
+            android:layout_height="20dp"
+            android:background="#4CAF50"
+            tools:layout_editor_absoluteX="12dp"
+            tools:layout_editor_absoluteY="207dp" /><![CDATA[
+
+        />
+
+
+
+        ]]>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</RelativeLayout>

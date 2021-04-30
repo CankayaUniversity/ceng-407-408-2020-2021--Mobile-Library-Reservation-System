@@ -30,7 +30,8 @@
             android:layout_marginBottom="238dp"
             app:srcCompat="@drawable/read_book"
             tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteY="340dp"></ImageView>
+            tools:layout_editor_absoluteY="340dp"
+            android:contentDescription="@string/todo"></ImageView>
 
         <TextView
             android:layout_width="276dp"
@@ -47,7 +48,7 @@
             android:fontFamily="sans-serif-condensed"
             android:lineSpacingExtra="0sp"
             android:paddingTop="10dp"
-            android:text="MAKE RESERVATION"
+            android:text="@string/make_reservation"
             android:textAlignment="center"
             android:textColor="@color/mlrs_white_button"
             android:textSize="30sp"
@@ -70,6 +71,24 @@
         android:layout_marginBottom="-10dp"
         android:orientation="vertical">
 
+        <Button
+            android:id="@+id/btn_search_table"
+            style="?android:textAppearanceSmall"
+            android:layout_width="210dp"
+            android:layout_height="55dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="97dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="103dp"
+            android:layout_marginBottom="75dp"
+            android:backgroundTint="@color/mlrs_white_button"
+            android:text="@string/search_table"
+            android:textColor="@color/Black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
         <RelativeLayout
             android:layout_width="362dp"
             android:layout_height="430dp"
@@ -88,8 +107,9 @@
                 android:layout_height="39dp"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginEnd="28dp"
-                android:layout_marginBottom="58dp"
+                android:layout_marginEnd="35dp"
+                android:layout_marginBottom="82dp"
+                android:autofillHints=""
                 android:background="#C2C2C2"
                 android:ems="10"
                 android:inputType="time" />
@@ -100,10 +120,10 @@
                 android:layout_height="34dp"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginEnd="133dp"
-                android:layout_marginBottom="94dp"
+                android:layout_marginEnd="138dp"
+                android:layout_marginBottom="114dp"
                 android:fontFamily="sans-serif-black"
-                android:text="To"
+                android:text="@string/to"
                 android:textColor="#040303"
                 android:textSize="18sp" />
 
@@ -113,10 +133,10 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginEnd="263dp"
-                android:layout_marginBottom="106dp"
+                android:layout_marginEnd="259dp"
+                android:layout_marginBottom="120dp"
                 android:fontFamily="sans-serif-black"
-                android:text="From"
+                android:text="@string/from"
                 android:textColor="#040303"
                 android:textSize="18sp" />
 
@@ -126,10 +146,10 @@
                 android:layout_height="34dp"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginEnd="243dp"
-                android:layout_marginBottom="117dp"
+                android:layout_marginEnd="239dp"
+                android:layout_marginBottom="142dp"
                 android:fontFamily="sans-serif-black"
-                android:text="Time Slot:"
+                android:text="@string/time_slot"
                 android:textColor="#040303"
                 android:textSize="18sp" />
 
@@ -152,7 +172,7 @@
                     android:layout_marginEnd="15dp"
                     android:layout_marginBottom="30dp"
                     android:ems="40"
-                    android:text="Please, select DATE and TIME SLOT"
+                    android:text="@string/please_select_date_and_time_slot"
                     android:textAlignment="center"
                     android:textColor="@color/Black"
                     android:textSize="15sp"
@@ -168,8 +188,8 @@
                     android:layout_marginBottom="6dp"
                     android:ems="30"
                     android:fontFamily="sans-serif"
-                    android:paddingLeft="50dp"
-                    android:text="for your reservation."
+                    android:paddingStart="50dp"
+                    android:text="@string/for_your_reservation"
                     android:textColor="@color/Black"
                     android:textSize="15sp"
                     android:textStyle="bold" />
@@ -178,9 +198,9 @@
                     android:id="@+id/textView17"
                     android:layout_width="match_parent"
                     android:layout_height="39dp"
-                    android:paddingLeft="15dp"
+                    android:paddingStart="15dp"
                     android:fontFamily="sans-serif-condensed"
-                    android:text="CEBECI PUBLIC LIBRARY"
+                    android:text="@string/cebeci_public_library"
                     android:textColor="#FFFFFF"
                     android:textSize="24sp"
                     android:textStyle="bold" />
@@ -194,10 +214,10 @@
                 android:layout_height="34dp"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginEnd="255dp"
-                android:layout_marginBottom="214dp"
+                android:layout_marginEnd="259dp"
+                android:layout_marginBottom="225dp"
                 android:fontFamily="sans-serif-black"
-                android:text="Date:"
+                android:text="@string/date"
                 android:textColor="#040303"
                 android:textSize="18sp" />
 
@@ -207,8 +227,9 @@
                 android:layout_height="36dp"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginEnd="114dp"
-                android:layout_marginBottom="162dp"
+                android:layout_marginEnd="116dp"
+                android:layout_marginBottom="194dp"
+                android:autofillHints=""
                 android:background="#C2C2C2"
                 android:ems="10"
                 android:inputType="date" />
@@ -219,8 +240,9 @@
                 android:layout_height="36dp"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginEnd="189dp"
-                android:layout_marginBottom="53dp"
+                android:layout_marginEnd="191dp"
+                android:layout_marginBottom="79dp"
+                android:autofillHints=""
                 android:background="#C2C2C2"
                 android:ems="10"
                 android:inputType="time" />
@@ -237,21 +259,6 @@
 
 
         </RelativeLayout>
-
-        <Button
-            android:id="@+id/btn_search_table"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="131dp"
-            android:layout_marginEnd="136dp"
-            android:layout_marginBottom="73dp"
-            android:background="#FAFAFA"
-            android:backgroundTint="@color/mlrs_white_button"
-            android:text="Search Table"
-            android:textColor="#000000" />
 
     </RelativeLayout>
 
