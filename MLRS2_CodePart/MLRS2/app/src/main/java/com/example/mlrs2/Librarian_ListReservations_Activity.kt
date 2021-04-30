@@ -7,6 +7,6 @@ class Librarian_ListReservations_Activity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_menu_librarian)
+        setContentView(R.layout.activity_librarian_listreservations)
     }
 }
