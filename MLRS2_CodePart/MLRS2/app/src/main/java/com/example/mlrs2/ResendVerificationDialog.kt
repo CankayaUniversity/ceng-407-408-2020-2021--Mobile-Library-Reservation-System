@@ -89,7 +89,7 @@ class ResendVerificationDialog : DialogFragment() {
 
         user?.sendEmailVerification()?.addOnCompleteListener { task ->
             if (task.isSuccessful) {
-                Toast.makeText(mContext, "Sent Verification Email", Toast.LENGTH_SHORT).show()
+                Toast.makeText(mContext, "Send Verification Email", Toast.LENGTH_SHORT).show()
             } else {
                 Toast.makeText(mContext, "Couldn't send email", Toast.LENGTH_SHORT).show()
             }
