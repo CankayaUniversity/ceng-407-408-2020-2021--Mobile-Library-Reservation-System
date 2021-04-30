@@ -69,6 +69,13 @@
         android:layout_marginBottom="67dp"
         android:orientation="vertical">
 
+        <Spinner
+            android:id="@+id/spinner3"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="335dp" />
+
     </RelativeLayout>
 
 
