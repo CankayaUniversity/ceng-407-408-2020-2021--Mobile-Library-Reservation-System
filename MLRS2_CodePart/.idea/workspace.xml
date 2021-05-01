@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d1d71009-e9f8-4350-b13c-59618c754b7f" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="ADD_SUFFIX_TO_CHERRY_PICKS_OF_PUBLISHED_COMMITS" value="false" />
+    <option name="PATH_TO_GIT" value="C:\Program Files\Git\bin\git.exe" />
+    <option name="PREVIEW_PUSH_PROTECTED_ONLY" value="true" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="ProjectId" id="1rwrToscnNYgAmTCQZUaJjBLiU9" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="android.sdk.path" value="$PROJECT_DIR$/../../../../Android/Sdk" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d1d71009-e9f8-4350-b13c-59618c754b7f" name="Default Changelist" comment="" />
+      <created>1619898003405</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1619898003405</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="533" y="233" width="465" height="449" key="#Notifications" timestamp="1619899337606">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="533" y="233" width="465" height="449" key="#Notifications/0.0.1366.728@0.0.1366.728" timestamp="1619899337606" />
+    <state x="179" y="25" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1619898720247">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="179" y="25" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1619898720247" />
+    <state x="295" y="101" width="859" height="540" key="AVDManager" timestamp="1619898751800">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="295" y="101" width="859" height="540" key="AVDManager/0.0.1366.728@0.0.1366.728" timestamp="1619898751800" />
+    <state x="171" y="62" key="MergeDialog" timestamp="1619898243099">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="171" y="62" key="MergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1619898243099" />
+    <state x="363" y="132" key="MultipleFileMergeDialog" timestamp="1619898243106">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="363" y="132" key="MultipleFileMergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1619898243106" />
+    <state x="230" y="91" key="RollbackChangesDialog" timestamp="1619899091111">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="230" y="91" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1619899091111" />
+    <state x="112" y="17" key="SettingsEditor" timestamp="1619899290716">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="112" y="17" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1619899290716" />
+    <state x="534" y="284" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1619898602134">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="534" y="284" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1619898602134" />
+    <state x="380" y="168" key="run.anything.popup" timestamp="1619898261054">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="380" y="168" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1619898261054" />
+  </component>
+</project>
