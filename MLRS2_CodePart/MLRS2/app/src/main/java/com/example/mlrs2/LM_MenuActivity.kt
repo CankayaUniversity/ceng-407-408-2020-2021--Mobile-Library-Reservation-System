@@ -5,11 +5,11 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 
-class MainActivity : AppCompatActivity() {
+class LM_MenuActivity : AppCompatActivity() {
 
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
-            setContentView(R.layout.signin_up_firstpage)
+            setContentView(R.layout.activity_menu_lm)
 
             val btn_makeReservation = findViewById<Button>(R.id.btn_lm_menu_make_reservation)
             val btn_listReservation = findViewById<Button>(R.id.btn_lm_menu_list_reservation)
@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
             }
 
         }
-
+        // list resevation for starting reservation page 1
         fun reDirectMakeReservationPage() {
             val intent = Intent(this, LM_ListLibraries_Activity::class.java)
             startActivity(intent)

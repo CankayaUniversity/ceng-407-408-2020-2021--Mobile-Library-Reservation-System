@@ -8,7 +8,7 @@
     android:background="#C2C2C2"
     android:backgroundTint="@color/mlrs_mlrs_mainpageBlue"
     android:scrollbarThumbHorizontal="@drawable/ic_launcher_foreground"
-    tools:context=".MainActivity">
+    tools:context=".LM_MenuActivity">
 
 
     <Button

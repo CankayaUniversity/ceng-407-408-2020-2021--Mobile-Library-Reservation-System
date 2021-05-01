@@ -19,9 +19,14 @@
 
         <activity android:name=".LoginActivity"></activity>
         <activity android:name=".RegisterActivity"></activity>
-        <activity android:name=".MainActivity"></activity>
+
+        <activity android:name=".LM_MenuActivity"></activity>
+        <activity android:name=".LM_ListLibraries_Activity"></activity>
+        <activity android:name=".LM_ListReservations_Activity"></activity>
+
         <activity android:name=".Admin_AddLibrary_Activity"></activity>
         <activity android:name=".Admin_ListLibraries_Activity"></activity>
+
         <activity android:name=".Librarian_ListReservations_Activity"></activity>
 
     </application>

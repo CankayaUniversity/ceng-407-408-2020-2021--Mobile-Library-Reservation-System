@@ -2,7 +2,6 @@ package com.example.mlrs2
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
@@ -119,7 +118,7 @@ class LoginActivity : AppCompatActivity() {
 
     // The user is directed from the login page to the home(main) page.
     fun reDirectMainPage(){
-        val intent = Intent(this@LoginActivity, MainActivity::class.java)
+        val intent = Intent(this@LoginActivity, LM_MenuActivity::class.java)
         startActivity(intent)
         finish()
     }
