@@ -61,8 +61,9 @@ class RegisterActivity : AppCompatActivity() {
 
             if (v.isSuccessful) {
                 Toast.makeText(this, "Session  :" + FirebaseAuth.getInstance().currentUser?.uid, Toast.LENGTH_LONG).show()
-
                 sendVerificationEmail()
+                //BURASIIIII
+
 
                 FirebaseAuth.getInstance().signOut()
                 reDirectLoginPage()
