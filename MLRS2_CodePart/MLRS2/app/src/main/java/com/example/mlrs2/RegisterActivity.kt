@@ -26,9 +26,14 @@ class RegisterActivity : AppCompatActivity() {
 
         //  In order to use the assets on the design page, variables such as button, edit text have been created.
         val btn_register = findViewById<Button>(R.id.btn_register)
+        val btn_sign_in = findViewById<Button>(R.id.btnEmail_sign_in_button)
         val et_input_password = findViewById<EditText>(R.id.et_input_password)
         val et_input_email = findViewById<EditText>(R.id.et_input_email)
         val et_input_confirm_password = findViewById<EditText>(R.id.et_input_confirm_password)
+
+        btn_sign_in.setOnClickListener {
+            reLoginPage()
+        }
 
         // If the user presses the button, it is checked that all fields are correctly filled.
         btn_register.setOnClickListener {
@@ -106,6 +111,12 @@ class RegisterActivity : AppCompatActivity() {
 
     // If user verify account with Mail, user is directed Login screen.
     fun reDirectLoginPage(){
+        val intent = Intent(this@RegisterActivity, LoginActivity::class.java)
+        startActivity(intent)
+        finish()
+    }
+
+    fun reLoginPage(){
         val intent = Intent(this@RegisterActivity, LoginActivity::class.java)
         startActivity(intent)
         finish()
