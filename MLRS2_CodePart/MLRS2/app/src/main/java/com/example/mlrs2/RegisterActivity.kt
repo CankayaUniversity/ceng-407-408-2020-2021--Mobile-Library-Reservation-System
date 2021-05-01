@@ -31,9 +31,9 @@ class RegisterActivity : AppCompatActivity() {
         val et_input_email = findViewById<EditText>(R.id.et_input_email)
         val et_input_confirm_password = findViewById<EditText>(R.id.et_input_confirm_password)
 
-        btn_sign_in.setOnClickListener {
-            reLoginPage()
-        }
+       // btn_sign_in.setOnClickListener{
+         //   reLoginPage()
+        //}
 
         // If the user presses the button, it is checked that all fields are correctly filled.
         btn_register.setOnClickListener {
@@ -96,7 +96,6 @@ class RegisterActivity : AppCompatActivity() {
 
             })
         }
-
 
     }
 
