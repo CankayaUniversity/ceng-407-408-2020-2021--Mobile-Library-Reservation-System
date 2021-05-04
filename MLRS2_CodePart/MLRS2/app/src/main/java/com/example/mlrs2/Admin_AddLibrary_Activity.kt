@@ -10,3 +10,4 @@ class Admin_AddLibrary_Activity : AppCompatActivity() {
         setContentView(R.layout.admin_add_library_page)
     }
 }
+// burda değişiklik yaptım.********
