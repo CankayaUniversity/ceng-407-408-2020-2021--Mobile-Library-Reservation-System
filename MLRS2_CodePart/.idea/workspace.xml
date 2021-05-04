@@ -24,7 +24,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d1d71009-e9f8-4350-b13c-59618c754b7f" name="Default Changelist" comment="" />
+    <list default="true" id="d1d71009-e9f8-4350-b13c-59618c754b7f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -75,6 +77,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="533" y="233" width="465" height="449" key="#Notifications" timestamp="1619899337606">
@@ -89,6 +92,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="295" y="101" width="859" height="540" key="AVDManager/0.0.1366.728@0.0.1366.728" timestamp="1619898751800" />
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1620153103877">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1620153103877" />
     <state x="171" y="62" key="MergeDialog" timestamp="1619898243099">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
