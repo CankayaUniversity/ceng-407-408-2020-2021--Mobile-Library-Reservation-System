@@ -8,5 +8,6 @@ class Admin_AddLibrary_Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.admin_add_library_page)
+
     }
 }

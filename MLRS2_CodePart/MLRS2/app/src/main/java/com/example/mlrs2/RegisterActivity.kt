@@ -17,12 +17,14 @@ import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.gms.tasks.OnFailureListener
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.AuthResult
+import com.google.firebase.database.FirebaseDatabase
 
 class RegisterActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
+
 
         //  In order to use the assets on the design page, variables such as button, edit text have been created.
         val btn_register = findViewById<Button>(R.id.btn_register)
@@ -31,12 +33,13 @@ class RegisterActivity : AppCompatActivity() {
         val et_input_email = findViewById<EditText>(R.id.et_input_email)
         val et_input_confirm_password = findViewById<EditText>(R.id.et_input_confirm_password)
 
-        btn_sign_in.setOnClickListener {
+       /* btn_sign_in.setOnClickListener {
             reLoginPage()
-        }
+        }*/
 
         // If the user presses the button, it is checked that all fields are correctly filled.
         btn_register.setOnClickListener {
+
 
             // The correctness of the fields filled is checked. For example, the correctness of the password entered for the second time.
             if (et_input_email.text.isNotEmpty() && et_input_password.text.isNotEmpty() && et_input_confirm_password.text.isNotEmpty()) {
