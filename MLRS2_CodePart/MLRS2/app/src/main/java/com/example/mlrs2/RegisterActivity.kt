@@ -3,21 +3,11 @@ package com.example.mlrs2
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import android.content.Intent
-import android.util.Log
-import android.util.Patterns
 import android.view.View
-import android.content.ContentValues.TAG
 import android.widget.*
-import com.example.mlrs2.R.layout.activity_register
-import com.example.mlrs2.R.layout.text_view_with_line_height_from_layout
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
-import java.lang.Exception
 import com.google.android.gms.tasks.OnCompleteListener
-import com.google.android.gms.tasks.OnFailureListener
 import com.google.android.gms.tasks.Task
-import com.google.firebase.auth.AuthResult
-import com.google.firebase.database.FirebaseDatabase
 
 class RegisterActivity : AppCompatActivity() {
 
@@ -28,7 +18,7 @@ class RegisterActivity : AppCompatActivity() {
 
         //  In order to use the assets on the design page, variables such as button, edit text have been created.
         val btn_register = findViewById<Button>(R.id.btn_register)
-        val btn_sign_in = findViewById<Button>(R.id.btnEmail_sign_in_button)
+        val btn_sign_in = findViewById<Button>(R.id.btn_add_library)
         val et_input_password = findViewById<EditText>(R.id.et_input_password)
         val et_input_email = findViewById<EditText>(R.id.et_input_email)
         val et_input_confirm_password = findViewById<EditText>(R.id.et_input_confirm_password)

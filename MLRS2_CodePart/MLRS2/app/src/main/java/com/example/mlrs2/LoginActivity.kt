@@ -21,7 +21,7 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_login)
 
         setupFirebase()
-        var btnEmail_sign_in_button = findViewById<Button>(R.id.btnEmail_sign_in_button)
+        var btnEmail_sign_in_button = findViewById<Button>(R.id.btn_add_library)
         var etEmail = findViewById<EditText>(R.id.etEmail)
         var etPassword = findViewById<EditText>(R.id.etPassword)
         var tvlink_register = findViewById<TextView>(R.id.tvlink_register)

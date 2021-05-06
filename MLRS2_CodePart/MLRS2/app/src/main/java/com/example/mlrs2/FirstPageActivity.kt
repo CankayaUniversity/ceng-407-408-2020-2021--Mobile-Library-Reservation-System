@@ -11,7 +11,7 @@ class FirstPageActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.signin_up_firstpage)
 
-        val btn_login = findViewById<Button>(R.id.btnEmail_sign_in_button)
+        val btn_login = findViewById<Button>(R.id.btn_add_library)
         val btn_signup = findViewById<Button>(R.id.btnEmail_sign_up_button)
 
         btn_login.setOnClickListener {

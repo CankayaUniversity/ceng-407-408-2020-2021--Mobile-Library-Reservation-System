@@ -2,11 +2,17 @@ package com.example.mlrs2
 
 class Library {
 
-    var libId:Int=0
-    var libName:String=""
+    //    var libNo:Int = 0
+    var libName:String = ""
+    var libAddress:String = ""
+    var libCapacity:Int = 0
 
-    constructor(userNo:Int, userEmail:String, userPassword:String){
-        this.libId=libId
-        this.libName=libName
-        }
+    constructor( libName:String, libAddress:String, libCapacity:Int )
+    {
+        this.libName = libName
+        this.libAddress = libAddress
+        this.libCapacity = libCapacity
+//      libNo = libNo + 1
+    }
+
 }

@@ -27,7 +27,7 @@
             android:src="@drawable/mlrs_login_logo" />
 
         <Button
-            android:id="@+id/btnEmail_sign_in_button"
+            android:id="@+id/btn_add_library"
             style="?android:textAppearanceSmall"
             android:layout_width="285dp"
             android:layout_height="50dp"
