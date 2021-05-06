@@ -1,42 +1,63 @@
 {
   "project_info": {
-    "project_number": "613793632262",
-    "firebase_url": "https://mlrs2-69f25-default-rtdb.europe-west1.firebasedatabase.app",
-    "project_id": "mlrs2-69f25",
-    "storage_bucket": "mlrs2-69f25.appspot.com"
+    "project_number": "248044302585",
+    "firebase_url": "https://databasemlrs-df090-default-rtdb.firebaseio.com",
+    "project_id": "databasemlrs-df090",
+    "storage_bucket": "databasemlrs-df090.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:613793632262:android:72b27d9c1ec88184ef7387",
+        "mobilesdk_app_id": "1:248044302585:android:69b0fc270bb9d853117228",
         "android_client_info": {
-          "package_name": "com.example.mlrs2"
+          "package_name": "com.example.databasebaglantisi"
         }
       },
       "oauth_client": [
         {
-          "client_id": "613793632262-r8f0lnl7a0kbhifp0sof1v458ed56bv1.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.mlrs2",
-            "certificate_hash": "c042f138d96702ead66a29e0883a50c8b5cce8ae"
-          }
-        },
-        {
-          "client_id": "613793632262-617f753c1554475mgjfig5ek5ncma2df.apps.googleusercontent.com",
+          "client_id": "248044302585-ann357b7j9nkd87rhum50bdf6hi83jgt.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBSbn11zQwF3TYYQzYwwT2rpOgf5fE4MoA"
+          "current_key": "AIzaSyCD_615nOVFu6gAH0SwSB7pdS1PcJl8XoU"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "613793632262-617f753c1554475mgjfig5ek5ncma2df.apps.googleusercontent.com",
+              "client_id": "248044302585-ann357b7j9nkd87rhum50bdf6hi83jgt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:248044302585:android:fbefc6331ddfb36c117228",
+        "android_client_info": {
+          "package_name": "com.example.mlrs2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "248044302585-ann357b7j9nkd87rhum50bdf6hi83jgt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCD_615nOVFu6gAH0SwSB7pdS1PcJl8XoU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "248044302585-ann357b7j9nkd87rhum50bdf6hi83jgt.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

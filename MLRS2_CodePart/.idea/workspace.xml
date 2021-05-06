@@ -25,8 +25,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d1d71009-e9f8-4350-b13c-59618c754b7f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MLRS2/app/src/main/java/com/example/mlrs2/Admin_AddLibrary_Activity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/MLRS2/app/src/main/java/com/example/mlrs2/Admin_AddLibrary_Activity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MLRS2/app/google-services.json" beforeDir="false" afterPath="$PROJECT_DIR$/MLRS2/app/google-services.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
