@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "691715567876",
+    "project_id": "mobilrs-436f4",
+    "storage_bucket": "mobilrs-436f4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:691715567876:android:5f5f9fbee9ef2f50bd6051",
+        "android_client_info": {
+          "package_name": "com.example.mobilelibrs"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "691715567876-fpo38agovrndsueinun0a0kr56ja57ae.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4flvZQWJxu7Hw87Wr9NA94Dr9Vk2fp0E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "691715567876-fpo38agovrndsueinun0a0kr56ja57ae.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
