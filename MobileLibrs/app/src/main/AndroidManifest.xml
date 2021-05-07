@@ -9,14 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MobileLibrs">
-        <activity android:name="AdminAddLibraryActivity">
+        <activity android:name=".LM_ListLib_Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
+        <!--Admin Pages-->
         <activity android:name=".Admin_LibList_Activity"> </activity>
+        <activity android:name=".AdminAddLibraryActivity"> </activity>
 
 
     </application>
