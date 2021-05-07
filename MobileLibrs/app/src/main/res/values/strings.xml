@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">MobileLibrs</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="resend_verification_email">Resend Verification Email</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="register">Register</string>
+    <string name="sign_in">Sign In</string>
+    <string name="password">Password</string>
+    <string name="tabian_consulting_logo">Tabian Consulting Logo</string>
+    <string name="mlrs_login_logo">Mlrs Login Logo</string>
+    <string name="email_registration">Email Registration</string>
+    <string name="email">Email</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="mlrs_long_name">Mobile Library Reservation System</string>
+    <string name="this_week_s_initiatives">This week\'s initiatives</string>
+    <string name="employee_schedule">Employee Schedule</string>
+    <string name="company_culture">Company Culture</string>
+    <string name="tabian_consulting_sales_chart">Tabian Consulting Sales Chart</string>
+    <string name="cancel">CANCEL</string>
+    <string name="confirm">CONFIRM</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="sign_out">Sign out</string>
+    <string name="account_settings">Account Settings</string>
+    <string name="current_password">Current Password</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_new_password">Confirm New Password</string>
+    <string name="cebeci_public_library">CEBECI PUBLIC LIBRARY</string>
+    <string name="for_your_reservation">for your reservation.</string>
+    <string name="please_select_date_and_time_slot">Please, select DATE and TIME SLOT</string>
+    <string name="time_slot">Time Slot:</string>
+    <string name="search_table">SEARCH TABLE</string>
+    <string name="date">Date:</string>
+    <string name="to">To</string>
+    <string name="from">From</string>
+    <string name="make_reservation">MAKE RESERVATION</string>
+    <string name="reserved">Reserved</string>
+    <string name="selected">Selected</string>
+    <string name="avaible">Avaible</string>
+    <string name="todo">TODO</string>
+</resources>
