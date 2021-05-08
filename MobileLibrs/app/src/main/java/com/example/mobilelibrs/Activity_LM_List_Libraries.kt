@@ -7,20 +7,20 @@ import android.widget.ArrayAdapter
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.mobilelibrs.databinding.ActivityLmListlibrariesBinding
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import java.lang.StringBuilder
 import com.example.mobilelibrs.Library
+import com.example.mobilelibrs.databinding.LayoutLmListLibrariesBinding
 
 class Activity_LM_List_Libraries : AppCompatActivity() {
 
-    lateinit var binding : ActivityLmListlibrariesBinding
+    lateinit var binding : LayoutLmListLibrariesBinding
     var arrayLibList = ArrayList<String>()
 
-    val binding3 = ActivityLmListlibrariesBinding.inflate(layoutInflater)
+    val binding3 = LayoutLmListLibrariesBinding.inflate(layoutInflater)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
