@@ -17,14 +17,15 @@ import com.example.mobilelibrs.databinding.LayoutLmListLibrariesBinding
 
 class Activity_LM_List_Libraries : AppCompatActivity() {
 
-    lateinit var binding : LayoutLmListLibrariesBinding
-    var arrayLibList = ArrayList<String>()
+    //lateinit var binding : LayoutLmListLibrariesBinding
+    //var arrayLibList = ArrayList<String>()
 
-    val binding3 = LayoutLmListLibrariesBinding.inflate(layoutInflater)
+    //val binding3 = LayoutLmListLibrariesBinding.inflate(layoutInflater)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // click make reservation button, view list libraries.
         setContentView(R.layout.layout_lm_list_libraries)
     }
+
 }
