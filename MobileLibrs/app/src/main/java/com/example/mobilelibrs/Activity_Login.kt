@@ -57,7 +57,7 @@ class Activity_Login : AppCompatActivity() {
 
 
         tvlink_register.setOnClickListener {
-            var intent = Intent(this, Register_Activity::class.java)
+            var intent = Intent(this, Activity_Register::class.java)
             startActivity(intent)
         }
 
@@ -78,7 +78,7 @@ class Activity_Login : AppCompatActivity() {
                 if (user != null) {
 
                     if (user.isEmailVerified) {
-                        Toast.makeText(this@Activity_Login "E-mail is confirmed. : " + user.uid, Toast.LENGTH_LONG).show()
+                        Toast.makeText(this@Activity_Login, "E-mail is confirmed. : " + user.uid, Toast.LENGTH_LONG).show()
                     }else{
                         Toast.makeText(this@Activity_Login, "Please confirm your e-mail. : ", Toast.LENGTH_LONG).show()
                         FirebaseAuth.getInstance().signOut()
