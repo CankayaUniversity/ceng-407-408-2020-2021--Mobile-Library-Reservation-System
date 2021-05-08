@@ -21,7 +21,6 @@ class Activity_Admin_List_Libraries : AppCompatActivity() {
         var database = FirebaseDatabase.getInstance().reference
 
         setContentView(binding2.root)
-        // Data reads to db
 
         // All data is in getData variable
         var getData = object : ValueEventListener {
