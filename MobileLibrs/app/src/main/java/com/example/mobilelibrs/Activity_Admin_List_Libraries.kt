@@ -2,21 +2,21 @@ package com.example.mobilelibrs
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.mobilelibrs.databinding.ActivityAdminLiblistBinding
+import com.example.mobilelibrs.databinding.LayoutAdminListLibrariesBinding
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import java.lang.StringBuilder
 
-class Admin_LibList_Activity : AppCompatActivity() {
+class Activity_Admin_List_Libraries : AppCompatActivity() {
 
-    lateinit var binding : ActivityAdminLiblistBinding
+    lateinit var binding : LayoutAdminListLibrariesBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 //       setContentView(R.layout.activity_admin_liblist)
 
-        val binding2 = ActivityAdminLiblistBinding.inflate(layoutInflater)
+        val binding2 = LayoutAdminListLibrariesBinding.inflate(layoutInflater)
 
         var database = FirebaseDatabase.getInstance().reference
 

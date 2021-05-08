@@ -7,15 +7,12 @@ class Library {
     var LibraryCapacity:Int = 0
   //  var LibraryList = ArrayList<Library>()
 
-    constructor( libNamee:String, libAddresss:String, libCapacityy:Int)
+    constructor( libName:String, libAddress:String, libCapacity:Int)
     {
-        this.LibraryName = libNamee
-        this.LibraryAddress = libAddresss
-        this.LibraryCapacity = libCapacityy
+        this.LibraryName = libName
+        this.LibraryAddress = libAddress
+        this.LibraryCapacity = libCapacity
    //     LibraryList.add(Library(LibraryName, LibraryAddress, LibraryCapacity, libraryNo))
 
     }
-
-
-
 }

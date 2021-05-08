@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:accessibilityHeading="true"
+    android:background="#C2C2C2"
+    android:backgroundTint="@color/mlrs_mlrs_mainpageBlue"
+    android:scrollbarThumbHorizontal="@drawable/ic_launcher_foreground"
+    tools:context=".Activity_LM_Seelect_Date_and_Time_Slot">
+
+    <RelativeLayout
+        android:layout_width="355dp"
+        android:layout_height="318dp"
+        android:layout_marginStart="29dp"
+        >
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="96dp"
+            android:layout_height="55dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="-3dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="262dp"
+            android:layout_marginBottom="238dp"
+            app:srcCompat="@drawable/read_book"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="340dp"
+            android:contentDescription="@string/todo"></ImageView>
+
+        <TextView
+            android:layout_width="276dp"
+            android:layout_height="55dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="71dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="238dp"
+            android:background="@color/mlrs_lightBlue"
+            android:fontFamily="sans-serif-condensed"
+            android:lineSpacingExtra="0sp"
+            android:paddingTop="10dp"
+            android:text="@string/make_reservation"
+            android:textAlignment="center"
+            android:textColor="@color/mlrs_white_button"
+            android:textSize="30sp"
+            app:cornerRadius="?android:attr/buttonCornerRadius"></TextView>
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="104dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="-10dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_search_table"
+            style="?android:textAppearanceSmall"
+            android:layout_width="210dp"
+            android:layout_height="55dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="97dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="103dp"
+            android:layout_marginBottom="75dp"
+            android:backgroundTint="@color/mlrs_white_button"
+            android:text="@string/search_table"
+            android:textColor="@color/Black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="362dp"
+            android:layout_height="430dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="27dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="161dp"
+            android:background="@drawable/sekil"
+            android:orientation="vertical">
+
+
+            <EditText
+                android:id="@+id/et_time_to"
+                android:layout_width="131dp"
+                android:layout_height="39dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="35dp"
+                android:layout_marginBottom="82dp"
+                android:autofillHints=""
+                android:background="#C2C2C2"
+                android:ems="10"
+                android:inputType="time" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="138dp"
+                android:layout_marginBottom="114dp"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/to"
+                android:textColor="#040303"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="61dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="259dp"
+                android:layout_marginBottom="120dp"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/from"
+                android:textColor="#040303"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="239dp"
+                android:layout_marginBottom="142dp"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/time_slot"
+                android:textColor="#040303"
+                android:textSize="18sp" />
+
+            <RelativeLayout
+                android:layout_width="300dp"
+                android:layout_height="123dp"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="44dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/mlrs_lightBlue"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="260dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="30dp"
+                    android:ems="40"
+                    android:text="@string/please_select_date_and_time_slot"
+                    android:textAlignment="center"
+                    android:textColor="@color/Black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="260dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginBottom="6dp"
+                    android:ems="30"
+                    android:fontFamily="sans-serif"
+                    android:paddingStart="50dp"
+                    android:text="@string/for_your_reservation"
+                    android:textColor="@color/Black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="match_parent"
+                    android:layout_height="39dp"
+                    android:paddingStart="15dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="@string/cebeci_public_library"
+                    android:textColor="#FFFFFF"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="62dp"
+                android:layout_height="34dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="259dp"
+                android:layout_marginBottom="225dp"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/date"
+                android:textColor="#040303"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/et_date"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="116dp"
+                android:layout_marginBottom="194dp"
+                android:autofillHints=""
+                android:background="#C2C2C2"
+                android:ems="10"
+                android:inputType="date" />
+
+            <EditText
+                android:id="@+id/et_time_from"
+                android:layout_width="135dp"
+                android:layout_height="36dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="191dp"
+                android:layout_marginBottom="79dp"
+                android:autofillHints=""
+                android:background="#C2C2C2"
+                android:ems="10"
+                android:inputType="time" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="280dp"
+                android:layout_height="2dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="44dp"
+                android:layout_marginBottom="265dp"
+                android:background="@color/Black" />
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
