@@ -38,7 +38,7 @@
         android:layout_marginStart="0dp"
         android:layout_marginEnd="0dp"
         android:layout_marginBottom="-10dp"
-        android:orientation="vertical"/>
+        android:orientation="vertical" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -96,6 +96,7 @@
             android:id="@+id/et_choose_table_to"
             android:layout_width="105dp"
             android:layout_height="34dp"
+            android:background="#C2C2C2"
             android:ems="10"
             android:inputType="date"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -103,8 +104,7 @@
             app:layout_constraintHorizontal_bias="0.86"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.404"
-            android:background="#C2C2C2"/>/>
+            app:layout_constraintVertical_bias="0.404" />/>
 
         <TextView
             android:id="@+id/textView36"
@@ -231,6 +231,7 @@
             android:id="@+id/et_choose_table_date"
             android:layout_width="105dp"
             android:layout_height="34dp"
+            android:background="#C2C2C2"
             android:ems="10"
             android:inputType="date"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -238,13 +239,13 @@
             app:layout_constraintHorizontal_bias="0.143"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.381"
-            android:background="#C2C2C2"/>
+            app:layout_constraintVertical_bias="0.381" />
 
         <EditText
             android:id="@+id/et_choose_table_from"
             android:layout_width="107dp"
             android:layout_height="35dp"
+            android:background="#C2C2C2"
             android:ems="10"
             android:inputType="time"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -252,13 +253,13 @@
             app:layout_constraintHorizontal_bias="0.161"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.693"
-            android:background="#C2C2C2"/>/>
+            app:layout_constraintVertical_bias="0.693" />/>
 
         <EditText
             android:id="@+id/et_time_slot_to"
             android:layout_width="114dp"
             android:layout_height="39dp"
+            android:background="#C2C2C2"
             android:ems="10"
             android:inputType="time"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -266,8 +267,7 @@
             app:layout_constraintHorizontal_bias="0.929"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.69"
-            android:background="#C2C2C2"/>/>
+            app:layout_constraintVertical_bias="0.69" />/>
 
         <Switch
             android:id="@+id/switch_status"

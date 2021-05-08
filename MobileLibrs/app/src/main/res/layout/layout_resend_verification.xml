@@ -1,42 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="25dp"
-    android:background="@color/mlrs_mlrs_mainpageBlue">
+    android:background="@color/mlrs_mlrs_mainpageBlue"
+    android:orientation="vertical"
+    android:padding="25dp">
 
     <TextView
+        android:id="@+id/dialogTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
         android:text="@string/resend_verification_email"
-        android:textSize="21sp"
         android:textAlignment="center"
-        android:layout_marginTop="30dp"
         android:textColor="@color/Black"
-        android:id="@+id/dialogTitle"/>
+        android:textSize="21sp" />
 
     <EditText
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:hint="@string/email"
         android:id="@+id/confirm_email"
-        android:inputType="textEmailAddress"
-        android:textSize="20sp"
-        android:layout_marginTop="30dp"
-        android:background="@color/mlrs_white_button"/>
-
-    <EditText
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:hint="@string/password"
-        android:id="@+id/confirm_password"
-        android:inputType="textPassword"
-        android:textSize="20sp"
         android:layout_marginTop="30dp"
         android:background="@color/mlrs_white_button"
-        />
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/confirm_password"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/mlrs_white_button"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:textSize="20sp" />
 
     <RelativeLayout
         android:layout_width="wrap_content"
@@ -49,11 +48,11 @@
             android:layout_marginTop="40dp"
             android:layout_marginRight="10dp"
             android:layout_marginBottom="10dp"
+            android:background="@color/mlrs_white_button"
             android:backgroundTint="@color/common_google_signin_btn_text_light"
             android:text="@string/cancel"
             android:textAlignment="center"
             android:textColor="@color/mlrs_white_button"
-            android:background="@color/mlrs_white_button"
             android:textSize="20sp" />
 
         <TextView

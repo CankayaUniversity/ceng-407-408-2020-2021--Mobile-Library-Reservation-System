@@ -5,8 +5,7 @@
     android:layout_height="match_parent"
     android:background="#2D9CDB"
     android:outlineSpotShadowColor="#FFFFFF"
-    android:textAlignment="inherit"
-    >
+    android:textAlignment="inherit">
 
 
     <androidx.appcompat.widget.AppCompatButton

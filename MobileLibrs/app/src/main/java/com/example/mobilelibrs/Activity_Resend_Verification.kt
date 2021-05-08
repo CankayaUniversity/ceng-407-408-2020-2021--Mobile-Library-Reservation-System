@@ -21,7 +21,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 
 
-class Activity_Resend_Verification: DialogFragment() {
+class Activity_Resend_Verification : DialogFragment() {
 
     //widgets
     private var mConfirmPassword: EditText? = null
@@ -30,7 +30,11 @@ class Activity_Resend_Verification: DialogFragment() {
     //vars
     private var mContext: Context? = null
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         val view = inflater!!.inflate(R.layout.layout_resend_verification, container, false)
         mConfirmPassword = view.findViewById<View>(R.id.confirm_password) as EditText
         mConfirmEmail = view.findViewById<View>(R.id.confirm_email) as EditText
@@ -44,8 +48,10 @@ class Activity_Resend_Verification: DialogFragment() {
             if (!isEmpty(mConfirmEmail!!.text.toString()) && !isEmpty(mConfirmPassword!!.text.toString())) {
 
                 //temporarily authenticate and resend verification email
-                authenticateAndResendEmail(mConfirmEmail!!.text.toString(),
-                        mConfirmPassword!!.text.toString())
+                authenticateAndResendEmail(
+                    mConfirmEmail!!.text.toString(),
+                    mConfirmPassword!!.text.toString()
+                )
             } else {
                 Toast.makeText(mContext, "all fields must be filled out", Toast.LENGTH_SHORT).show()
             }
@@ -66,19 +72,23 @@ class Activity_Resend_Verification: DialogFragment() {
      */
     private fun authenticateAndResendEmail(email: String, password: String) {
         val credential = EmailAuthProvider
-                .getCredential(email, password)
+            .getCredential(email, password)
         FirebaseAuth.getInstance().signInWithCredential(credential)
-                .addOnCompleteListener { task ->
-                    if (task.isSuccessful) {
-                        Log.d(TAG, "onComplete: Reauthenticate success.")
-                        sendVerificationEmail()
-                        FirebaseAuth.getInstance().signOut()
-                        dialog?.dismiss()
-                    }
-                }.addOnFailureListener {
-                    Toast.makeText(mContext, "Invalid Credentials. \nReset your password and try again", Toast.LENGTH_SHORT).show()
+            .addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    Log.d(TAG, "onComplete: Reauthenticate success.")
+                    sendVerificationEmail()
+                    FirebaseAuth.getInstance().signOut()
                     dialog?.dismiss()
                 }
+            }.addOnFailureListener {
+                Toast.makeText(
+                    mContext,
+                    "Invalid Credentials. \nReset your password and try again",
+                    Toast.LENGTH_SHORT
+                ).show()
+                dialog?.dismiss()
+            }
     }
 
     /**

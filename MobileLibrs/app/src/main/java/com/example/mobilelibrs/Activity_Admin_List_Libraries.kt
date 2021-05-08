@@ -11,7 +11,7 @@ import java.lang.StringBuilder
 
 class Activity_Admin_List_Libraries : AppCompatActivity() {
 
-    lateinit var binding : LayoutAdminListLibrariesBinding
+    lateinit var binding: LayoutAdminListLibrariesBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 //       setContentView(R.layout.activity_admin_liblist)
@@ -28,12 +28,12 @@ class Activity_Admin_List_Libraries : AppCompatActivity() {
             //bu method veritabanında veri varsa anında görüntülüyor
             override fun onDataChange(snapshot: DataSnapshot) {
                 var sb = StringBuilder() // metin birleştirme sınıfı
-                for(i in snapshot.children) {
+                for (i in snapshot.children) {
                     // path: datebase de tutulan değişkenin ismi
                     var lname = i.child("libraryName").getValue()
                     var laddress = i.child("libraryAddress").getValue()
                     var lcap = i.child("libraryCapacity").getValue()
-                    sb.append( "${i.key}) Name: $lname \n Address: $laddress \n Capacity: $lcap \n\n")
+                    sb.append("${i.key}) Name: $lname \n Address: $laddress \n Capacity: $lcap \n\n")
                 }
                 binding2.AdminLibList.setText(sb)
             }

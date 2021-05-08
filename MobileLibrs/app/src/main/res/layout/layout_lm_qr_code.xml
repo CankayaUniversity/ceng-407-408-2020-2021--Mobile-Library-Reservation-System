@@ -13,8 +13,7 @@
     <RelativeLayout
         android:layout_width="355dp"
         android:layout_height="318dp"
-        android:layout_marginStart="29dp"
-        >
+        android:layout_marginStart="29dp">
 
         <ImageView
             android:id="@+id/imageView10"
@@ -52,8 +51,6 @@
             android:textColor="@color/mlrs_white_button"
             android:textSize="30sp"
             app:cornerRadius="?android:attr/buttonCornerRadius"></TextView>
-
-
     </RelativeLayout>
 
 

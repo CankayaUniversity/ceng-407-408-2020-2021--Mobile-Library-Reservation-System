@@ -79,7 +79,7 @@ class Activity_Login : AppCompatActivity() {
 
                     if (user.isEmailVerified) {
                         Toast.makeText(this@Activity_Login, "E-mail is confirmed. : " + user.uid, Toast.LENGTH_LONG).show()
-                    }else{
+                    } else {
                         Toast.makeText(this@Activity_Login, "Please confirm your e-mail. : ", Toast.LENGTH_LONG).show()
                         FirebaseAuth.getInstance().signOut()
                     }
@@ -117,7 +117,7 @@ class Activity_Login : AppCompatActivity() {
     }
 
     // The user is directed from the login page to the home(main) page.
-    fun reDirectMainPage(){
+    fun reDirectMainPage() {
         val intent = Intent(this@Activity_Login, Activity_LM_Menu::class.java)
         startActivity(intent)
         finish()
