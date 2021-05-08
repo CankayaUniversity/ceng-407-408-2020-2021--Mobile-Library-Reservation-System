@@ -68,7 +68,7 @@
             app:layout_constraintHorizontal_bias="0.698"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.659"></TextView>
+            app:layout_constraintVertical_bias="0.659"/>
 
         <ImageView
             android:id="@+id/imageView4"
@@ -105,7 +105,7 @@
             app:layout_constraintHorizontal_bias="0.86"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.404" />/>
+            app:layout_constraintVertical_bias="0.404" />
 
         <TextView
             android:id="@+id/textView36"
@@ -254,7 +254,7 @@
             app:layout_constraintHorizontal_bias="0.161"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.693" />/>
+            app:layout_constraintVertical_bias="0.693" />
 
         <EditText
             android:id="@+id/et_time_slot_to"
@@ -268,7 +268,7 @@
             app:layout_constraintHorizontal_bias="0.929"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.69" />/>
+            app:layout_constraintVertical_bias="0.69" />
 
         <Switch
             android:id="@+id/switch_status"
@@ -283,6 +283,4 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.92" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
 </RelativeLayout>

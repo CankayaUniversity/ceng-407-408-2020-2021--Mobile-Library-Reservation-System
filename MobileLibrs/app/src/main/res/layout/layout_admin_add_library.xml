@@ -38,7 +38,6 @@
                 android:layout_marginBottom="25dp"
                 android:text="Library Capacity"
                 android:textAlignment="center"
-
                 android:textColor="@color/Black"
                 android:textSize="24sp"
                 android:textStyle="bold" />
@@ -79,7 +78,6 @@
                 android:layout_marginStart="70dp"
                 android:layout_marginTop="100dp"
                 android:background="@color/mlrs_white_button"
-
                 android:ems="13"
                 android:hint=""
                 android:text="" />
@@ -92,7 +90,6 @@
                 android:layout_marginStart="70dp"
                 android:layout_marginTop="235dp"
                 android:background="@color/mlrs_white_button"
-
                 android:ems="13"
                 android:hint=""
 
@@ -105,10 +102,8 @@
                 android:layout_marginStart="70dp"
                 android:layout_marginTop="370dp"
                 android:background="@color/mlrs_white_button"
-
                 android:ems="13"
                 android:hint=""
-
                 android:text="" />
 
             <Button
@@ -137,15 +132,12 @@
                 android:layout_marginEnd="98dp"
                 android:layout_marginBottom="25dp"
                 android:text="Library Address"
-
                 android:textAlignment="center"
                 android:textColor="@color/Black"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
         </RelativeLayout>
-
-
     </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
