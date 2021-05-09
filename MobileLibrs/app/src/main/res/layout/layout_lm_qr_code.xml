@@ -30,7 +30,7 @@
             android:layout_marginBottom="238dp"
             app:srcCompat="@drawable/read_book"
             tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteY="340dp"></ImageView>
+            tools:layout_editor_absoluteY="340dp"/>
 
         <TextView
             android:layout_width="276dp"
@@ -51,7 +51,7 @@
             android:textAlignment="center"
             android:textColor="@color/mlrs_white_button"
             android:textSize="30sp"
-            app:cornerRadius="?android:attr/buttonCornerRadius"></TextView>
+            app:cornerRadius="?android:attr/buttonCornerRadius"/>
     </RelativeLayout>
 
 

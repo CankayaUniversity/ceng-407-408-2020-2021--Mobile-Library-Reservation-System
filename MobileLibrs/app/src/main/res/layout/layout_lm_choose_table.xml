@@ -57,7 +57,7 @@
             app:layout_constraintHorizontal_bias="0.698"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.659"></TextView>
+            app:layout_constraintVertical_bias="0.659"/>
 
         <ImageView
             android:id="@+id/imageView4"
@@ -89,7 +89,8 @@
             android:layout_height="20dp"
             android:background="#EDDE54"
             tools:layout_editor_absoluteX="224dp"
-            tools:layout_editor_absoluteY="205dp" />
+            tools:layout_editor_absoluteY="205dp"
+            tools:ignore="MissingConstraints" />
 
         <TextView
             android:id="@+id/textView20"
@@ -97,7 +98,8 @@
             android:layout_height="20dp"
             android:background="#EF1A0A"
             tools:layout_editor_absoluteX="106dp"
-            tools:layout_editor_absoluteY="205dp" />
+            tools:layout_editor_absoluteY="205dp"
+            tools:ignore="MissingConstraints" />
 
         <EditText
             android:id="@+id/et_choose_table_to"
@@ -255,7 +257,8 @@
             android:layout_height="20dp"
             android:background="#4CAF50"
             tools:layout_editor_absoluteX="12dp"
-            tools:layout_editor_absoluteY="207dp" />
+            tools:layout_editor_absoluteY="207dp"
+            tools:ignore="MissingConstraints" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
