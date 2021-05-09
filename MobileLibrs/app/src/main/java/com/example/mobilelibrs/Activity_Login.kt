@@ -26,19 +26,54 @@ class Activity_Login : AppCompatActivity() {
         var etPassword = findViewById<EditText>(R.id.etPassword)
         var tvlink_register = findViewById<TextView>(R.id.tvlink_register)
         var tvresend_verification_email = findViewById<TextView>(R.id.tvresend_verification_email)
+        var flag = 0
+
+        if(etEmail.text.toString().equals("mlrs.library2021@gmail.com"))
+        {
+            flag=1
+        }
+        if(etEmail.text.toString().equals("ybeyza.ankara@gmail.com"))
+        {
+            flag=2
+        }
+        if(etEmail.text.toString().equals("yaratici2007@gmail.com"))
+        {
+            flag=3
+        }
 
 
+        // login btn click listener
         btnEmail_sign_in_button.setOnClickListener {
-            if (etEmail.text.isNotEmpty() && etPassword.text.isNotEmpty()) {
 
+            if (etEmail.text.isNotEmpty() && etPassword.text.isNotEmpty()) {
                 showProgressbar()
+
                 FirebaseAuth.getInstance().signInWithEmailAndPassword(etEmail.text.toString(), etPassword.text.toString())
                         .addOnCompleteListener(object : OnCompleteListener<AuthResult> {
                             override fun onComplete(p0: Task<AuthResult>) {
-                                reDirectMainPage()
-                                closeProgressBar()
-                                Toast.makeText(this@Activity_Login, "Login Successful: " + p0.isSuccessful, Toast.LENGTH_SHORT).show()
-                            }
+                                    // if user is admin
+                                    if(flag == 1) {
+                                        reDirect_Admin_MenuPage()
+                                        closeProgressBar()
+                                        Toast.makeText(this@Activity_Login, "Admin Login Successful: " + p0.isSuccessful, Toast.LENGTH_SHORT).show()
+                                    }
+                                    // if user is lib mem
+                                    else if(flag == 2)
+                                    {
+                                        reDirect_LM_MenuPage()
+                                        closeProgressBar()
+                                        Toast.makeText(this@Activity_Login, "Library Member Login Successful: " + p0.isSuccessful, Toast.LENGTH_SHORT).show()
+
+                                    }
+                                    // if user is librarian
+                                    else if(flag == 3)
+                                    {
+                                        reDirect_Librarian_MenuPage()
+                                        closeProgressBar()
+                                        Toast.makeText(this@Activity_Login, "Librarian Login Successful: " + p0.isSuccessful, Toast.LENGTH_SHORT).show()
+
+                                    }
+                                }
 
                         })
                         .addOnFailureListener(object : OnFailureListener {
@@ -116,9 +151,23 @@ class Activity_Login : AppCompatActivity() {
         progressBar.visibility = View.INVISIBLE
     }
 
-    // The user is directed from the login page to the home(main) page.
-    fun reDirectMainPage() {
+    // The user is directed from the login page to the home(main) library member page.
+    fun reDirect_LM_MenuPage() {
         val intent = Intent(this@Activity_Login, Activity_LM_Menu::class.java)
+        startActivity(intent)
+        finish()
+    }
+
+    // The user is directed from the login page to the home(main) admin page.
+    fun reDirect_Admin_MenuPage() {
+        val intent = Intent(this@Activity_Login, Activity_Admin_Menu::class.java)
+        startActivity(intent)
+        finish()
+    }
+
+    // The user is directed from the login page to the home(main) librarian page.
+    fun reDirect_Librarian_MenuPage() {
+        val intent = Intent(this@Activity_Login, Activity_Librarian_Menu::class.java)
         startActivity(intent)
         finish()
     }

@@ -20,10 +20,10 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="62dp"
+        android:layout_marginStart="88dp"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="93dp"
-        android:layout_marginBottom="70dp"
+        android:layout_marginEnd="67dp"
+        android:layout_marginBottom="67dp"
         android:backgroundTint="@color/mlrs_white_button"
         android:text="@string/make_reservation"
         android:textColor="@color/Black"
@@ -262,6 +262,34 @@
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="293dp"
+        android:layout_marginTop="763dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="20dp"
+        android:text="Next" />
+
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="765dp"
+        android:layout_marginEnd="291dp"
+        android:layout_marginBottom="18dp"
+        android:text="Back" />
 
 
 </RelativeLayout>

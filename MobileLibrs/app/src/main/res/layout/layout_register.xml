@@ -18,10 +18,10 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="279dp"
+        android:layout_marginStart="269dp"
         android:layout_marginTop="124dp"
-        android:layout_marginEnd="41dp"
-        android:layout_marginBottom="91dp"
+        android:layout_marginEnd="51dp"
+        android:layout_marginBottom="192dp"
         android:background="@color/mlrs_blue"
         android:radius="11dp"
         android:text="SIGN IN"
@@ -135,6 +135,31 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="120dp"
         android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/button_lm_back"
+        android:layout_width="115dp"
+        android:layout_height="51dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="736dp"
+        android:layout_marginEnd="265dp"
+        android:layout_marginBottom="37dp"
+        android:background="@color/mlrs_white_button"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:text="Back"
+        android:textColor="@color/mlrs_white_button"
+        android:textColorHighlight="@color/mlrs_white_button"
+        android:textColorHint="@color/blue1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.164"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976" />
 
 
 </RelativeLayout>
