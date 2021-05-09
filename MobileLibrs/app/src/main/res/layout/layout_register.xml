@@ -18,10 +18,10 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="269dp"
+        android:layout_marginStart="276dp"
         android:layout_marginTop="124dp"
-        android:layout_marginEnd="51dp"
-        android:layout_marginBottom="192dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="161dp"
         android:background="@color/mlrs_blue"
         android:radius="11dp"
         android:text="SIGN IN"
@@ -121,9 +121,9 @@
         android:layout_alignBottom="@+id/btn_register"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="61dp"
-        android:layout_marginEnd="72dp"
-        android:layout_marginBottom="-83dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginEnd="95dp"
+        android:layout_marginBottom="-103dp"
         android:fontFamily="sans-serif-black"
         android:text="Already have an account?"
         android:textSize="18sp" />
@@ -136,6 +136,6 @@
         android:layout_marginTop="120dp"
         android:visibility="invisible" />
 
-   
+
 
 </RelativeLayout>
