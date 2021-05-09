@@ -1,6 +1,8 @@
 package com.example.mobilelibrs
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.mobilelibrs.databinding.LayoutAdminAddLibraryBinding
@@ -38,5 +40,21 @@ class Activity_Admin_Add_Library : AppCompatActivity() {
             Toast.makeText(this, "Library succefully added..", Toast.LENGTH_LONG).show()
         }
 
+
+
+        binding.buttonAdBack.setOnClickListener {
+            reDirectBackAdminMenuPage()
+        }
+
+
     }
+
+    fun reDirectBackAdminMenuPage() {
+        val intent = Intent(this, Activity_Admin_Menu::class.java)
+        startActivity(intent)
+        finish()
+
+    }
+
+
 }

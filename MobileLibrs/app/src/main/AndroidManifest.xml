@@ -11,7 +11,7 @@
         android:theme="@style/Theme.MobileLibrs">
 
         <!--First Page-->
-        <activity android:name=".Activity_First_Page">
+        <activity android:name=".Activity_Admin_Menu">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,23 +19,23 @@
             </intent-filter>
         </activity>
 
-        <!--LM Pages-->
+        <!--LM Pages
         <activity android:name=".Activity_LM_Menu"> </activity>
         <activity android:name=".Activity_LM_List_Libraries"> </activity>
         <activity android:name=".Activity_LM_Seelect_Date_and_Time_Slot"> </activity>
         <activity android:name=".Activity_LM_Choose_Table"> </activity>
         <activity android:name=".Activity_LM_QR"> </activity>
-        <activity android:name=".Activity_LM_List_Reservations"> </activity>
+        <activity android:name=".Activity_LM_List_Reservations"> </activity> -->
 
         <!--Admin Pages-->
-        <activity android:name=".Activity_Admin_Menu"> </activity>
+        <!-- <activity android:name=".Activity_Admin_Menu"> </activity> -->
         <activity android:name=".Activity_Admin_List_Libraries"> </activity>
         <activity android:name=".Activity_Admin_Add_Library"> </activity>
-        <activity android:name=".Activity_Admin_Change_Library_Status"> </activity>
+        <activity android:name=".Activity_Admin_Change_Library_Status"> </activity> -->
 
-        <!--Librarian Pages-->
+        <!--Librarian Pages
         <activity android:name=".Activity_Librarian_Menu"> </activity>
-        <activity android:name=".Activity_Librarian_List_Reservations"> </activity>
+        <activity android:name=".Activity_Librarian_List_Reservations"> </activity> -->
 
     </application>
 

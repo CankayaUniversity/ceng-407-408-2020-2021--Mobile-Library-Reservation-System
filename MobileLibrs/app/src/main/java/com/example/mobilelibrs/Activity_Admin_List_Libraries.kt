@@ -1,5 +1,6 @@
 package com.example.mobilelibrs
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.mobilelibrs.databinding.LayoutAdminListLibrariesBinding
@@ -35,6 +36,7 @@ class Activity_Admin_List_Libraries : AppCompatActivity() {
                     sb.append("${i.key}) Name: $lname \n Address: $laddress \n Capacity: $lcap \n\n")
                 }
                 binding2.AdminLibList.setText(sb)
+
             }
 
             override fun onCancelled(error: DatabaseError) {
@@ -43,5 +45,17 @@ class Activity_Admin_List_Libraries : AppCompatActivity() {
         }
         database.addValueEventListener(getData)
         database.addListenerForSingleValueEvent(getData)
+
+        binding2.buttonLmBack.setOnClickListener {
+            reDirectBackAdminMenuPage()
+        }
+
+
+    }
+
+    fun reDirectBackAdminMenuPage() {
+        val intent = Intent(this, Activity_Admin_Menu::class.java)
+        startActivity(intent)
+        finish()
     }
 }
