@@ -27,6 +27,7 @@
         android:layout_height="41dp"
         android:text="LIBRARY LIST"
         android:textAlignment="center"
+        android:textColor="@color/common_google_signin_btn_text_dark_default"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/AdminLibList"
         app:layout_constraintEnd_toEndOf="parent"
