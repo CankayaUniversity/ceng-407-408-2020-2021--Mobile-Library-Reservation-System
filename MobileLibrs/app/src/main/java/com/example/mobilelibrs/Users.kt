@@ -2,19 +2,16 @@ package com.example.mobilelibrs
 
 class Users {
 
-    var userid: Int = 1
-    var userName: String = ""
-    var userEmail: String = ""
+    var userId : String? = null
+    var userPassword: String? = null
+    var userEmail: String? = null
 
-    constructor(userid: Int, userName: String, userEmail: String) {
-        this.userid = userid
-        this.userName = userName
+    constructor(userId: String, userPassword: String, userEmail: String) {
+        this.userId = userId
+        this.userPassword = userPassword
         this.userEmail = userEmail
     }
 
-    constructor()
-    {
-
-    }
+    constructor() {}
 
 }
