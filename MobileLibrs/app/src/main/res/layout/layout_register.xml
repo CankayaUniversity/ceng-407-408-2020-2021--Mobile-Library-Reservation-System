@@ -11,24 +11,6 @@
     tools:context=".Activity_Register">
 
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_register2"
-        android:layout_width="91dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="276dp"
-        android:layout_marginTop="124dp"
-        android:layout_marginEnd="44dp"
-        android:layout_marginBottom="161dp"
-        android:background="@color/mlrs_blue"
-        android:radius="11dp"
-        android:text="SIGN IN"
-        android:textColor="@color/mlrs_white_button"
-        android:textColorHint="#2D9CDB"
-        android:textSize="16sp"
-        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/et_input_email"
@@ -116,14 +98,14 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="278dp"
-        android:layout_height="32dp"
-        android:layout_alignBottom="@+id/btn_register"
+        android:layout_width="226dp"
+        android:layout_height="38dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="38dp"
-        android:layout_marginEnd="95dp"
-        android:layout_marginBottom="-103dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="150dp"
+        android:layout_marginBottom="165dp"
         android:fontFamily="sans-serif-black"
         android:text="Already have an account?"
         android:textSize="18sp" />
@@ -136,6 +118,19 @@
         android:layout_marginTop="120dp"
         android:visibility="invisible" />
 
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="54dp"
+        android:layout_marginBottom="166dp"
+        android:backgroundTint="@color/mlrs_white_button"
+        android:text="SIGN IN"
+        android:textColor="#2D9CDB"
+        android:textColorHint="#2D9CDB"
+        android:textSize="15dp" />
 
 
 </RelativeLayout>
