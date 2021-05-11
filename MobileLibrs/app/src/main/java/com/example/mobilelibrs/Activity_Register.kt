@@ -6,8 +6,7 @@ import android.content.Intent
 import android.view.View
 import android.widget.*
 import com.google.firebase.auth.FirebaseAuth
-import com.google.android.gms.tasks.OnCompleteListener
-import com.google.android.gms.tasks.Task
+import com.google.firebase.database.FirebaseDatabase
 
 class Activity_Register : AppCompatActivity() {
 
@@ -16,14 +15,19 @@ class Activity_Register : AppCompatActivity() {
         setContentView(R.layout.layout_register)
 
 
-        //  In order to use the assets on the design page, variables such as button, edit text have been created.
+        // In order to use the assets on the design page, variables such as button, edit text have been created.
         val btn_register = findViewById<Button>(R.id.btn_register)
+<<<<<<< Updated upstream
         val btn_back = findViewById<Button>(R.id.btn_back)
         val btn_sign_in = findViewById<Button>(R.id.btn_sign_in)
+=======
+        val btn_sign_in = findViewById<Button>(R.id.btn_register2)
+>>>>>>> Stashed changes
         val et_input_password = findViewById<EditText>(R.id.et_input_password)
         val et_input_email = findViewById<EditText>(R.id.et_input_email)
         val et_input_confirm_password = findViewById<EditText>(R.id.et_input_confirm_password)
 
+<<<<<<< Updated upstream
          btn_sign_in.setOnClickListener {
              reLoginPage()
          }
@@ -31,20 +35,28 @@ class Activity_Register : AppCompatActivity() {
         btn_back.setOnClickListener {
             reLoginPage()
         }
+=======
+
+        // Redirect to Login Page
+        btn_sign_in.setOnClickListener {
+            reLoginPage()
+        }
+
+>>>>>>> Stashed changes
 
         // If the user presses the button, it is checked that all fields are correctly filled.
         btn_register.setOnClickListener {
 
-
             // The correctness of the fields filled is checked. For example, the correctness of the password entered for the second time.
             if (et_input_email.text.isNotEmpty() && et_input_password.text.isNotEmpty() && et_input_confirm_password.text.isNotEmpty()) {
 
+                //Check whether password match or not.
                 if (et_input_password.text.toString()
                         .equals(et_input_confirm_password.text.toString())
                 ) {
 
                     //Toast.makeText(this,"Sorun yok ekleme yapılabilir",Toast.LENGTH_LONG).show()
-                    registerNewEmail(
+                    registerNewUser(
                         et_input_email.text.toString(),
                         et_input_password.text.toString()
                     )
@@ -54,39 +66,50 @@ class Activity_Register : AppCompatActivity() {
                 }
 
             }
-            // if all fields are not filled..
+            // if all fields are not filled.
             else {
                 Toast.makeText(this, "Please fill in the blank fields.", Toast.LENGTH_LONG).show()
             }
         }
     }
 
-    // Check Firebase Registration
-    fun registerNewEmail(email: String, password: String) {
+    // Firebase Registration
+    fun registerNewUser(email: String, password: String) {
+
         showProgressbar()
 
         FirebaseAuth.getInstance().createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener { v ->
-                Toast.makeText(this, "Successful :" + v.isSuccessful, Toast.LENGTH_SHORT).show()
+
 
                 if (v.isSuccessful) {
-                    Toast.makeText(
-                        this,
-                        "Session  :" + FirebaseAuth.getInstance().currentUser?.uid,
-                        Toast.LENGTH_LONG
-                    ).show()
-//                    sendVerificationEmail()
+                    Toast.makeText(this, "Session  :" + FirebaseAuth.getInstance().currentUser?.uid, Toast.LENGTH_LONG).show()
+                   //sendVerificationEmail()
 
-                    FirebaseAuth.getInstance().signOut()
-                    reDirectLoginPage()
+                    // Add these records to database
+                    var newUser = User()
+                    newUser.userId=FirebaseAuth.getInstance().currentUser?.uid
+                    newUser.userEmail= email
+                    newUser.userPassword=password
+                    newUser.userStatus="1"
+                    newUser.userPunishmentScore="0"
 
+                    FirebaseDatabase.getInstance().reference
+                        .child("user")
+                        .child(FirebaseAuth.getInstance().currentUser.uid)
+                        .setValue(newUser).addOnCompleteListener{  task->
+                            if(task.isSuccessful){
+                                Toast.makeText(this, "Successful :" + v.isSuccessful, Toast.LENGTH_SHORT).show()
+                                FirebaseAuth.getInstance().signOut()
+                                reLoginPage()
+                            }
+                        }
+
+                    //FirebaseAuth.getInstance().signOut()
+                    //reDirectLoginPage()
 
                 } else {
-                    Toast.makeText(
-                        this,
-                        "Error! Could not add. :" + v.exception?.message,
-                        Toast.LENGTH_SHORT
-                    ).show()
+                    Toast.makeText(this,"Error! Could not add. :" + v.exception?.message, Toast.LENGTH_SHORT).show()
                 }
             }
         closeProgressBar()
