@@ -25,13 +25,13 @@ class Activity_First_Page : AppCompatActivity() {
     }
 
     fun reDirectSignUpPage() {
-        val intent = Intent(this, Activity_Register::class.java)
+        val intent = Intent(this@Activity_First_Page, Activity_Register::class.java)
         startActivity(intent)
         finish()
     }
 
     fun reDirectLoginPage() {
-        val intent = Intent(this, Activity_Login::class.java)
+        val intent = Intent(this@Activity_First_Page, Activity_Login::class.java)
         startActivity(intent)
         finish()
     }

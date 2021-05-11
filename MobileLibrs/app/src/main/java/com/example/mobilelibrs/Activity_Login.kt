@@ -24,11 +24,14 @@ class Activity_Login : AppCompatActivity() {
         var btnEmail_sign_in_button = findViewById<Button>(R.id.btn_add_library)
         var etEmail = findViewById<EditText>(R.id.etEmail)
         var etPassword = findViewById<EditText>(R.id.etPassword)
-        var tvlink_register = findViewById<TextView>(R.id.tvlink_register)
+        var btnEmail_sign_up_button = findViewById<TextView>(R.id.btn_sign_up)
         var tvresend_verification_email = findViewById<TextView>(R.id.tvresend_verification_email)
         var flag = 0
 
 
+        btnEmail_sign_up_button.setOnClickListener {
+            reDirectSignUpPage()
+        }
 
         // login btn click listener
         btnEmail_sign_in_button.setOnClickListener {
@@ -155,10 +158,6 @@ class Activity_Login : AppCompatActivity() {
 
         }
 */
-        tvlink_register.setOnClickListener {
-            var intent = Intent(this, Activity_Register::class.java)
-            startActivity(intent)
-        }
 
         tvresend_verification_email.setOnClickListener {
             val dialog = Activity_Resend_Verification()
@@ -182,8 +181,6 @@ class Activity_Login : AppCompatActivity() {
                         Toast.makeText(this@Activity_Login, "Please confirm your e-mail. : ", Toast.LENGTH_LONG).show()
                         FirebaseAuth.getInstance().signOut()
                     }
-
-
                 } else {
                     Toast.makeText(this@Activity_Login, "EXIT WAS DONE. : ", Toast.LENGTH_LONG).show()
                 }
@@ -214,6 +211,13 @@ class Activity_Login : AppCompatActivity() {
         var progressBar = findViewById<ProgressBar>(R.id.progressBar)
         progressBar.visibility = View.INVISIBLE
     }
+
+    fun reDirectSignUpPage() {
+        var intent = Intent(this@Activity_Login, Activity_Register::class.java)
+        startActivity(intent)
+        finish()
+    }
+
 
     // The user is directed from the login page to the home(main) library member page.
     fun reDirect_LM_MenuPage() {
