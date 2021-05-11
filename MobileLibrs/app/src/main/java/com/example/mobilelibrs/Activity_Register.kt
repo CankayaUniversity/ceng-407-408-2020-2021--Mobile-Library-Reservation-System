@@ -70,9 +70,7 @@ class Activity_Register : AppCompatActivity() {
                         "Session  :" + FirebaseAuth.getInstance().currentUser?.uid,
                         Toast.LENGTH_LONG
                     ).show()
-                    sendVerificationEmail()
-                    //BURASIIIII
-
+//                    sendVerificationEmail()
 
                     FirebaseAuth.getInstance().signOut()
                     reDirectLoginPage()
@@ -90,7 +88,7 @@ class Activity_Register : AppCompatActivity() {
     }
 
     // Send Verification Mail of Added Account.
-    fun sendVerificationEmail() {
+/*    fun sendVerificationEmail() {
 
         var user = FirebaseAuth.getInstance().currentUser
         if (user != null) {
@@ -113,10 +111,8 @@ class Activity_Register : AppCompatActivity() {
 
             })
         }
-
-
     }
-
+*/
     public fun showProgressbar() {
         val progressBar = findViewById<ProgressBar>(R.id.progressBar)
         progressBar.visibility = View.VISIBLE
