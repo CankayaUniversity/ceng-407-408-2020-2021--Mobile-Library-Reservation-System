@@ -12,4 +12,9 @@ class Users {
         this.userEmail = userEmail
     }
 
+    constructor()
+    {
+
+    }
+
 }

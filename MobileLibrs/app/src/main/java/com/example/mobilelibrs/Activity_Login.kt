@@ -34,13 +34,13 @@ class Activity_Login : AppCompatActivity() {
         btnEmail_sign_in_button.setOnClickListener {
 
             // this email for login admin menu page
-            if(etEmail.text.toString().equals("mlrs.library2021@gmail.com"))
+            if(etEmail.text.toString().equals("a@gmail.com"))
                 flag=1
             // this email for login lm menu page
-            if(etEmail.text.toString().equals("ybeyza.ankara@gmail.com"))
+            if(etEmail.text.toString().equals("lm@gmail.com"))
                 flag=2
             // this email for librarian admin menu page
-            if(etEmail.text.toString().equals("yaratici2007@gmail.com"))
+            if(etEmail.text.toString().equals("lb@gmail.com"))
                 flag=3
             if (etEmail.text.isNotEmpty() && etPassword.text.isNotEmpty()) {
                 showProgressbar()
