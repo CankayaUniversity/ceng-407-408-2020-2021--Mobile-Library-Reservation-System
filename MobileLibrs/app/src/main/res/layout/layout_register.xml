@@ -96,14 +96,16 @@
         android:layout_marginEnd="0dp"
         app:srcCompat="@drawable/register_logo_mlrs" />
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/textView2"
         android:layout_width="226dp"
         android:layout_height="38dp"
         android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="35dp"
+        android:layout_marginTop="620dp"
         android:layout_marginEnd="150dp"
         android:layout_marginBottom="165dp"
         android:fontFamily="sans-serif-black"
@@ -118,19 +120,35 @@
         android:layout_marginTop="120dp"
         android:visibility="invisible" />
 
-    <Button
-        android:id="@+id/button"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_sign_in"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="54dp"
-        android:layout_marginBottom="166dp"
+        android:layout_marginStart="270dp"
+        android:layout_marginTop="607dp"
+        android:layout_marginEnd="46dp"
+        android:layout_marginBottom="168dp"
         android:backgroundTint="@color/mlrs_white_button"
         android:text="SIGN IN"
         android:textColor="#2D9CDB"
         android:textColorHint="#2D9CDB"
         android:textSize="15dp" />
+
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="280dp"
+        android:layout_marginBottom="21dp"
+        android:text="Back" />
 
 
 </RelativeLayout>
