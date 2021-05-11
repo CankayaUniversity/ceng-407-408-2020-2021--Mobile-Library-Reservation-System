@@ -17,32 +17,13 @@ class Activity_Register : AppCompatActivity() {
 
         // In order to use the assets on the design page, variables such as button, edit text have been created.
         val btn_register = findViewById<Button>(R.id.btn_register)
-<<<<<<< Updated upstream
         val btn_back = findViewById<Button>(R.id.btn_back)
         val btn_sign_in = findViewById<Button>(R.id.btn_sign_in)
-=======
-        val btn_sign_in = findViewById<Button>(R.id.btn_register2)
->>>>>>> Stashed changes
         val et_input_password = findViewById<EditText>(R.id.et_input_password)
         val et_input_email = findViewById<EditText>(R.id.et_input_email)
         val et_input_confirm_password = findViewById<EditText>(R.id.et_input_confirm_password)
 
-<<<<<<< Updated upstream
-         btn_sign_in.setOnClickListener {
-             reLoginPage()
-         }
 
-        btn_back.setOnClickListener {
-            reLoginPage()
-        }
-=======
-
-        // Redirect to Login Page
-        btn_sign_in.setOnClickListener {
-            reLoginPage()
-        }
-
->>>>>>> Stashed changes
 
         // If the user presses the button, it is checked that all fields are correctly filled.
         btn_register.setOnClickListener {
@@ -163,4 +144,5 @@ class Activity_Register : AppCompatActivity() {
         startActivity(intent)
         finish()
     }
+
 }

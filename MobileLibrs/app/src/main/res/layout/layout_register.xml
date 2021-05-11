@@ -10,9 +10,6 @@
     android:textAlignment="inherit"
     tools:context=".Activity_Register">
 
-
-<<<<<<< Updated upstream
-=======
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_register2"
         android:layout_width="91dp"
@@ -31,7 +28,7 @@
         android:textColorHint="#2D9CDB"
         android:textSize="16sp"
         android:textStyle="bold" />
->>>>>>> Stashed changes
+
 
     <EditText
         android:id="@+id/et_input_email"
