@@ -12,9 +12,13 @@ class Activity_Librarian_Menu : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.layout_librarian_menu)
 
+        val btn_exit_menu = findViewById<Button>(R.id.btn_menu_exit)
         val btn_listReservation = findViewById<Button>(R.id.btn_librarian_menu_list_reservations)
 //              val btn_editProfile = findViewById<Button>(R.id.btn_librariam_menu_edit_profile)
 
+        btn_exit_menu.setOnClickListener {
+            reDirectLoginPage()
+        }
         // click make reservation button, go to make reservation page
         btn_listReservation.setOnClickListener {
             reDirectListReservationPage()
@@ -29,6 +33,12 @@ class Activity_Librarian_Menu : AppCompatActivity() {
 
     fun reDirectListReservationPage() {
         val intent = Intent(this, Activity_Librarian_List_Reservations::class.java)
+        startActivity(intent)
+        finish()
+    }
+
+    fun reDirectLoginPage() {
+        val intent = Intent(this, Activity_Login::class.java)
         startActivity(intent)
         finish()
     }
