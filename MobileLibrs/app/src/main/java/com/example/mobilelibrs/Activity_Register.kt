@@ -62,18 +62,24 @@ class Activity_Register : AppCompatActivity() {
         FirebaseAuth.getInstance().createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener { v ->
 
-
                 if (v.isSuccessful) {
                     Toast.makeText(this, "Session  :" + FirebaseAuth.getInstance().currentUser?.uid, Toast.LENGTH_LONG).show()
                    //sendVerificationEmail()
 
                     // Add these records to database
                     var newUser = User()
-                    newUser.userId=FirebaseAuth.getInstance().currentUser?.uid
-                    newUser.userEmail= email
-                    newUser.userPassword=password
-                    newUser.userStatus="1"
-                    newUser.userPunishmentScore="0"
+                    newUser.userId = FirebaseAuth.getInstance().currentUser?.uid
+                    newUser.userEmail = email
+                    // UserType
+                    if(email.equals("a@gmail.com"))
+                        newUser.userStatus = "Admin"
+                    else if(email.toString().equals("lb@gmail.com"))
+                        newUser.userStatus = "Librarian"
+                    else {
+                        newUser.userStatus = "Library Member"
+                        newUser.userPunishmentScore = "0"
+                    }
+                    newUser.userPassword = password
 
                     FirebaseDatabase.getInstance().reference
                         .child("user")
