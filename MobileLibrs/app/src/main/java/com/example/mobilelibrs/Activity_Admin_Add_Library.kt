@@ -16,8 +16,9 @@ import java.lang.StringBuilder
 
 class Activity_Admin_Add_Library : AppCompatActivity() {
 
-    var libraryNum = 0;
+
     lateinit var binding: LayoutAdminAddLibraryBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // setContentView(R.layout.activity_main)
@@ -33,10 +34,10 @@ class Activity_Admin_Add_Library : AppCompatActivity() {
             var libName = binding.txtLibraryName.text.toString()
             var libAddres = binding.txtLibraryAddres.text.toString()
             var libCapacity = binding.txtLibraryCapacity.text.toString().toInt()
-            libraryNum++
+
             // Write a message to the database
             //database.setValue(Library(libNamee, libAddress, libCapacities) )
-            database.child(libraryNum.toString()).setValue(Library(libName, libAddres, libCapacity))
+            database.child("library").push().setValue(Library(libName, libAddres, libCapacity))
             Toast.makeText(this, "Library succefully added..", Toast.LENGTH_LONG).show()
         }
 
