@@ -29,6 +29,7 @@
         <activity android:name=".Activity_Register"> </activity>
 
         <!--LM Pages -->
+        <activity android:name=".Activity_LM_Make_Reservation"> </activity>
         <activity android:name=".Activity_LM_List_Libraries"> </activity>
         <activity android:name=".Activity_LM_Seelect_Date_and_Time_Slot"> </activity>
         <activity android:name=".Activity_LM_Choose_Table"> </activity>

@@ -18,22 +18,26 @@ import com.example.mobilelibrs.databinding.LayoutLmListLibrariesBinding
 
 class Activity_LM_List_Libraries : AppCompatActivity() {
 
-    lateinit var binding : LayoutLmListLibrariesBinding
-    //var arrayLibList = ArrayList<String>()
-
-    val binding3 = LayoutLmListLibrariesBinding.inflate(layoutInflater)
-
+    lateinit var binding1: LayoutLmListLibrariesBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        // click make reservation button, view list libraries.
-        setContentView(R.layout.layout_lm_list_libraries)
-        setContentView(binding.root)
 
-        binding3.btnBack.setOnClickListener {
-            val intent = Intent(this, Activity_LM_Menu::class.java)
-            startActivity(intent)
-            finish()
+        val binding1 = LayoutLmListLibrariesBinding.inflate(layoutInflater)
+        // click make reservation button, view list libraries.
+        setContentView(binding1.root)
+
+
+        binding1.btnContinueLmselecttlib.setOnClickListener(){
+
+            reDirect_LM_Select_Date_Time_Slot()
+
         }
+    }
+
+    fun reDirect_LM_Select_Date_Time_Slot() {
+        val intent = Intent(this, Activity_LM_Seelect_Date_and_Time_Slot::class.java)
+        startActivity(intent)
+        finish()
     }
 
 }
