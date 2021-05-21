@@ -184,16 +184,18 @@
 
         <Button
             android:id="@+id/button_ad_back"
-            android:layout_width="wrap_content"
-            android:layout_height="46dp"
+            android:layout_width="107dp"
+            android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
             android:layout_marginStart="35dp"
-            android:layout_marginEnd="283dp"
+            android:layout_marginEnd="269dp"
             android:layout_marginBottom="31dp"
             android:background="@color/mlrs_white_button"
-            android:text="Back" />
+            android:text="Back"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
 
     </RelativeLayout>
