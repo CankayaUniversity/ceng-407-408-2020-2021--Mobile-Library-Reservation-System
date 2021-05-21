@@ -23,27 +23,22 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="-3dp"
+            android:layout_marginStart="-16dp"
             android:layout_marginTop="25dp"
-            android:layout_marginEnd="262dp"
-            android:layout_marginBottom="238dp"
+            android:layout_marginEnd="275dp"
             android:contentDescription="@string/todo"
             app:srcCompat="@drawable/read_book"
             tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteY="340dp"/>
+            tools:layout_editor_absoluteY="340dp" />
 
         <TextView
-            android:layout_width="276dp"
+            android:layout_width="298dp"
             android:layout_height="55dp"
-            android:layout_alignParentStart="true"
+
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="71dp"
             android:layout_marginTop="25dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="238dp"
+            android:layout_marginEnd="-3dp"
             android:background="@color/mlrs_lightBlue"
             android:fontFamily="sans-serif-condensed"
             android:lineSpacingExtra="0sp"
@@ -52,7 +47,8 @@
             android:textAlignment="center"
             android:textColor="@color/mlrs_white_button"
             android:textSize="30sp"
-            app:cornerRadius="?android:attr/buttonCornerRadius"/>
+            android:textStyle="bold"
+            app:cornerRadius="?android:attr/buttonCornerRadius" />
 
 
     </RelativeLayout>
@@ -68,6 +64,7 @@
         android:layout_marginStart="0dp"
         android:layout_marginTop="104dp"
         android:layout_marginEnd="0dp"
+
         android:layout_marginBottom="-10dp"
         android:orientation="vertical">
 
@@ -79,10 +76,10 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="97dp"
+            android:layout_marginStart="22dp"
             android:layout_marginTop="20dp"
-            android:layout_marginEnd="103dp"
-            android:layout_marginBottom="121dp"
+            android:layout_marginEnd="22dp"
+            android:layout_marginBottom="253dp"
             android:backgroundTint="@color/mlrs_white_button"
             android:text="@string/search_table"
             android:textColor="@color/Black"
@@ -91,26 +88,26 @@
 
         <RelativeLayout
             android:layout_width="362dp"
-            android:layout_height="430dp"
+            android:layout_height="410dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="25dp"
+            android:layout_marginStart="22dp"
             android:layout_marginTop="3dp"
-            android:layout_marginEnd="25dp"
-            android:layout_marginBottom="220dp"
+            android:layout_marginEnd="22dp"
+            android:layout_marginBottom="305dp"
             android:background="@drawable/sekil"
             android:orientation="vertical">
 
 
             <EditText
                 android:id="@+id/et_time_to"
-                android:layout_width="131dp"
-                android:layout_height="39dp"
+                android:layout_width="135dp"
+                android:layout_height="36dp"
+                android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginEnd="35dp"
-                android:layout_marginBottom="82dp"
+                android:layout_marginTop="310dp"
+                android:layout_marginEnd="40dp"
                 android:autofillHints=""
                 android:background="#C2C2C2"
                 android:ems="10"
@@ -122,8 +119,8 @@
                 android:layout_height="34dp"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginEnd="138dp"
-                android:layout_marginBottom="114dp"
+                android:layout_marginEnd="155dp"
+                android:layout_marginBottom="120dp"
                 android:fontFamily="sans-serif-black"
                 android:text="@string/to"
                 android:textColor="#040303"
@@ -240,10 +237,10 @@
                 android:id="@+id/et_time_from"
                 android:layout_width="135dp"
                 android:layout_height="36dp"
+                android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
+                android:layout_marginTop="310dp"
                 android:layout_marginEnd="191dp"
-                android:layout_marginBottom="79dp"
                 android:autofillHints=""
                 android:background="#C2C2C2"
                 android:ems="10"
@@ -267,10 +264,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
             android:layout_marginStart="24dp"
-            android:layout_marginEnd="299dp"
             android:layout_marginBottom="31dp"
             android:background="@color/mlrs_white_button"
             android:backgroundTint="@color/colorPrimaryDark"
@@ -279,12 +274,164 @@
             android:textColorHighlight="@color/mlrs_white_button"
             android:textColorHint="@color/blue1"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.164"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.976" />
+            app:layout_constraintEnd_toEndOf="parent" />
 
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="127dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="22dp"
+            android:layout_marginEnd="22dp"
+            android:background="@drawable/sekil"
+            android:layout_marginBottom="128dp">
+
+            <Button
+                android:id="@+id/T0"
+                android:layout_width="55dp"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="13dp"
+                android:layout_marginBottom="60dp"
+                android:text="T0"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/t6"
+                android:layout_width="55dp"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="13dp"
+                android:layout_marginBottom="5dp"
+                android:text="T5"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/t7"
+                android:layout_width="55dp"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="83dp"
+                android:layout_marginBottom="5dp"
+                android:text="T6"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/t8"
+                android:layout_width="55dp"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="158dp"
+                android:layout_marginBottom="5dp"
+                android:text="T7"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/t9"
+                android:layout_width="55dp"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="232dp"
+                android:layout_marginBottom="5dp"
+                android:text="T8"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/t0"
+                android:layout_width="55dp"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="300dp"
+                android:layout_marginBottom="5dp"
+                android:text="T9"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/t2"
+                android:layout_width="55dp"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="81dp"
+                android:layout_marginBottom="60dp"
+                android:text="T1"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/t3"
+                android:layout_width="55dp"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="158dp"
+                android:layout_marginBottom="60dp"
+                android:text="T2"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/t4"
+                android:layout_width="55dp"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="231dp"
+                android:layout_marginBottom="60dp"
+                android:text="T3"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/t5"
+                android:layout_width="55dp"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="299dp"
+                android:layout_marginBottom="60dp"
+                android:text="T4"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="31dp"
+            android:background="@color/mlrs_white_button"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:text="Next"
+            android:textColor="@color/mlrs_white_button"
+            android:textColorHighlight="@color/mlrs_white_button"
+            android:textColorHint="@color/blue1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:id="@+id/btn_next2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="31dp"
+            android:background="@color/mlrs_white_button"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:text="Next"
+            android:textColor="@color/mlrs_white_button"
+            android:textColorHighlight="@color/mlrs_white_button"
+            android:textColorHint="@color/blue1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
     </RelativeLayout>
 
