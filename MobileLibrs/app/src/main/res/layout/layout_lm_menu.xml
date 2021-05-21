@@ -24,7 +24,7 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="-3dp"
+            android:layout_marginStart="-35dp"
             android:layout_marginTop="25dp"
             android:layout_marginEnd="262dp"
             android:layout_marginBottom="238dp"
@@ -33,15 +33,15 @@
             tools:layout_editor_absoluteY="340dp"/>
 
         <TextView
-            android:layout_width="276dp"
+            android:layout_width="296dp"
             android:layout_height="55dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="71dp"
+            android:layout_marginStart="55dp"
             android:layout_marginTop="25dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginEnd="0dp"
             android:layout_marginBottom="238dp"
             android:background="@color/mlrs_lightBlue"
             android:fontFamily="sans-serif-condensed-medium"
