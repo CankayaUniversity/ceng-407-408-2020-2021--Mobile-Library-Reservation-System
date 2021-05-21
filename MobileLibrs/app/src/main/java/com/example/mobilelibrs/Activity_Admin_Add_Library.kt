@@ -16,7 +16,6 @@ import java.lang.StringBuilder
 
 class Activity_Admin_Add_Library : AppCompatActivity() {
 
-
     lateinit var binding: LayoutAdminAddLibraryBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -40,8 +39,6 @@ class Activity_Admin_Add_Library : AppCompatActivity() {
             database.child("library").push().setValue(Library(libName, libAddres, libCapacity))
             Toast.makeText(this, "Library succefully added..", Toast.LENGTH_LONG).show()
         }
-
-
 
         binding.buttonAdBack.setOnClickListener {
             reDirectBackAdminMenuPage()
