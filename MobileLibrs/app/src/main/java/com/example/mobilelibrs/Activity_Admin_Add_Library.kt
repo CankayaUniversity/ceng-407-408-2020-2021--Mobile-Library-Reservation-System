@@ -21,7 +21,6 @@ class Activity_Admin_Add_Library : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // setContentView(R.layout.activity_main)
-
         val binding = LayoutAdminAddLibraryBinding.inflate(layoutInflater)
 
         var database = FirebaseDatabase.getInstance().reference
@@ -43,8 +42,6 @@ class Activity_Admin_Add_Library : AppCompatActivity() {
         binding.buttonAdBack.setOnClickListener {
             reDirectBackAdminMenuPage()
         }
-
-
     }
 
     fun reDirectBackAdminMenuPage() {
