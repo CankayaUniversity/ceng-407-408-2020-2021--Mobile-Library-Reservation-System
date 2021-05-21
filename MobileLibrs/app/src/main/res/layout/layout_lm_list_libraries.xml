@@ -22,7 +22,7 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="3dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="286dp"
             android:layout_marginBottom="46dp"
@@ -32,11 +32,11 @@
 
         <TextView
             android:layout_width="279dp"
-            android:layout_height="62dp"
+            android:layout_height="63dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginStart="102dp"
+            android:layout_marginStart="98dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="30dp"
             android:layout_marginBottom="20dp"
@@ -68,42 +68,41 @@
                 android:layout_width="wrap_content"
                 android:layout_height="66dp"
                 android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
-                android:layout_marginStart="21dp"
-                android:layout_marginTop="55dp"
-                android:layout_marginEnd="21dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="488dp"
                 android:background="@color/mlrs_white_button"
                 android:ems="13"
                 android:textSize="23sp" />
 
-
             <TextView
                 android:id="@+id/topicEnterlibname"
                 android:layout_width="321dp"
-                android:layout_height="58dp"
+                android:layout_height="50dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="22dp"
-                android:layout_marginBottom="548dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="556dp"
                 android:text="Enter library name from list :"
                 android:textAlignment="textStart"
                 android:textColor="@color/mlrs_white_button"
                 android:textSize="23sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/txt_AreaLiblist"
                 android:layout_width="wrap_content"
-                android:layout_height="422dp"
+                android:layout_height="416dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginStart="21dp"
-                android:layout_marginEnd="21dp"
-                android:layout_marginBottom="7dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="5dp"
                 android:textAlignment="textStart"
                 android:textColor="@color/mlrs_white_button"
                 android:textSize="23sp" />
@@ -111,18 +110,18 @@
             <TextView
                 android:id="@+id/topicLibraryList"
                 android:layout_width="wrap_content"
-                android:layout_height="49dp"
+                android:layout_height="50dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginStart="21dp"
-                android:layout_marginEnd="21dp"
-                android:layout_marginBottom="435dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="432dp"
                 android:text="Library List :"
                 android:textAlignment="textStart"
                 android:textColor="@color/mlrs_white_button"
                 android:textSize="23sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
 
             <!--
