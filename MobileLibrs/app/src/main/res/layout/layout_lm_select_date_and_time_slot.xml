@@ -11,48 +11,6 @@
     android:scrollbarThumbHorizontal="@drawable/ic_launcher_foreground"
     tools:context=".Activity_LM_Seelect_Date_and_Time_Slot">
 
-    <RelativeLayout
-        android:layout_width="355dp"
-        android:layout_height="318dp"
-        android:layout_marginStart="29dp">
-
-        <ImageView
-            android:id="@+id/imageView10"
-            android:layout_width="96dp"
-            android:layout_height="55dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="-16dp"
-            android:layout_marginTop="25dp"
-            android:layout_marginEnd="275dp"
-            android:contentDescription="@string/todo"
-            app:srcCompat="@drawable/read_book"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteY="340dp" />
-
-        <TextView
-            android:layout_width="298dp"
-            android:layout_height="55dp"
-
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="25dp"
-            android:layout_marginEnd="-3dp"
-            android:background="@color/mlrs_lightBlue"
-            android:fontFamily="sans-serif-condensed"
-            android:lineSpacingExtra="0sp"
-            android:paddingTop="10dp"
-            android:text="@string/make_reservation"
-            android:textAlignment="center"
-            android:textColor="@color/mlrs_white_button"
-            android:textSize="30sp"
-            android:textStyle="bold"
-            app:cornerRadius="?android:attr/buttonCornerRadius" />
-
-
-    </RelativeLayout>
-
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -435,7 +393,38 @@
 
     </RelativeLayout>
 
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="96dp"
+        android:layout_height="57dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="25dp"
+        android:contentDescription="@string/todo"
+        app:srcCompat="@drawable/read_book"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="340dp" />
 
+    <TextView
+        android:layout_width="297dp"
+        android:layout_height="57dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="22dp"
+        android:background="@color/mlrs_lightBlue"
+        android:fontFamily="sans-serif-condensed"
+        android:lineSpacingExtra="0sp"
+        android:paddingTop="10dp"
+        android:text="@string/make_reservation"
+        android:textAlignment="center"
+        android:textColor="@color/mlrs_white_button"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:cornerRadius="?android:attr/buttonCornerRadius" />
 
 
 </RelativeLayout>
