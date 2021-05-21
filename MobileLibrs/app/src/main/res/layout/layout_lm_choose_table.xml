@@ -23,128 +23,6 @@
         android:layout_marginBottom="128dp"
         android:background="@drawable/sekil">
 
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="127dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="22dp"
-            android:layout_marginEnd="22dp"
-            android:layout_marginBottom="128dp"
-            android:background="@drawable/sekil">
-
-            <Button
-                android:id="@+id/T0"
-                android:layout_width="55dp"
-                android:layout_height="50dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="13dp"
-                android:layout_marginBottom="60dp"
-                android:text="T0"
-                android:textStyle="bold" />
-
-            <Button
-                android:id="@+id/t6"
-                android:layout_width="55dp"
-                android:layout_height="50dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="13dp"
-                android:layout_marginBottom="5dp"
-                android:text="T5"
-                android:textStyle="bold" />
-
-            <Button
-                android:id="@+id/t7"
-                android:layout_width="55dp"
-                android:layout_height="50dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="83dp"
-                android:layout_marginBottom="5dp"
-                android:text="T6"
-                android:textStyle="bold" />
-
-            <Button
-                android:id="@+id/t8"
-                android:layout_width="55dp"
-                android:layout_height="50dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="158dp"
-                android:layout_marginBottom="5dp"
-                android:text="T7"
-                android:textStyle="bold" />
-
-            <Button
-                android:id="@+id/t9"
-                android:layout_width="55dp"
-                android:layout_height="50dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="232dp"
-                android:layout_marginBottom="5dp"
-                android:text="T8"
-                android:textStyle="bold" />
-
-            <Button
-                android:id="@+id/t0"
-                android:layout_width="55dp"
-                android:layout_height="50dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="300dp"
-                android:layout_marginBottom="5dp"
-                android:text="T9"
-                android:textStyle="bold" />
-
-            <Button
-                android:id="@+id/t2"
-                android:layout_width="55dp"
-                android:layout_height="50dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="81dp"
-                android:layout_marginBottom="60dp"
-                android:text="T1"
-                android:textStyle="bold" />
-
-            <Button
-                android:id="@+id/t3"
-                android:layout_width="55dp"
-                android:layout_height="50dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="158dp"
-                android:layout_marginBottom="60dp"
-                android:text="T2"
-                android:textStyle="bold" />
-
-            <Button
-                android:id="@+id/t4"
-                android:layout_width="55dp"
-                android:layout_height="50dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="231dp"
-                android:layout_marginBottom="60dp"
-                android:text="T3"
-                android:textStyle="bold" />
-
-            <Button
-                android:id="@+id/t5"
-                android:layout_width="55dp"
-                android:layout_height="50dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="299dp"
-                android:layout_marginBottom="60dp"
-                android:text="T4"
-                android:textStyle="bold" />
-        </RelativeLayout>
-
         <Button
             android:id="@+id/T0"
             android:layout_width="55dp"
@@ -153,7 +31,7 @@
             android:layout_alignParentBottom="true"
             android:layout_marginStart="13dp"
             android:layout_marginBottom="60dp"
-            android:text="T0"
+            android:text="1"
             android:textStyle="bold" />
 
         <Button
@@ -164,7 +42,7 @@
             android:layout_alignParentBottom="true"
             android:layout_marginStart="13dp"
             android:layout_marginBottom="5dp"
-            android:text="T5"
+            android:text="6"
             android:textStyle="bold" />
 
         <Button
@@ -175,7 +53,7 @@
             android:layout_alignParentBottom="true"
             android:layout_marginStart="83dp"
             android:layout_marginBottom="5dp"
-            android:text="T6"
+            android:text="7"
             android:textStyle="bold" />
 
         <Button
@@ -186,7 +64,7 @@
             android:layout_alignParentBottom="true"
             android:layout_marginStart="158dp"
             android:layout_marginBottom="5dp"
-            android:text="T7"
+            android:text="8"
             android:textStyle="bold" />
 
         <Button
@@ -197,18 +75,18 @@
             android:layout_alignParentBottom="true"
             android:layout_marginStart="232dp"
             android:layout_marginBottom="5dp"
-            android:text="T8"
+            android:text="9"
             android:textStyle="bold" />
 
         <Button
-            android:id="@+id/t0"
+            android:id="@+id/t10"
             android:layout_width="55dp"
             android:layout_height="50dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentBottom="true"
             android:layout_marginStart="300dp"
             android:layout_marginBottom="5dp"
-            android:text="T9"
+            android:text="10"
             android:textStyle="bold" />
 
         <Button
@@ -219,7 +97,7 @@
             android:layout_alignParentBottom="true"
             android:layout_marginStart="81dp"
             android:layout_marginBottom="60dp"
-            android:text="T1"
+            android:text="2"
             android:textStyle="bold" />
 
         <Button
@@ -230,7 +108,7 @@
             android:layout_alignParentBottom="true"
             android:layout_marginStart="158dp"
             android:layout_marginBottom="60dp"
-            android:text="T2"
+            android:text="3"
             android:textStyle="bold" />
 
         <Button
@@ -241,7 +119,7 @@
             android:layout_alignParentBottom="true"
             android:layout_marginStart="231dp"
             android:layout_marginBottom="60dp"
-            android:text="T3"
+            android:text="4"
             android:textStyle="bold" />
 
         <Button
@@ -252,7 +130,7 @@
             android:layout_alignParentBottom="true"
             android:layout_marginStart="299dp"
             android:layout_marginBottom="60dp"
-            android:text="T4"
+            android:text="5"
             android:textStyle="bold" />
     </RelativeLayout>
 

@@ -14,7 +14,7 @@ class Activity_LM_Make_Reservation : AppCompatActivity() {
     lateinit var binding1: LayoutLmListLibrariesBinding
     lateinit var binding2: LayoutLmSelectDateAndTimeSlotBinding
     lateinit var binding3: LayoutLmChooseTableBinding
-    
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
