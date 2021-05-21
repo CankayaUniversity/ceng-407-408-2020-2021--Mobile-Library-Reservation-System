@@ -91,7 +91,8 @@
                 android:text="Enter library name from list :"
                 android:textAlignment="textStart"
                 android:textColor="@color/mlrs_white_button"
-                android:textSize="23sp" />
+                android:textSize="23sp"
+                android:textStyle="bold"/>
 
             <TextView
                 android:id="@+id/txt_AreaLiblist"
@@ -120,7 +121,8 @@
                 android:text="Library List :"
                 android:textAlignment="textStart"
                 android:textColor="@color/mlrs_white_button"
-                android:textSize="23sp" />
+                android:textSize="23sp"
+                android:textStyle="bold"/>
 
 
             <!--

@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".Activity_Admin_Add_Library">
 
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -15,14 +16,49 @@
         android:backgroundTint="@color/mlrs_mlrs_mainpageBlue"
         android:scrollbarThumbHorizontal="@drawable/ic_launcher_foreground">
 
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="120dp"
+            android:layout_height="63dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="286dp"
+            android:layout_marginBottom="46dp"
+            app:srcCompat="@drawable/read_book"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="340dp"/>
+
+        <TextView
+            android:layout_width="279dp"
+            android:layout_height="62dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="102dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="20dp"
+            android:background="@color/mlrs_lightBlue"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:lineSpacingExtra="8sp"
+            android:paddingTop="10dp"
+            android:text="LIBRARY LIST"
+            android:textAlignment="center"
+            android:textColor="@color/mlrs_white_button"
+            android:textSize="30sp"
+            app:cornerRadius="?android:attr/buttonCornerRadius"/>
+
         <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="586dp"
+            android:layout_width="wrap_content"
+            android:layout_height="630dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
             android:layout_marginStart="3dp"
-            android:layout_marginEnd="-3dp"
+            android:layout_marginEnd="0dp"
             android:layout_marginBottom="70dp"
             android:backgroundTint="#FFFFFF"
             android:orientation="vertical">
@@ -57,20 +93,21 @@
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
+
             <TextView
                 android:id="@+id/textView6"
-                android:layout_width="287dp"
-                android:layout_height="303dp"
-                android:layout_marginStart="55dp"
+                android:layout_width="304dp"
+                android:layout_height="52dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="46dp"
                 android:layout_marginTop="1dp"
                 android:layout_marginEnd="15dp"
                 android:layout_marginBottom="233dp"
                 android:text="New Library Information"
                 android:textAlignment="center"
                 android:textColor="@color/Black"
-                android:textSize="24sp"
+                android:textSize="26sp"
                 android:textStyle="bold" />
-
 
             <EditText
                 android:id="@+id/txtLibraryName"
@@ -115,9 +152,11 @@
                 android:id="@+id/btnAddLibrary"
                 style="?android:textAppearanceSmall"
                 android:layout_width="235dp"
-                android:layout_height="50dp"
+                android:layout_height="65dp"
+                android:layout_alignParentBottom="true"
                 android:layout_marginLeft="85dp"
                 android:layout_marginTop="455dp"
+                android:layout_marginBottom="94dp"
                 android:backgroundTint="@color/mlrs_white_button"
                 android:radius="50dp"
                 android:text="ADD"
@@ -147,16 +186,14 @@
         <Button
             android:id="@+id/button_ad_back"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="46dp"
             android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:background="@color/mlrs_white_button"
             android:layout_marginStart="35dp"
-            android:layout_marginTop="659dp"
             android:layout_marginEnd="283dp"
-            android:layout_marginBottom="24dp"
+            android:layout_marginBottom="31dp"
+            android:background="@color/mlrs_white_button"
             android:text="Back" />
 
 
