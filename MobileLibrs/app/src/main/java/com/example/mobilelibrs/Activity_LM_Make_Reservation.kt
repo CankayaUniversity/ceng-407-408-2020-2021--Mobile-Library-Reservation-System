@@ -56,10 +56,18 @@ class Activity_LM_Make_Reservation : AppCompatActivity() {
             database.child("reservation").push().setValue(Reservation(libName, date, timeslot, tableno))
             //  Toast.makeText(this, "Library succefully added..", Toast.LENGTH_LONG).show()
         }
+
+
+
+
+        //if btn click, user go to qr code page
+        binding2.btnNext.setOnClickListener {
+            reDirectQRcodePage()
+        }
     }
 
-    fun reDirect() {
-        val intent = Intent(this, Activity_LM_Seelect_Date_and_Time_Slot::class.java)
+    fun reDirectQRcodePage() {
+        val intent = Intent(this, Activity_LM_QR::class.java)
         startActivity(intent)
         finish()
     }
