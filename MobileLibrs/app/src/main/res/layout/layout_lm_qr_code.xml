@@ -1,199 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:accessibilityHeading="true"
-    android:background="#C2C2C2"
-    android:backgroundTint="@color/mlrs_mlrs_mainpageBlue"
-    android:scrollbarThumbHorizontal="@drawable/ic_launcher_foreground"
+    android:orientation="vertical"
     tools:context=".Activity_LM_QR">
 
-    <RelativeLayout
-        android:layout_width="355dp"
-        android:layout_height="318dp"
-        android:layout_marginStart="29dp">
-
-        <ImageView
-            android:id="@+id/imageView10"
-            android:layout_width="96dp"
-            android:layout_height="55dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="-3dp"
-            android:layout_marginTop="25dp"
-            android:layout_marginEnd="262dp"
-            android:layout_marginBottom="238dp"
-            app:srcCompat="@drawable/read_book"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteY="340dp"/>
-
-        <TextView
-            android:layout_width="276dp"
-            android:layout_height="55dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="71dp"
-            android:layout_marginTop="25dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="238dp"
-            android:background="@color/mlrs_lightBlue"
-            android:fontFamily="sans-serif-condensed-medium"
-            android:lineSpacingExtra="8sp"
-            android:paddingTop="10dp"
-            android:text="QR CODE"
-            android:textAlignment="center"
-            android:textColor="@color/mlrs_white_button"
-            android:textSize="30sp"
-            app:cornerRadius="?android:attr/buttonCornerRadius"/>
-    </RelativeLayout>
-
-
-    <RelativeLayout
+    <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="104dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="-10dp"
-        android:orientation="vertical">
+        android:id="@+id/edittext"
+        android:hint="Text"
+        />
 
-        <RelativeLayout
-            android:layout_width="355dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="3dp"
-            android:layout_marginEnd="40dp"
-            android:layout_marginBottom="160dp"
-            android:background="@drawable/sekil"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
-                android:text=""
-                android:textSize="25dp" />
-
-            <RelativeLayout
-                android:layout_width="280dp"
-                android:layout_height="183dp"
-                android:layout_marginStart="45dp"
-
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="44dp"
-
-                android:layout_marginBottom="330dp"
-                android:background="@drawable/qrkod"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_centerVertical="true"
-                    android:text=""
-                    android:textSize="25dp" />
-
-                <EditText
-                    android:id="@+id/editTextTextPersonName"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    android:lineSpacingExtra="24sp"
-                    android:text="Cebeci Public Library"
-                    android:textAlignment="center"
-                    android:textColor="@color/Black"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/textView11"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginEnd="50dp"
-                    android:layout_marginBottom="65dp"
-                    android:ems="10"
-                    android:text="30.12.2020"
-                    android:textAlignment="center"
-                    android:textColor="@color/Black"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/textView12"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginEnd="76dp"
-                    android:layout_marginBottom="38dp"
-                    android:text="15:30-16:30     T16"
-                    android:textColor="@color/Black"
-                    android:textStyle="bold" />
-
-            </RelativeLayout>
-
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="241dp"
-                android:layout_height="193dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginStart="70dp"
-                android:layout_marginTop="237dp"
-                android:layout_marginEnd="69dp"
-                app:srcCompat="@drawable/qrkoddd_foreground" />
-
-            <TextView
-                android:id="@+id/textView10"
-                android:layout_width="264dp"
-                android:layout_height="50dp"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginEnd="24dp"
-                android:layout_marginBottom="9dp"
-                android:text="Scan the QR code to QR code reader!"
-                android:textAlignment="viewStart"
-                android:textColor="@color/Black"
-                android:textStyle="bold" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button"
+        android:text="Generate"
+        />
 
 
-        </RelativeLayout>
+    <ImageView
+        android:id="@+id/imageview"
+        android:layout_width="129dp"
+        android:layout_height="102dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="75dp" />
 
-        <Button
-            android:id="@+id/btn_backMenu"
-            android:layout_width="wrap_content"
-            android:layout_height="66dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="110dp"
-            android:layout_marginEnd="110dp"
-            android:layout_marginBottom="54dp"
-            android:text="Back To Menu" />
-
-
-    </RelativeLayout>
-
-
-
-</RelativeLayout>
+</LinearLayout>

@@ -1,30 +1,41 @@
 package com.example.mobilelibrs
 
-import android.content.Intent
 import android.os.Bundle
+import android.view.View
+import android.widget.Button
+import android.widget.EditText
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
-import com.example.mobilelibrs.databinding.LayoutLmListLibrariesBinding
-import com.example.mobilelibrs.databinding.LayoutLmQrCodeBinding
+import com.google.zxing.BarcodeFormat
+import com.google.zxing.MultiFormatWriter
+import com.journeyapps.barcodescanner.BarcodeEncoder
 
-class Activity_LM_QR : AppCompatActivity() {
 
-    lateinit var binding: LayoutLmQrCodeBinding
+class  Activity_LM_QR : AppCompatActivity() {
+    var editText: EditText? = null
+    var button: Button? = null
+    var imageView: ImageView? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-
-        val binding1 = LayoutLmQrCodeBinding.inflate(layoutInflater)
-        setContentView(binding1.root)
-        // click make reservation button, view menu of lm.
-        binding1.btnBackMenu.setOnClickListener(){
-            reDirectMainMenu()
+        setContentView(R.layout.layout_lm_qr_code)
+        editText = findViewById<View>(R.id.edittext) as EditText
+        button = findViewById<View>(R.id.button) as Button
+        imageView = findViewById<View>(R.id.imageview) as ImageView
+        button!!.setOnClickListener {
+            val multiFormatWriter = MultiFormatWriter()
+            try {
+                val bitMatrix = multiFormatWriter.encode(
+                    editText!!.text.toString(),
+                    BarcodeFormat.QR_CODE,
+                    500,
+                    500
+                )
+                val barcodeEncoder = BarcodeEncoder()
+                val bitmap = barcodeEncoder.createBitmap(bitMatrix)
+                imageView!!.setImageBitmap(bitmap)
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
         }
-    }
-
-    // Reservation finished in page. Redirect main menu.
-    fun reDirectMainMenu() {
-        val intent = Intent(this, Activity_LM_Menu::class.java)
-        startActivity(intent)
-        finish()
     }
 }

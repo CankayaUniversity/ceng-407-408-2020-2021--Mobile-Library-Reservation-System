@@ -26,7 +26,14 @@ class Activity_LM_List_Libraries : AppCompatActivity() {
 
         setContentView(binding1.root)
         // click make reservation button, view list libraries.
+
         binding1.btnNextSelectDateAndTimeSlot.setOnClickListener(){
+            val libName= "Milli Kütüphane"
+            val yeniIntent= Intent(this,Activity_LM_Choose_Table::class.java )
+
+            yeniIntent.putExtra("LibName",  libName)
+            startActivity(yeniIntent)
+
             reDirect_LM_Select_Date_Time_Slot()
         }
     }

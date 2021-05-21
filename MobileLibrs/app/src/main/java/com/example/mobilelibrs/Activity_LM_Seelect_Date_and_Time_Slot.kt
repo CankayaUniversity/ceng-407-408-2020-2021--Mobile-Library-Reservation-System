@@ -2,9 +2,11 @@ package com.example.mobilelibrs
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.mobilelibrs.databinding.LayoutLmQrCodeBinding
 import com.example.mobilelibrs.databinding.LayoutLmSelectDateAndTimeSlotBinding
+import com.google.firebase.database.FirebaseDatabase
 
 class Activity_LM_Seelect_Date_and_Time_Slot : AppCompatActivity() {
 
@@ -17,6 +19,20 @@ class Activity_LM_Seelect_Date_and_Time_Slot : AppCompatActivity() {
         setContentView(binding2.root)
         //if btn click, user go to Choose_Table page
         binding2.btnSearchTable.setOnClickListener {
+            //date bilgisini al ve choose table a gönder
+            val date= "02/05/2021"
+            val yeniIntent1= Intent(this,Activity_LM_Choose_Table::class.java )
+
+            yeniIntent1.putExtra("date",  date)
+            startActivity(yeniIntent1)
+
+            //time slot bilgisini al ve choose table a gönder
+            val timeSlot= "12:00-13:00"
+            val yeniIntent2= Intent(this,Activity_LM_Choose_Table::class.java )
+
+            yeniIntent2.putExtra("timeSlot",  timeSlot)
+            startActivity(yeniIntent2)
+
             reDirectChoose_TablePage()
         }
     }
