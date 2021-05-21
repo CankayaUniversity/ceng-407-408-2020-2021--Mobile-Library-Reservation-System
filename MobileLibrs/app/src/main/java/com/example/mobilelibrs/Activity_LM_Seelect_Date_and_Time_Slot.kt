@@ -16,7 +16,7 @@ class Activity_LM_Seelect_Date_and_Time_Slot : AppCompatActivity() {
         val binding2 = LayoutLmSelectDateAndTimeSlotBinding.inflate(layoutInflater)
         setContentView(binding2.root)
         //if btn click, user go to Choose_Table page
-        binding2.btnSearchTableNext.setOnClickListener {
+        binding2.btnSearchTable.setOnClickListener {
             reDirectChoose_TablePage()
         }
     }

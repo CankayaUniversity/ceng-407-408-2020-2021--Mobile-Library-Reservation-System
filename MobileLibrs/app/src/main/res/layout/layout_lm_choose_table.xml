@@ -135,7 +135,7 @@
     </RelativeLayout>
 
     <Button
-        android:id="@+id/btn_make_reservation_last_step"
+        android:id="@+id/btn_make_reservation"
         style="?android:textAppearanceSmall"
         android:layout_width="wrap_content"
         android:layout_height="63dp"
@@ -212,18 +212,26 @@
             android:layout_width="24dp"
             android:layout_height="20dp"
             android:background="#EDDE54"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="224dp"
-            tools:layout_editor_absoluteY="205dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.725"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.504"
+            tools:ignore="MissingConstraints" />
 
         <TextView
             android:id="@+id/textView20"
-            android:layout_width="24dp"
+            android:layout_width="22dp"
             android:layout_height="20dp"
             android:background="#EF1A0A"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="106dp"
-            tools:layout_editor_absoluteY="205dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/textView35"
+            app:layout_constraintHorizontal_bias="0.395"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.511"
+            tools:ignore="MissingConstraints" />
 
         <EditText
             android:id="@+id/et_choose_table_to"
@@ -250,9 +258,10 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintHorizontal_bias="0.517"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.509" />
 
         <TextView
             android:id="@+id/textView34"
@@ -278,10 +287,10 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.941"
+            app:layout_constraintHorizontal_bias="0.919"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.495" />
+            app:layout_constraintVertical_bias="0.504" />
 
         <TextView
             android:id="@+id/textView32"
@@ -380,9 +389,12 @@
             android:layout_width="24dp"
             android:layout_height="20dp"
             android:background="#4CAF50"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="12dp"
-            tools:layout_editor_absoluteY="207dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.046"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

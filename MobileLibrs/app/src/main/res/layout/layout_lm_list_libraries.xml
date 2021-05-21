@@ -46,7 +46,7 @@
         />
 
         <Button
-            android:id="@+id/btnBack"
+            android:id="@+id/btn_Back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
@@ -58,7 +58,7 @@
             android:text="Back" />
 
         <Button
-            android:id="@+id/btnNextLmselecttlib"
+            android:id="@+id/btn_next_select_date_and_time_slot"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"

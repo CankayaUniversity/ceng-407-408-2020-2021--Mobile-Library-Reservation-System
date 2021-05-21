@@ -26,34 +26,16 @@
         android:layout_marginBottom="-10dp"
         android:orientation="vertical">
 
-        <Button
-            android:id="@+id/btn_search_table_next"
-            style="?android:textAppearanceSmall"
-            android:layout_width="210dp"
-            android:layout_height="55dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="83dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="83dp"
-            android:layout_marginBottom="224dp"
-            android:backgroundTint="@color/mlrs_white_button"
-            android:text="@string/search_table"
-            android:textColor="@color/Black"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
         <RelativeLayout
             android:layout_width="362dp"
             android:layout_height="410dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="22dp"
+            android:layout_marginStart="27dp"
             android:layout_marginTop="3dp"
-            android:layout_marginEnd="22dp"
-            android:layout_marginBottom="305dp"
+            android:layout_marginEnd="17dp"
+            android:layout_marginBottom="216dp"
             android:background="@drawable/sekil"
             android:orientation="vertical">
 
@@ -64,8 +46,8 @@
                 android:layout_height="36dp"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
-                android:layout_marginTop="310dp"
-                android:layout_marginEnd="40dp"
+                android:layout_marginTop="300dp"
+                android:layout_marginEnd="45dp"
                 android:autofillHints=""
                 android:background="#C2C2C2"
                 android:ems="10"
@@ -121,21 +103,6 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/textView11"
-                    android:layout_width="260dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginEnd="15dp"
-                    android:layout_marginBottom="30dp"
-                    android:ems="40"
-                    android:text="@string/please_select_date_and_time_slot"
-                    android:textAlignment="center"
-                    android:textColor="@color/Black"
-                    android:textSize="15sp"
-                    android:textStyle="bold" />
-
-                <TextView
                     android:id="@+id/textView12"
                     android:layout_width="260dp"
                     android:layout_height="30dp"
@@ -160,6 +127,20 @@
                     android:text="@string/cebeci_public_library"
                     android:textColor="#FFFFFF"
                     android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="260dp"
+                    android:layout_height="30dp"
+                    android:layout_above="@+id/textView12"
+                    android:layout_marginEnd="-13dp"
+                    android:layout_marginBottom="3dp"
+                    android:ems="40"
+                    android:text="@string/please_select_date_and_time_slot"
+                    android:textAlignment="center"
+                    android:textColor="@color/Black"
+                    android:textSize="15sp"
                     android:textStyle="bold" />
 
 
@@ -197,8 +178,8 @@
                 android:layout_height="36dp"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
-                android:layout_marginTop="310dp"
-                android:layout_marginEnd="191dp"
+                android:layout_marginTop="299dp"
+                android:layout_marginEnd="198dp"
                 android:autofillHints=""
                 android:background="#C2C2C2"
                 android:ems="10"
@@ -218,13 +199,31 @@
         </RelativeLayout>
 
         <Button
+            android:id="@+id/btn_search_table"
+            style="?android:textAppearanceSmall"
+            android:layout_width="210dp"
+            android:layout_height="55dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="85dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="81dp"
+            android:layout_marginBottom="117dp"
+            android:backgroundTint="@color/mlrs_white_button"
+            android:text="@string/search_table"
+            android:textColor="@color/Black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <Button
             android:id="@+id/btn_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="24dp"
-            android:layout_marginBottom="31dp"
+            android:layout_marginStart="34dp"
+            android:layout_marginBottom="28dp"
             android:background="@color/mlrs_white_button"
             android:backgroundTint="@color/colorPrimaryDark"
             android:text="Back"
@@ -234,40 +233,6 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 
-
-        <Button
-            android:id="@+id/btn_next"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginEnd="24dp"
-            android:layout_marginBottom="31dp"
-            android:background="@color/mlrs_white_button"
-            android:backgroundTint="@color/colorPrimaryDark"
-            android:text="Next"
-            android:textColor="@color/mlrs_white_button"
-            android:textColorHighlight="@color/mlrs_white_button"
-            android:textColorHint="@color/blue1"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
-
-        <Button
-            android:id="@+id/btn_next2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginEnd="24dp"
-            android:layout_marginBottom="31dp"
-            android:background="@color/mlrs_white_button"
-            android:backgroundTint="@color/colorPrimaryDark"
-            android:text="Next"
-            android:textColor="@color/mlrs_white_button"
-            android:textColorHighlight="@color/mlrs_white_button"
-            android:textColorHint="@color/blue1"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
 
     </RelativeLayout>
 

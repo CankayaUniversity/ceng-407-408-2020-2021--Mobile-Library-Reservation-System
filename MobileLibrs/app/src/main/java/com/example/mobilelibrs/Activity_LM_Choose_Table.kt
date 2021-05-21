@@ -16,7 +16,7 @@ class Activity_LM_Choose_Table : AppCompatActivity() {
         val binding4 = LayoutLmChooseTableBinding.inflate(layoutInflater)
         setContentView(binding4.root)
         // click make reservation button, view list libraries.
-        binding4.btnMakeReservationLastStep.setOnClickListener(){
+        binding4.btnMakeReservation.setOnClickListener(){
             reDirect_QrCodePage()
         }
     }
