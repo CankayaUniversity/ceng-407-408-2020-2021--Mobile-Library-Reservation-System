@@ -39,6 +39,7 @@
             android:layout_marginEnd="30dp"
             android:background="@color/mlrs_lightBlue"
             android:text="LIBRARY LIST"
+            android:paddingTop="10dp"
             android:textStyle="bold"
             android:textAlignment="center"
             android:textColor="@color/mlrs_white_button"
@@ -65,6 +66,7 @@
             android:layout_alignParentBottom="true"
             android:layout_marginEnd="40dp"
             android:layout_marginBottom="21dp"
+
             android:text="Next" />
 
         <TextView
