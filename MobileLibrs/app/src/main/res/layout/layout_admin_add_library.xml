@@ -45,7 +45,7 @@
             android:fontFamily="sans-serif-condensed-medium"
             android:lineSpacingExtra="8sp"
             android:paddingTop="10dp"
-            android:text="LIBRARY LIST"
+            android:text="ADD LIBRARY"
             android:textAlignment="center"
             android:textColor="@color/mlrs_white_button"
             android:textSize="30sp"
@@ -62,7 +62,6 @@
             android:layout_marginBottom="70dp"
             android:backgroundTint="#FFFFFF"
             android:orientation="vertical">
-
 
             <TextView
                 android:id="@+id/textView9"
