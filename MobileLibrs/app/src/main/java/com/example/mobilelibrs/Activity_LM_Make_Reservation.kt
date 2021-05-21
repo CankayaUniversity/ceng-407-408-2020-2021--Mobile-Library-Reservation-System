@@ -14,20 +14,19 @@ class Activity_LM_Make_Reservation : AppCompatActivity() {
     lateinit var binding1: LayoutLmListLibrariesBinding
     lateinit var binding2: LayoutLmSelectDateAndTimeSlotBinding
     lateinit var binding3: LayoutLmChooseTableBinding
-
-
+    
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        setContentView(binding1.root)
+        setContentView(binding2.root)
+        setContentView(binding3.root)
 
         val binding1 = LayoutLmListLibrariesBinding.inflate(layoutInflater)
         val binding2 = LayoutLmSelectDateAndTimeSlotBinding.inflate(layoutInflater)
         val binding3 = LayoutLmChooseTableBinding.inflate(layoutInflater)
 
         var database = FirebaseDatabase.getInstance().reference
-
-        setContentView(binding1.root)
-        setContentView(binding2.root)
-        setContentView(binding3.root)
 
         //setContentView(R.layout.layout_lm_list_libraries)
         //setContentView(R.layout.layout_lm_select_date_and_time_slot)
@@ -44,7 +43,7 @@ class Activity_LM_Make_Reservation : AppCompatActivity() {
             libName = "Milli Kütüphane"
         }
 
-        binding2.btnSearchTable.setOnClickListener(){
+        binding2.btnSearchTableNext.setOnClickListener(){
             date= "04.07.2020"
             timeslot="12:00-13:00"
         }
@@ -57,15 +56,7 @@ class Activity_LM_Make_Reservation : AppCompatActivity() {
             //  Toast.makeText(this, "Library succefully added..", Toast.LENGTH_LONG).show()
         }
 
-        //if btn click, user go to Choose_Table page
-        binding2.btnNext.setOnClickListener {
-            reDirectChoose_TablePage()
-        }
+
     }
 
-    fun reDirectChoose_TablePage() {
-        val intent = Intent(this, Activity_LM_Choose_Table::class.java)
-        startActivity(intent)
-        finish()
-    }
 }

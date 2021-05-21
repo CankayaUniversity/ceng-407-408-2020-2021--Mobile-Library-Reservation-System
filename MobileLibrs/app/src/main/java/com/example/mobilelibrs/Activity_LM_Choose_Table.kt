@@ -9,15 +9,14 @@ import com.example.mobilelibrs.databinding.LayoutLmQrCodeBinding
 
 class Activity_LM_Choose_Table : AppCompatActivity() {
 
-    lateinit var binding1: LayoutLmChooseTableBinding
+    lateinit var binding: LayoutLmChooseTableBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(binding.root)
 
-        val binding1 = LayoutLmChooseTableBinding.inflate(layoutInflater)
+        val binding4 = LayoutLmChooseTableBinding.inflate(layoutInflater)
         // click make reservation button, view list libraries.
-        setContentView(binding1.root)
-        
-        binding1.btnNext.setOnClickListener(){
+        binding4.btnMakeReservationLastStep.setOnClickListener(){
             reDirect_QrCodePage()
         }
     }

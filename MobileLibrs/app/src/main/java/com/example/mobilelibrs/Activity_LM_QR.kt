@@ -8,20 +8,19 @@ import com.example.mobilelibrs.databinding.LayoutLmQrCodeBinding
 
 class Activity_LM_QR : AppCompatActivity() {
 
-    lateinit var binding1: LayoutLmQrCodeBinding
+    lateinit var binding: LayoutLmQrCodeBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(binding.root)
 
         val binding1 = LayoutLmQrCodeBinding.inflate(layoutInflater)
-        // click make reservation button, view list libraries.
-        setContentView(binding1.root)
-
-        // Reservation finished in page. Redirect main menu.
+        // click make reservation button, view menu of lm.
         binding1.btnBackMenu.setOnClickListener(){
             reDirectMainMenu()
         }
     }
 
+    // Reservation finished in page. Redirect main menu.
     fun reDirectMainMenu() {
         val intent = Intent(this, Activity_LM_Menu::class.java)
         startActivity(intent)
