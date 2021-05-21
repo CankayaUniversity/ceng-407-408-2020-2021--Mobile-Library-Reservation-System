@@ -27,10 +27,8 @@ class Activity_LM_List_Libraries : AppCompatActivity() {
         setContentView(binding1.root)
 
 
-        binding1.btnContinueLmselecttlib.setOnClickListener(){
-
+        binding1.btnNextLmselecttlib.setOnClickListener(){
             reDirect_LM_Select_Date_Time_Slot()
-
         }
     }
 

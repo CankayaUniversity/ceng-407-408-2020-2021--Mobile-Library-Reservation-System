@@ -39,15 +39,13 @@ class Activity_LM_Make_Reservation : AppCompatActivity() {
         var timeslot=""
         var tableno=0
 
-        binding1.btnContinueLmselecttlib.setOnClickListener(){
+        // Next Butona bastığında devam edecek time slot, date seçimine
+        binding1.btnNextLmselecttlib.setOnClickListener(){
             libName = "Milli Kütüphane"
-            reDirect_LM_Select_Date_Time_Slot()
-
-
         }
 
         binding2.btnSearchTable.setOnClickListener(){
-            date= "04,07,2020"
+            date= "04.07.2020"
             timeslot="12:00-13:00"
         }
 
@@ -60,7 +58,7 @@ class Activity_LM_Make_Reservation : AppCompatActivity() {
         }
     }
 
-    fun reDirect_LM_Select_Date_Time_Slot() {
+    fun reDirect() {
         val intent = Intent(this, Activity_LM_Seelect_Date_and_Time_Slot::class.java)
         startActivity(intent)
         finish()

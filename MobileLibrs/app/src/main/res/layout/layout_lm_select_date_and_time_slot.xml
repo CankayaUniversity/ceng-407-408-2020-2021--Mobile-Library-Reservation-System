@@ -82,7 +82,7 @@
             android:layout_marginStart="97dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="103dp"
-            android:layout_marginBottom="75dp"
+            android:layout_marginBottom="121dp"
             android:backgroundTint="@color/mlrs_white_button"
             android:text="@string/search_table"
             android:textColor="@color/Black"
@@ -93,10 +93,12 @@
             android:layout_width="362dp"
             android:layout_height="430dp"
             android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="27dp"
+            android:layout_marginStart="25dp"
             android:layout_marginTop="3dp"
-            android:layout_marginBottom="161dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="220dp"
             android:background="@drawable/sekil"
             android:orientation="vertical">
 
