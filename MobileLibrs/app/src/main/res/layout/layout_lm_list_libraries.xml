@@ -72,7 +72,7 @@
                 android:layout_alignParentBottom="true"
                 android:layout_marginStart="0dp"
                 android:layout_marginEnd="0dp"
-                android:layout_marginBottom="488dp"
+                android:layout_marginBottom="498dp"
                 android:background="@color/mlrs_white_button"
                 android:ems="13"
                 android:textSize="23sp" />
