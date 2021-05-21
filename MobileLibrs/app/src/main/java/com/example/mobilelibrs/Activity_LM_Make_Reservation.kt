@@ -57,17 +57,14 @@ class Activity_LM_Make_Reservation : AppCompatActivity() {
             //  Toast.makeText(this, "Library succefully added..", Toast.LENGTH_LONG).show()
         }
 
-
-
-
-        //if btn click, user go to qr code page
+        //if btn click, user go to Choose_Table page
         binding2.btnNext.setOnClickListener {
-            reDirectQRcodePage()
+            reDirectChoose_TablePage()
         }
     }
 
-    fun reDirectQRcodePage() {
-        val intent = Intent(this, Activity_LM_QR::class.java)
+    fun reDirectChoose_TablePage() {
+        val intent = Intent(this, Activity_LM_Choose_Table::class.java)
         startActivity(intent)
         finish()
     }
