@@ -11,20 +11,20 @@ import com.google.firebase.database.FirebaseDatabase
 
 class Activity_LM_Make_Reservation : AppCompatActivity() {
 
-    lateinit var binding1: LayoutLmListLibrariesBinding
-    lateinit var binding2: LayoutLmSelectDateAndTimeSlotBinding
-    lateinit var binding3: LayoutLmChooseTableBinding
+    lateinit var binding4: LayoutLmListLibrariesBinding
+    lateinit var binding5: LayoutLmSelectDateAndTimeSlotBinding
+    lateinit var binding6: LayoutLmChooseTableBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        setContentView(binding1.root)
-        setContentView(binding2.root)
-        setContentView(binding3.root)
-
         val binding1 = LayoutLmListLibrariesBinding.inflate(layoutInflater)
         val binding2 = LayoutLmSelectDateAndTimeSlotBinding.inflate(layoutInflater)
         val binding3 = LayoutLmChooseTableBinding.inflate(layoutInflater)
+
+        setContentView(binding1.root)
+        setContentView(binding2.root)
+        setContentView(binding3.root)
 
         var database = FirebaseDatabase.getInstance().reference
 

@@ -11,9 +11,10 @@ class Activity_LM_QR : AppCompatActivity() {
     lateinit var binding: LayoutLmQrCodeBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(binding.root)
+
 
         val binding1 = LayoutLmQrCodeBinding.inflate(layoutInflater)
+        setContentView(binding1.root)
         // click make reservation button, view menu of lm.
         binding1.btnBackMenu.setOnClickListener(){
             reDirectMainMenu()

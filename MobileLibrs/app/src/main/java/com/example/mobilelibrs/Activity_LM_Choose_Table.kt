@@ -12,9 +12,9 @@ class Activity_LM_Choose_Table : AppCompatActivity() {
     lateinit var binding: LayoutLmChooseTableBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(binding.root)
 
         val binding4 = LayoutLmChooseTableBinding.inflate(layoutInflater)
+        setContentView(binding4.root)
         // click make reservation button, view list libraries.
         binding4.btnMakeReservationLastStep.setOnClickListener(){
             reDirect_QrCodePage()

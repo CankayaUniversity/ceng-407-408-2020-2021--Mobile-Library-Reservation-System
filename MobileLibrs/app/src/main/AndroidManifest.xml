@@ -11,7 +11,7 @@
         android:theme="@style/Theme.MobileLibrs">
 
         <!--First Page-->
-        <activity android:name=".Activity_First_Page">
+        <activity android:name=".Activity_LM_Menu">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,7 +20,9 @@
         </activity>
 
         <!-- User's Menu Pages -->
-        <activity android:name=".Activity_LM_Menu"> </activity>
+
+        <activity android:name=".Activity_First_Page"> </activity>
+
         <activity android:name=".Activity_Admin_Menu"> </activity>
         <activity android:name=".Activity_Librarian_Menu"> </activity>
 

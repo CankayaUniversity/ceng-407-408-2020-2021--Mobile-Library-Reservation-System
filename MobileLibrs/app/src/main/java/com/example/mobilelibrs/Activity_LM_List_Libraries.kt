@@ -18,15 +18,14 @@ import com.example.mobilelibrs.databinding.LayoutLmListLibrariesBinding
 
 class Activity_LM_List_Libraries : AppCompatActivity() {
 
-    lateinit var binding1: LayoutLmListLibrariesBinding
+    lateinit var binding4: LayoutLmListLibrariesBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         val binding1 = LayoutLmListLibrariesBinding.inflate(layoutInflater)
-        // click make reservation button, view list libraries.
+
         setContentView(binding1.root)
-
-
+        // click make reservation button, view list libraries.
         binding1.btnNextLmselecttlib.setOnClickListener(){
             reDirect_LM_Select_Date_Time_Slot()
         }

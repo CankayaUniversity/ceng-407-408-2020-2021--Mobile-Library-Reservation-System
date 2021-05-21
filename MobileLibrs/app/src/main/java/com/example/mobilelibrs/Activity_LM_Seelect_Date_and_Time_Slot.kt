@@ -12,10 +12,9 @@ class Activity_LM_Seelect_Date_and_Time_Slot : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(binding.root)
 
         val binding2 = LayoutLmSelectDateAndTimeSlotBinding.inflate(layoutInflater)
-
+        setContentView(binding2.root)
         //if btn click, user go to Choose_Table page
         binding2.btnSearchTableNext.setOnClickListener {
             reDirectChoose_TablePage()

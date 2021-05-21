@@ -29,7 +29,7 @@ class Activity_LM_Menu  : AppCompatActivity() {
         }
 
     }
-    // list resevation for starting reservation page 1
+    // for make reservation page 1, list libraries page.
     fun reDirectMakeReservationPage() {
         val intent = Intent(this, Activity_LM_List_Libraries::class.java)
         startActivity(intent)
