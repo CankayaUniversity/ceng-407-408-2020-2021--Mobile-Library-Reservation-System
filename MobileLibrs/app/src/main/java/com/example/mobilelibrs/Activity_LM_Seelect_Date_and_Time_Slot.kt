@@ -20,14 +20,14 @@ class Activity_LM_Seelect_Date_and_Time_Slot : AppCompatActivity() {
         //if btn click, user go to Choose_Table page
         binding2.btnSearchTable.setOnClickListener {
             //date bilgisini al ve choose table a gönder
-            val date= "02/05/2021"
+            val date= binding2.etDate.text.toString()
             val yeniIntent1= Intent(this,Activity_LM_Choose_Table::class.java )
 
             yeniIntent1.putExtra("date",  date)
             startActivity(yeniIntent1)
 
             //time slot bilgisini al ve choose table a gönder
-            val timeSlot= "12:00-13:00"
+            val timeSlot= binding2.etTimeFrom.text.toString()
             val yeniIntent2= Intent(this,Activity_LM_Choose_Table::class.java )
 
             yeniIntent2.putExtra("timeSlot",  timeSlot)
