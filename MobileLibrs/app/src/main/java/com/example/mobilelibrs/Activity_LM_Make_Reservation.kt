@@ -17,7 +17,7 @@ class Activity_LM_Make_Reservation : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+/*
         val binding1 = LayoutLmListLibrariesBinding.inflate(layoutInflater)
         val binding2 = LayoutLmSelectDateAndTimeSlotBinding.inflate(layoutInflater)
         val binding3 = LayoutLmChooseTableBinding.inflate(layoutInflater)
@@ -55,7 +55,7 @@ class Activity_LM_Make_Reservation : AppCompatActivity() {
             database.child("reservation").push().setValue(Reservation(libName, date, timeslot, tableno))
             //  Toast.makeText(this, "Library succefully added..", Toast.LENGTH_LONG).show()
         }
-
+*/
 
     }
 
