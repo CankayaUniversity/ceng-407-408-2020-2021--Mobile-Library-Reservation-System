@@ -48,7 +48,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="40dp"
         android:layout_marginBottom="21dp"
-        android:text="Next" />
+        android:text="Main Menu" />
 
     <TextView
         android:layout_width="300dp"
@@ -80,22 +80,52 @@
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteY="340dp" />
 
-    <EditText
+    <RelativeLayout
+        android:layout_width="280dp"
+        android:layout_height="113dp"
+        android:layout_marginStart="55dp"
+
+        android:layout_marginTop="130dp"
+        android:layout_marginEnd="44dp"
+
+        android:layout_marginBottom="330dp"
+        android:background="@drawable/qrkod"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/editTextTextPersonName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="22dp"
+            android:layout_marginBottom="94dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:lineSpacingExtra="24sp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/Black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <TextView
         android:id="@+id/edittext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="22dp"
-        android:layout_marginTop="139dp"
+        android:layout_marginTop="319dp"
         android:layout_marginEnd="22dp"
         android:layout_marginBottom="94dp"
-        android:hint="Text" />
+        android:hint="" />
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/button"
         android:text="Generate"
         android:layout_marginStart="22dp"
-        android:layout_marginTop="199dp"
+        android:layout_marginTop="359dp"
         android:layout_marginEnd="22dp"
         android:layout_marginBottom="94dp"
         />
@@ -106,7 +136,7 @@
         android:layout_height="47dp"
         android:layout_gravity="center"
         android:layout_marginStart="190dp"
-        android:layout_marginTop="370dp"
+        android:layout_marginTop="470dp"
         android:layout_marginEnd="22dp"
         android:layout_marginBottom="94dp" />
 
