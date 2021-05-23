@@ -1,32 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:accessibilityHeading="true"
+    android:background="#C2C2C2"
+    android:backgroundTint="@color/mlrs_mlrs_mainpageBlue"
+    android:scrollbarThumbHorizontal="@drawable/ic_launcher_foreground"
     tools:context=".Activity_LM_QR">
 
+
+    <TextView
+        android:id="@+id/AreaReservation"
+        android:layout_width="wrap_content"
+        android:layout_height="595dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="59dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="94dp"
+        android:textAlignment="center"
+        android:textColor="@color/Black"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="280dp"
+        android:layout_marginBottom="21dp"
+        android:text="Back" />
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="21dp"
+        android:text="Next" />
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="-163dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="22dp"
+        android:background="@color/mlrs_lightBlue"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:lineSpacingExtra="8sp"
+        android:paddingTop="10dp"
+        android:text="QR CODE"
+        android:textAlignment="center"
+        android:textColor="@color/mlrs_white_button"
+        android:textSize="30sp"
+        app:cornerRadius="?android:attr/buttonCornerRadius" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="96dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="40dp"
+        app:srcCompat="@drawable/read_book"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="340dp" />
+
     <EditText
+        android:id="@+id/edittext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/edittext"
-        android:hint="Text"
-        />
-
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="139dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="94dp"
+        android:hint="Text" />
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/button"
         android:text="Generate"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="199dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="94dp"
         />
-
 
     <ImageView
         android:id="@+id/imageview"
-        android:layout_width="129dp"
-        android:layout_height="102dp"
+        android:layout_width="46dp"
+        android:layout_height="47dp"
         android:layout_gravity="center"
-        android:layout_marginTop="75dp" />
+        android:layout_marginStart="190dp"
+        android:layout_marginTop="370dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="94dp" />
 
-</LinearLayout>
+
+</RelativeLayout>
