@@ -12,19 +12,142 @@
     tools:context=".Activity_LM_List_Reservations">
 
 
+    <Button
+        android:id="@+id/btn_QR4"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="475dp"
+        android:layout_marginEnd="114dp"
+        android:layout_marginBottom="136dp"
+        android:text="QR"
+        app:rippleColor="@android:color/transparent" />
+
+    <Button
+        android:id="@+id/btn_Cancel4"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="473dp"
+        android:layout_marginEnd="43dp"
+        android:layout_marginBottom="138dp"
+        android:text="X"
+        app:rippleColor="@android:color/transparent" />
+
+    <Button
+        android:id="@+id/btn_Cancel3"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="366dp"
+        android:layout_marginEnd="43dp"
+        android:layout_marginBottom="244dp"
+        android:text="X"
+        app:rippleColor="@android:color/transparent" />
+
+    <Button
+        android:id="@+id/btn_Cancel2"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="260dp"
+        android:layout_marginEnd="43dp"
+        android:layout_marginBottom="351dp"
+        android:text="X"
+        app:rippleColor="@android:color/transparent" />
+
+    <Button
+        android:id="@+id/btn_Cancel1"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="146dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="465dp"
+        android:text="X"
+        app:rippleColor="@android:color/transparent" />
+
+    <Button
+        android:id="@+id/btn_QR2"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="261dp"
+        android:layout_marginEnd="116dp"
+        android:layout_marginBottom="350dp"
+        android:text="QR"
+        app:rippleColor="@android:color/transparent" />
+
+    <Button
+        android:id="@+id/btn_QR3"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="369dp"
+        android:layout_marginEnd="117dp"
+        android:layout_marginBottom="241dp"
+        android:text="QR"
+        app:rippleColor="@android:color/transparent" />
+
     <TextView
-        android:id="@+id/txtAreaReservations"
-        android:layout_width="208dp"
-        android:layout_height="324dp"
+        android:id="@+id/tvReservation2"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="86dp"
-        android:layout_marginTop="157dp"
-        android:layout_marginEnd="117dp"
-        android:layout_marginBottom="178dp"
-        android:textColor="@color/Black"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="251dp"
+        android:layout_marginEnd="198dp"
+        android:layout_marginBottom="328dp"
+        android:textColor="#0C0B0B"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvReservation3"
+        android:layout_width="wrap_content"
+        android:layout_height="81dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="365dp"
+        android:layout_marginEnd="198dp"
+        android:layout_marginBottom="212dp"
+        android:textColor="#0C0B0B"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvReservation4"
+        android:layout_width="wrap_content"
+        android:layout_height="79dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="477dp"
+        android:layout_marginEnd="197dp"
+        android:layout_marginBottom="103dp"
+        android:textColor="#0C0B0B"
         android:textSize="16sp"
         android:textStyle="bold" />
 
@@ -36,19 +159,19 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="40dp"
-        android:layout_marginEnd="280dp"
-        android:layout_marginBottom="21dp"
+        android:layout_marginEnd="268dp"
+        android:layout_marginBottom="23dp"
         android:text="Back" />
 
     <Button
-        android:id="@+id/btn_next"
+        android:id="@+id/btn_Back_to_LM_Menu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="40dp"
         android:layout_marginBottom="21dp"
-        android:text="Next" />
+        android:text="Menu" />
 
     <TextView
         android:layout_width="300dp"
@@ -80,21 +203,34 @@
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteY="340dp" />
 
-    <ScrollView
-        android:layout_width="235dp"
-        android:layout_height="397dp"
+    <TextView
+        android:id="@+id/tvReservation1"
+        android:layout_width="wrap_content"
+        android:layout_height="74dp"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="141dp"
-        android:layout_marginEnd="109dp"
-        android:layout_marginBottom="121dp">
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="144dp"
+        android:layout_marginEnd="198dp"
+        android:layout_marginBottom="441dp"
+        android:textColor="#0C0B0B"
+        android:textSize="16sp"
+        android:textStyle="bold" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" />
-    </ScrollView>
+    <Button
+        android:id="@+id/btn_QR1"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="145dp"
+        android:layout_marginEnd="115dp"
+        android:layout_marginBottom="466dp"
+        android:text="QR"
+        app:rippleColor="@android:color/transparent" />
 
 
 </RelativeLayout>
