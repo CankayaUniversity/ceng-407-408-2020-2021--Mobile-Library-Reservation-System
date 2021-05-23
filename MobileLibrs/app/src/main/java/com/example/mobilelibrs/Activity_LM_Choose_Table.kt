@@ -22,7 +22,7 @@ class Activity_LM_Choose_Table : AppCompatActivity() {
 
 
         // click make reservation button, go to qr code page.
-        binding4.btnMakeReservationLastStep.setOnClickListener(){
+        binding4.btnMakeReservation.setOnClickListener(){
 //            reDirect_QrCodePage()
 
             //?????? table name binding ile çekilecek.Şimdilik elle giriyorum
