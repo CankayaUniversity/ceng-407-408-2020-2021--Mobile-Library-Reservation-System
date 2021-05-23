@@ -30,6 +30,7 @@ class Activity_LM_List_Libraries : AppCompatActivity() {
         var database = FirebaseDatabase.getInstance().reference.child("library")
         setContentView(binding2.root)
         // click make reservation button, view list libraries.
+
         //--new
         binding2.btnNextLmselecttlib.setOnClickListener(){
 
@@ -67,6 +68,7 @@ class Activity_LM_List_Libraries : AppCompatActivity() {
             var enter_libname = binding2.txtEnterLibraryName.text.toString()
             database2.child("reservation").push().setValue(Reservation(enter_libname))
             reDirect_LM_Select_Date_Time_Slot()
+
         }
 
         */

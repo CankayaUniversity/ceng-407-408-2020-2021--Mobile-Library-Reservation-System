@@ -7,8 +7,9 @@ class Reservation {
     var totime:String=""
     var tableNo:Int=0
 
+
     constructor(libName:String, date:String, fromtime:String, totime:String, tableNo:Int){
-        this.libName=libName
+       this.libName=libName
         this.date=date
         this.fromtime=fromtime
         this.totime=totime
@@ -19,4 +20,4 @@ class Reservation {
     constructor(libName:String){
         this.libName=libName
     }
-}
+

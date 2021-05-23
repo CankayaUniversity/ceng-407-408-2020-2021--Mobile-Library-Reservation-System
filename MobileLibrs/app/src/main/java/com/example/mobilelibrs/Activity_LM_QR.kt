@@ -1,6 +1,5 @@
 package com.example.mobilelibrs
 
-import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -8,11 +7,13 @@ import com.example.mobilelibrs.databinding.LayoutLmListLibrariesBinding
 import com.example.mobilelibrs.databinding.LayoutLmQrCodeBinding
 import com.google.firebase.database.FirebaseDatabase
 
-class Activity_LM_QR : AppCompatActivity() {
-
-    lateinit var binding: LayoutLmQrCodeBinding
+class  Activity_LM_QR : AppCompatActivity() {
+    var editText: EditText? = null
+    var button: Button? = null
+    var imageView: ImageView? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         var database = FirebaseDatabase.getInstance().reference
 
         val binding1 = LayoutLmQrCodeBinding.inflate(layoutInflater)

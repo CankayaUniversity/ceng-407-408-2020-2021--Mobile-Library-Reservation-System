@@ -26,34 +26,16 @@
         android:layout_marginBottom="-10dp"
         android:orientation="vertical">
 
-        <Button
-            android:id="@+id/btn_search_table_next"
-            style="?android:textAppearanceSmall"
-            android:layout_width="210dp"
-            android:layout_height="55dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="86dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="80dp"
-            android:layout_marginBottom="97dp"
-            android:backgroundTint="@color/mlrs_white_button"
-            android:text="@string/search_table"
-            android:textColor="@color/Black"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
         <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="491dp"
+            android:layout_width="362dp"
+            android:layout_height="410dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="30dp"
+            android:layout_marginStart="27dp"
             android:layout_marginTop="3dp"
-            android:layout_marginEnd="30dp"
-            android:layout_marginBottom="162dp"
+            android:layout_marginEnd="17dp"
+            android:layout_marginBottom="216dp"
             android:background="@drawable/sekil"
             android:orientation="vertical">
 
@@ -62,12 +44,10 @@
                 android:id="@+id/et_time_to"
                 android:layout_width="135dp"
                 android:layout_height="36dp"
-                android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="415dp"
-                android:layout_marginEnd="191dp"
+                android:layout_marginTop="300dp"
+                android:layout_marginEnd="45dp"
                 android:autofillHints=""
                 android:background="#C2C2C2"
                 android:ems="10"
@@ -76,11 +56,11 @@
             <TextView
                 android:id="@+id/textView16"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="34dp"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginEnd="153dp"
-                android:layout_marginBottom="70dp"
+                android:layout_marginEnd="159dp"
+                android:layout_marginBottom="95dp"
                 android:fontFamily="sans-serif-black"
                 android:text="@string/to"
                 android:textColor="#040303"
@@ -90,12 +70,10 @@
                 android:id="@+id/textView15"
                 android:layout_width="61dp"
                 android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginStart="25dp"
-                android:layout_marginEnd="264dp"
-                android:layout_marginBottom="84dp"
+                android:layout_marginEnd="266dp"
+                android:layout_marginBottom="106dp"
                 android:fontFamily="sans-serif-black"
                 android:text="@string/from"
                 android:textColor="#040303"
@@ -105,27 +83,22 @@
                 android:id="@+id/textView14"
                 android:layout_width="wrap_content"
                 android:layout_height="34dp"
-                android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginStart="120dp"
-                android:layout_marginEnd="120dp"
-                android:layout_marginBottom="120dp"
+                android:layout_marginEnd="239dp"
+                android:layout_marginBottom="142dp"
                 android:fontFamily="sans-serif-black"
                 android:text="@string/time_slot"
                 android:textColor="#040303"
                 android:textSize="18sp" />
 
             <RelativeLayout
-                android:layout_width="286dp"
-                android:layout_height="139dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="34dp"
+                android:layout_width="300dp"
+                android:layout_height="123dp"
+                android:layout_marginStart="45dp"
                 android:layout_marginTop="20dp"
-                android:layout_marginEnd="34dp"
-                android:layout_marginBottom="322dp"
+                android:layout_marginEnd="44dp"
+                android:layout_marginBottom="5dp"
                 android:background="@color/mlrs_lightBlue"
                 android:orientation="vertical">
 
@@ -150,12 +123,10 @@
                     android:id="@+id/textView12"
                     android:layout_width="260dp"
                     android:layout_height="30dp"
-                    android:layout_alignParentStart="true"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentBottom="true"
-                    android:layout_marginStart="6dp"
-                    android:layout_marginEnd="6dp"
-                    android:layout_marginBottom="14dp"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginBottom="6dp"
                     android:ems="30"
                     android:fontFamily="sans-serif"
                     android:paddingStart="50dp"
@@ -167,18 +138,26 @@
                 <TextView
                     android:id="@+id/textView17"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginStart="0dp"
-                    android:layout_marginEnd="0dp"
-                    android:layout_marginBottom="103dp"
+                    android:layout_height="39dp"
                     android:fontFamily="sans-serif-condensed"
                     android:paddingStart="15dp"
                     android:text="@string/cebeci_public_library"
                     android:textColor="#FFFFFF"
                     android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="260dp"
+                    android:layout_height="30dp"
+                    android:layout_above="@+id/textView12"
+                    android:layout_marginEnd="-13dp"
+                    android:layout_marginBottom="3dp"
+                    android:ems="40"
+                    android:text="@string/please_select_date_and_time_slot"
+                    android:textAlignment="center"
+                    android:textColor="@color/Black"
+                    android:textSize="15sp"
                     android:textStyle="bold" />
 
 
@@ -201,12 +180,10 @@
                 android:id="@+id/et_date"
                 android:layout_width="wrap_content"
                 android:layout_height="36dp"
-                android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginStart="25dp"
-                android:layout_marginEnd="126dp"
-                android:layout_marginBottom="189dp"
+                android:layout_marginEnd="116dp"
+                android:layout_marginBottom="194dp"
                 android:autofillHints=""
                 android:background="#C2C2C2"
                 android:ems="10"
@@ -218,8 +195,8 @@
                 android:layout_height="36dp"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
-                android:layout_marginTop="415dp"
-                android:layout_marginEnd="42dp"
+                android:layout_marginTop="299dp"
+                android:layout_marginEnd="198dp"
                 android:autofillHints=""
                 android:background="#C2C2C2"
                 android:ems="10"
@@ -229,16 +206,32 @@
                 android:id="@+id/textView18"
                 android:layout_width="280dp"
                 android:layout_height="2dp"
-                android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginStart="40dp"
-                android:layout_marginEnd="40dp"
-                android:layout_marginBottom="308dp"
+                android:layout_marginEnd="44dp"
+                android:layout_marginBottom="265dp"
                 android:background="@color/Black" />
 
 
         </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_search_table"
+            style="?android:textAppearanceSmall"
+            android:layout_width="210dp"
+            android:layout_height="55dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="85dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="81dp"
+            android:layout_marginBottom="117dp"
+            android:backgroundTint="@color/mlrs_white_button"
+            android:text="@string/search_table"
+            android:textColor="@color/Black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/btn_back"
@@ -246,8 +239,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="24dp"
-            android:layout_marginBottom="31dp"
+            android:layout_marginStart="34dp"
+            android:layout_marginBottom="28dp"
             android:background="@color/mlrs_white_button"
             android:backgroundTint="@color/colorPrimaryDark"
             android:text="Back"
@@ -257,40 +250,6 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 
-
-        <Button
-            android:id="@+id/btn_next"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginEnd="24dp"
-            android:layout_marginBottom="31dp"
-            android:background="@color/mlrs_white_button"
-            android:backgroundTint="@color/colorPrimaryDark"
-            android:text="Next"
-            android:textColor="@color/mlrs_white_button"
-            android:textColorHighlight="@color/mlrs_white_button"
-            android:textColorHint="@color/blue1"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
-
-        <Button
-            android:id="@+id/btn_next2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginEnd="24dp"
-            android:layout_marginBottom="31dp"
-            android:background="@color/mlrs_white_button"
-            android:backgroundTint="@color/colorPrimaryDark"
-            android:text="Next"
-            android:textColor="@color/mlrs_white_button"
-            android:textColorHighlight="@color/mlrs_white_button"
-            android:textColorHint="@color/blue1"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
 
     </RelativeLayout>
 
@@ -324,7 +283,8 @@
         android:textAlignment="center"
         android:textColor="@color/mlrs_white_button"
         android:textSize="30sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        app:cornerRadius="?android:attr/buttonCornerRadius" />
 
 
 </RelativeLayout>

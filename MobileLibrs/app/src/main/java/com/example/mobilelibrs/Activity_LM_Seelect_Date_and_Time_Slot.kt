@@ -2,6 +2,7 @@ package com.example.mobilelibrs
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.mobilelibrs.databinding.LayoutLmChooseTableBinding
 import com.example.mobilelibrs.databinding.LayoutLmQrCodeBinding
@@ -21,6 +22,7 @@ class Activity_LM_Seelect_Date_and_Time_Slot : AppCompatActivity() {
         var database = FirebaseDatabase.getInstance().reference
 
         //if btn click, user go to Choose_Table page
+
         binding2.btnSearchTableNext.setOnClickListener {
 //           reDirectChoose_TablePage()
      //data aldığını diğer sayfalardan görmeki için
@@ -45,6 +47,7 @@ class Activity_LM_Seelect_Date_and_Time_Slot : AppCompatActivity() {
 
             startActivity(newIntent)
 //            finish()
+
         }
     }
 

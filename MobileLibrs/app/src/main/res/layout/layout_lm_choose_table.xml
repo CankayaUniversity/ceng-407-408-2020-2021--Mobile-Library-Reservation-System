@@ -135,7 +135,7 @@
     </RelativeLayout>
 
     <Button
-        android:id="@+id/btn_make_reservation_last_step"
+        android:id="@+id/btn_make_reservation"
         style="?android:textAppearanceSmall"
         android:layout_width="wrap_content"
         android:layout_height="63dp"
@@ -173,11 +173,11 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.502"
-            tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints" />
 
         <TextView
             android:id="@+id/textView20"
-            android:layout_width="24dp"
+            android:layout_width="22dp"
             android:layout_height="20dp"
             android:layout_marginEnd="224dp"
             android:background="#EF1A0A"
@@ -215,6 +215,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.503" />
+
 
         <TextView
             android:id="@+id/textView34"
@@ -359,7 +360,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.913" />
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
