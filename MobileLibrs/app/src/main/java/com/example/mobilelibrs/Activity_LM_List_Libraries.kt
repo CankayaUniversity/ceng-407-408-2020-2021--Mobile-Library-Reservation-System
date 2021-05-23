@@ -32,7 +32,7 @@ class Activity_LM_List_Libraries : AppCompatActivity() {
         // click make reservation button, view list libraries.
 
         //--new
-        binding2.btnNextLmselecttlib.setOnClickListener(){
+        binding2.btnNextSelectDateAndTimeSlot.setOnClickListener(){
 
 //            reDirect_LM_Select_Date_Time_Slot()
             // will send data

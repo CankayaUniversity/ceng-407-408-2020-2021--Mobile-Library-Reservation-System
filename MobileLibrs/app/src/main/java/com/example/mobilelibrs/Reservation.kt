@@ -17,7 +17,8 @@ class Reservation {
     }
 
     // make reservation page 1: list library page for constructor
-    constructor(libName:String){
-        this.libName=libName
+    constructor(libName:String) {
+        this.libName = libName
     }
+}
 
