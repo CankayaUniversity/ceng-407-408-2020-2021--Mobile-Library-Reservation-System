@@ -41,7 +41,7 @@
         android:text="Back" />
 
     <Button
-        android:id="@+id/btn_next"
+        android:id="@+id/btn_main_menu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
@@ -83,11 +83,14 @@
     <RelativeLayout
         android:layout_width="280dp"
         android:layout_height="113dp"
-        android:layout_marginStart="55dp"
+        android:layout_alignParentStart="true"
 
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+
+        android:layout_marginStart="60dp"
         android:layout_marginTop="130dp"
-        android:layout_marginEnd="44dp"
-
+        android:layout_marginEnd="60dp"
         android:layout_marginBottom="330dp"
         android:background="@drawable/qrkod"
         android:orientation="vertical">
@@ -96,10 +99,13 @@
             android:id="@+id/editTextTextPersonName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="22dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="26dp"
             android:layout_marginTop="20dp"
-            android:layout_marginEnd="22dp"
-            android:layout_marginBottom="94dp"
+            android:layout_marginEnd="26dp"
+            android:layout_marginBottom="65dp"
             android:ems="10"
             android:inputType="textPersonName"
             android:lineSpacingExtra="24sp"
@@ -119,26 +125,33 @@
         android:layout_marginEnd="22dp"
         android:layout_marginBottom="94dp"
         android:hint="" />
+
     <Button
+        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/button"
-        android:text="Generate"
-        android:layout_marginStart="22dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="85dp"
         android:layout_marginTop="359dp"
-        android:layout_marginEnd="22dp"
-        android:layout_marginBottom="94dp"
-        />
+        android:layout_marginEnd="85dp"
+        android:layout_marginBottom="409dp"
+        android:text="OR Generate" />
 
     <ImageView
         android:id="@+id/imageview"
-        android:layout_width="46dp"
-        android:layout_height="47dp"
+        android:layout_width="wrap_content"
+        android:layout_height="162dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
         android:layout_gravity="center"
-        android:layout_marginStart="190dp"
-        android:layout_marginTop="470dp"
-        android:layout_marginEnd="22dp"
-        android:layout_marginBottom="94dp" />
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="416dp"
+        android:layout_marginEnd="128dp"
+        android:layout_marginBottom="172dp" />
 
 
 </RelativeLayout>
