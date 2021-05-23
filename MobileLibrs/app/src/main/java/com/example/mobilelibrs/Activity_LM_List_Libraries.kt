@@ -2,6 +2,7 @@ package com.example.mobilelibrs
 
 import android.content.Intent
 import android.os.Bundle
+import android.text.method.ScrollingMovementMethod
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
@@ -25,14 +26,14 @@ class Activity_LM_List_Libraries : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         val binding2 = LayoutLmListLibrariesBinding.inflate(layoutInflater)
-
+        binding2.txtAreaLiblist.movementMethod = ScrollingMovementMethod()
         // get db reference
         var database = FirebaseDatabase.getInstance().reference.child("library")
         setContentView(binding2.root)
         // click make reservation button, view list libraries.
 
         //--new
-        binding2.btnNextSelectDateAndTimeSlot.setOnClickListener(){
+        binding2.btnNext.setOnClickListener(){
 
 //            reDirect_LM_Select_Date_Time_Slot()
             // will send data
@@ -40,10 +41,10 @@ class Activity_LM_List_Libraries : AppCompatActivity() {
             val newIntent = Intent(this, Activity_LM_Seelect_Date_and_Time_Slot::class.java)
             newIntent.putExtra("libName", sendingData)
             startActivity(newIntent)
-  //          finish()
+            finish()
         }
         //--new
-       /*
+
         // All data is in getData variable
         var getData = object : ValueEventListener {
             //bu method veritabanında veri varsa anında görüntülüyor
@@ -64,14 +65,9 @@ class Activity_LM_List_Libraries : AppCompatActivity() {
         database.addListenerForSingleValueEvent(getData)
 
         var database2 = FirebaseDatabase.getInstance().reference
-        binding2.btnNextLmselecttlib.setOnClickListener {
-            var enter_libname = binding2.txtEnterLibraryName.text.toString()
-            database2.child("reservation").push().setValue(Reservation(enter_libname))
-            reDirect_LM_Select_Date_Time_Slot()
 
-        }
 
-        */
+
     }
 
 
