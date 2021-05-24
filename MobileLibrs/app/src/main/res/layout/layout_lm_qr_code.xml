@@ -15,14 +15,15 @@
     <TextView
         android:id="@+id/AreaReservation"
         android:layout_width="wrap_content"
-        android:layout_height="595dp"
+        android:layout_height="451dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="22dp"
-        android:layout_marginTop="59dp"
-        android:layout_marginEnd="22dp"
-        android:layout_marginBottom="94dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="91dp"
+        android:background="@drawable/sekil"
         android:textAlignment="center"
         android:textColor="@color/Black"
         android:textSize="24sp"
@@ -81,64 +82,58 @@
         tools:layout_editor_absoluteY="340dp" />
 
     <RelativeLayout
+        android:id="@+id/relativeLayout"
         android:layout_width="280dp"
         android:layout_height="113dp"
+
+        android:layout_alignTop="@+id/AreaReservation"
+        android:layout_alignBottom="@+id/AreaReservation"
+
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
         android:layout_marginStart="55dp"
-
-        android:layout_marginTop="130dp"
-        android:layout_marginEnd="44dp"
-
-        android:layout_marginBottom="330dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="76dp"
+        android:layout_marginBottom="324dp"
         android:background="@drawable/qrkod"
-        android:orientation="vertical">
+        android:orientation="vertical" />
 
-        <TextView
-            android:id="@+id/editTextTextPersonName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="22dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="22dp"
-            android:layout_marginBottom="94dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:lineSpacingExtra="24sp"
-            android:text=""
-            android:textAlignment="center"
-            android:textColor="@color/Black"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-    </RelativeLayout>
-
-    <TextView
-        android:id="@+id/edittext"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="22dp"
-        android:layout_marginTop="319dp"
-        android:layout_marginEnd="22dp"
-        android:layout_marginBottom="94dp"
-        android:hint="" />
     <Button
+        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/button"
-        android:text="Generate"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
         android:layout_marginStart="22dp"
-        android:layout_marginTop="359dp"
-        android:layout_marginEnd="22dp"
-        android:layout_marginBottom="94dp"
-        />
+        android:layout_marginEnd="238dp"
+        android:layout_marginBottom="348dp"
+        android:text="Generate" />
 
     <ImageView
         android:id="@+id/imageview"
-        android:layout_width="97dp"
-        android:layout_height="85dp"
+        android:layout_width="200dp"
+        android:layout_height="188dp"
+        android:layout_below="@+id/edittext"
+        android:layout_alignBottom="@+id/AreaReservation"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
         android:layout_gravity="center"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="460dp"
-        android:layout_marginEnd="22dp"
-        android:layout_marginBottom="94dp" />
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="71dp"
+        android:layout_marginEnd="115dp"
+        android:layout_marginBottom="40dp" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="169dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="354dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name" />
 
 
 </RelativeLayout>
