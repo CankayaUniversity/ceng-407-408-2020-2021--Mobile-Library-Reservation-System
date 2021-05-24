@@ -23,6 +23,7 @@
         android:layout_marginEnd="114dp"
         android:layout_marginBottom="136dp"
         android:text="QR"
+        android:visibility="invisible"
         app:rippleColor="@android:color/transparent" />
 
     <Button
@@ -36,6 +37,7 @@
         android:layout_marginEnd="43dp"
         android:layout_marginBottom="138dp"
         android:text="X"
+        android:visibility="invisible"
         app:rippleColor="@android:color/transparent" />
 
     <Button
@@ -49,6 +51,7 @@
         android:layout_marginEnd="43dp"
         android:layout_marginBottom="244dp"
         android:text="X"
+        android:visibility="invisible"
         app:rippleColor="@android:color/transparent" />
 
     <Button
@@ -62,6 +65,7 @@
         android:layout_marginEnd="43dp"
         android:layout_marginBottom="351dp"
         android:text="X"
+        android:visibility="invisible"
         app:rippleColor="@android:color/transparent" />
 
     <Button
@@ -75,6 +79,7 @@
         android:layout_marginEnd="44dp"
         android:layout_marginBottom="465dp"
         android:text="X"
+        android:visibility="invisible"
         app:rippleColor="@android:color/transparent" />
 
     <Button
@@ -88,6 +93,7 @@
         android:layout_marginEnd="116dp"
         android:layout_marginBottom="350dp"
         android:text="QR"
+        android:visibility="invisible"
         app:rippleColor="@android:color/transparent" />
 
     <Button
@@ -101,6 +107,7 @@
         android:layout_marginEnd="117dp"
         android:layout_marginBottom="241dp"
         android:text="QR"
+        android:visibility="invisible"
         app:rippleColor="@android:color/transparent" />
 
     <TextView
@@ -230,6 +237,7 @@
         android:layout_marginEnd="115dp"
         android:layout_marginBottom="466dp"
         android:text="QR"
+        android:visibility="invisible"
         app:rippleColor="@android:color/transparent" />
 
 
