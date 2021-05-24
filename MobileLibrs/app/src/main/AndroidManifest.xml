@@ -11,7 +11,7 @@
         android:theme="@style/Theme.MobileLibrs">
 
         <!--First Page-->
-        <activity android:name=".Activity_LM_QR">
+        <activity android:name=".Activity_LM_List_Reservations">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
