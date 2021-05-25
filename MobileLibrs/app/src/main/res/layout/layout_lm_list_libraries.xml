@@ -14,7 +14,9 @@
         android:accessibilityHeading="true"
         android:background="#C2C2C2"
         android:backgroundTint="@color/mlrs_mlrs_mainpageBlue"
-        android:scrollbarThumbHorizontal="@drawable/ic_launcher_foreground">
+        android:scrollbarThumbHorizontal="@drawable/ic_launcher_foreground"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="16dp">
 
         <ImageView
             android:id="@+id/imageView10"
@@ -39,11 +41,10 @@
             android:layout_marginEnd="30dp"
             android:background="@color/mlrs_lightBlue"
             android:text="LIBRARY LIST"
-            android:textStyle="bold"
             android:textAlignment="center"
             android:textColor="@color/mlrs_white_button"
             android:textSize="30sp"
-        />
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/btn_Back"
@@ -68,65 +69,32 @@
             android:text="Next" />
 
         <TextView
-            android:id="@+id/topicEnterlibname"
-            android:layout_width="321dp"
-            android:layout_height="50dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="30dp"
-            android:layout_marginEnd="30dp"
-            android:layout_marginBottom="574dp"
-            android:text="Enter library name from list :"
-            android:textAlignment="textStart"
-            android:textColor="@color/mlrs_white_button"
-            android:textSize="23sp"
-            android:textStyle="bold" />
-
-        <EditText
-            android:id="@+id/txtEnterLibraryName"
-            android:layout_width="wrap_content"
-            android:layout_height="66dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="30dp"
-            android:layout_marginEnd="30dp"
-            android:layout_marginBottom="509dp"
-            android:background="@color/mlrs_white_button"
-            android:ems="13"
-            android:textSize="23sp" />
-
-        <TextView
-            android:id="@+id/topicLibraryList"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="30dp"
-            android:layout_marginEnd="30dp"
-            android:layout_marginBottom="444dp"
-            android:text="Library List :"
-            android:textAlignment="textStart"
-            android:textColor="@color/mlrs_white_button"
-            android:textSize="23sp"
-            android:textStyle="bold" />
-
-        <TextView
             android:id="@+id/txt_AreaLiblist"
             android:layout_width="wrap_content"
-            android:layout_height="342dp"
+            android:layout_height="451dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
-            android:scrollbars="vertical"
             android:layout_alignParentBottom="true"
             android:layout_marginStart="30dp"
             android:layout_marginEnd="30dp"
             android:layout_marginBottom="92dp"
+            android:scrollbars="vertical"
             android:textAlignment="textStart"
             android:textColor="@color/mlrs_white_button"
             android:textSize="23sp" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="346dp"
+            android:layout_height="80dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="556dp"
+            android:entries="@array/libraryName"
+            />
 
     </RelativeLayout>
 

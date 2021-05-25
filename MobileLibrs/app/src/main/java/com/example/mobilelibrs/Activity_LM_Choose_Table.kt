@@ -26,11 +26,23 @@ class Activity_LM_Choose_Table : AppCompatActivity() {
 //            reDirect_QrCodePage()
 
             //?????? table name binding ile çekilecek.Şimdilik elle giriyorum
-            val tableNo = 1
+            var tableNo = 1
+
+            val ln3 = intent.getStringExtra("l2")
+            var d3 = intent.getStringExtra("d1")
+ //           val ft3 = intent.getStringExtra("fT1")
+ //           val tt3 = intent.getStringExtra("tT1")
 
 
-            //?????? table name binding ile çekilecek.Şimdilik elle giriyorum
             val newIntent = Intent(this, Activity_LM_QR::class.java)
+
+            newIntent.putExtra("l4", ln3)
+            newIntent.putExtra("d4", d3)
+//            newIntent.putExtra("fT4", ft3)
+//            newIntent.putExtra("tT4", tt3)
+            newIntent.putExtra("tb1", tableNo.toString())
+            //putExtra içinde veri string olması gerek.DEğilse toString() ile çevirebiliriz.
+
             startActivity(newIntent)
 // qr kod da alınırsa finish yoruma al
             finish()

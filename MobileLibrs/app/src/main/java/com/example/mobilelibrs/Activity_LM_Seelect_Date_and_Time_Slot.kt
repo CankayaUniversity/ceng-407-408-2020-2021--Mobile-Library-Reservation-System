@@ -28,23 +28,29 @@ class Activity_LM_Seelect_Date_and_Time_Slot : AppCompatActivity() {
 
             // binding2.txtTopic.text = getLibname
 
-            // will send data
-            val sendingDateData = binding2.etDate.text.toString()
-            val sendingFromTimeData = binding2.etTimeFrom.text.toString()
-            val sendingToTimeData = binding2.etTimeTo.text.toString()
+            // will ingDatsend data
+            var ln1 = intent.getStringExtra("l1")
+            var sendeData = binding2.etDate.text.toString()
+
+            //****(***2satır) yoruma aldım(Beyza)Spinnerdan çekicez time ı.Silinecek spinner yapılınca
+            //            val sendingFromTimeData = binding2.etTimeFrom.text.toString()
+            //            val sendingToTimeData = binding2.etTimeTo.text.toString()
 
 //--            database.child("reservation").push().setValue(
 //--                Reservation(getLibname, sendingDateData, sendingFromTimeData, sendingToTimeData, 1))
 
 
             val newIntent = Intent(this, Activity_LM_Choose_Table::class.java)
+ //spinnerdan çekilcek
+            newIntent.putExtra("l2", ln1 )
+            newIntent.putExtra("d1", sendeData )
 
-            newIntent.putExtra("date", sendingDateData)
-            newIntent.putExtra("fromTime", sendingFromTimeData)
-            newIntent.putExtra("toTime", sendingToTimeData)
+            //(***2satır)bunlar spinneerdan alınacağı için silinecek yorum aldım.
+  //          newIntent.putExtra("fT1", sendingFromTimeData)
+  //          newIntent.putExtra("tT1", sendingToTimeData)
 
             startActivity(newIntent)
-//            finish()
+            finish()
 
         }
     }
