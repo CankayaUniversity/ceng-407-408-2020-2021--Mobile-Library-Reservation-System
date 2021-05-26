@@ -34,11 +34,11 @@ class Activity_LM_List_Libraries : AppCompatActivity() {
 
         binding.btnNext.setOnClickListener() {
             //Select a library name from spinner
-            var ln1 = binding.spinner.selectedItem.toString()
+            var libraryName1 = binding.spinner.selectedItem.toString()
 
             //Take the library name in l1 and send it to select date and time slot page
             val newIntent = Intent(this, Activity_LM_Seelect_Date_and_Time_Slot::class.java)
-            newIntent.putExtra("l1", ln1)
+            newIntent.putExtra("ln1", libraryName1)
             startActivity(newIntent)
             finish()
         }

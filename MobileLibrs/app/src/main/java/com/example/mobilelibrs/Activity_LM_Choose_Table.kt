@@ -27,17 +27,17 @@ class Activity_LM_Choose_Table : AppCompatActivity() {
         //Click the button to go QR code page
         binding.btnMakeReservation.setOnClickListener(){
             //Take library name, date, time slot and table no
-            val ln3 = intent.getStringExtra("l2")
-            val d3 = intent.getStringExtra("d1")
-            val ft3 = intent.getStringExtra("ts1")
-            val tableNo = 1
+            val libraryName3 = intent.getStringExtra("ln2")
+            val date3 = intent.getStringExtra("d2")
+            val timeSlot3 = intent.getStringExtra("ts2")
+            val tableNo3= 1
 
             val newIntent = Intent(this, Activity_LM_QR::class.java)
             //Send library name, date, time slot and table no to QR code page
-            newIntent.putExtra("l4", ln3)
-            newIntent.putExtra("d4", d3)
-            newIntent.putExtra("fT4", ft3)
-            newIntent.putExtra("tb1", tableNo.toString())
+            newIntent.putExtra("ln4", libraryName3)
+            newIntent.putExtra("d4", date3 )
+            newIntent.putExtra("ts4", timeSlot3)
+            newIntent.putExtra("tn4", tableNo3.toString())
             //putExtra içinde veri string olması gerek.Değilse toString() ile çevirebiliriz.
 
             startActivity(newIntent)

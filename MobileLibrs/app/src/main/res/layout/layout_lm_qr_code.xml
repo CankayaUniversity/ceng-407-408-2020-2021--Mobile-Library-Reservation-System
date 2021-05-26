@@ -15,14 +15,14 @@
     <TextView
         android:id="@+id/AreaReservation"
         android:layout_width="wrap_content"
-        android:layout_height="451dp"
+        android:layout_height="403dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="18dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="13dp"
-        android:layout_marginEnd="25dp"
-        android:layout_marginBottom="91dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="171dp"
         android:background="@drawable/sekil"
         android:textAlignment="center"
         android:textColor="@color/Black"
@@ -36,9 +36,9 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="280dp"
-        android:layout_marginBottom="21dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginEnd="274dp"
+        android:layout_marginBottom="46dp"
         android:text="Back" />
 
     <Button
@@ -47,8 +47,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="40dp"
-        android:layout_marginBottom="21dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginBottom="47dp"
         android:text="Main Menu" />
 
     <TextView
@@ -83,8 +83,8 @@
 
     <RelativeLayout
         android:id="@+id/relativeLayout"
-        android:layout_width="280dp"
-        android:layout_height="113dp"
+        android:layout_width="wrap_content"
+        android:layout_height="151dp"
 
         android:layout_alignTop="@+id/AreaReservation"
         android:layout_alignBottom="@+id/AreaReservation"
@@ -93,63 +93,67 @@
         android:layout_alignParentEnd="true"
         android:layout_marginStart="55dp"
         android:layout_marginTop="14dp"
-        android:layout_marginEnd="76dp"
-        android:layout_marginBottom="324dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="238dp"
         android:background="@drawable/qrkod"
-        android:orientation="vertical" >
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/tarih"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginTop="28dp"
-            android:layout_marginEnd="117dp"
-            android:layout_marginBottom="53dp"
-             />
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="39dp"
+            android:layout_marginEnd="29dp"
+            android:layout_marginBottom="73dp"
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/lname"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="38dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginEnd="116dp"
-            android:layout_marginBottom="79dp"
-             />
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="18dp"
+            android:layout_marginBottom="104dp"
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/saat"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="285dp"
+            android:layout_height="41dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginEnd="181dp"
-            android:layout_marginBottom="8dp"
-            />
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="74dp"
+            android:layout_marginEnd="17dp"
+            android:layout_marginBottom="40dp"
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/koltuk"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="285dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginEnd="60dp"
-            android:layout_marginBottom="6dp"
-             />
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="108dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="15dp"
+            android:textSize="16sp" />
     </RelativeLayout>
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="22dp"
-        android:layout_marginEnd="238dp"
-        android:layout_marginBottom="348dp"
-        android:text="Generate" />
 
     <ImageView
         android:id="@+id/imageview"
@@ -160,23 +164,19 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_gravity="center"
-        android:layout_marginStart="96dp"
+        android:layout_marginStart="100dp"
         android:layout_marginTop="71dp"
-        android:layout_marginEnd="115dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginEnd="111dp"
+        android:layout_marginBottom="37dp"
         tools:ignore="UnknownId" />
 
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="169dp"
+    <TextView
+        android:id="@+id/tv_qr_info"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="27dp"
-        android:layout_marginBottom="354dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name" />
+        android:layout_marginEnd="354dp"
+        tools:visibility="invisible" />
 
 
 </RelativeLayout>
