@@ -101,56 +101,48 @@
         <TextView
             android:id="@+id/tarih"
             android:layout_width="wrap_content"
-            android:layout_height="35dp"
+            android:layout_height="25dp"
             android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="39dp"
-            android:layout_marginEnd="29dp"
-            android:layout_marginBottom="73dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="77dp"
             android:textSize="16sp" />
 
         <TextView
             android:id="@+id/lname"
             android:layout_width="wrap_content"
-            android:layout_height="38dp"
+            android:layout_height="25dp"
             android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginEnd="18dp"
-            android:layout_marginBottom="104dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="112dp"
             android:textSize="16sp" />
 
         <TextView
             android:id="@+id/saat"
             android:layout_width="285dp"
-            android:layout_height="41dp"
+            android:layout_height="25dp"
             android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="14dp"
-            android:layout_marginTop="74dp"
-            android:layout_marginEnd="17dp"
-            android:layout_marginBottom="40dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="52dp"
             android:textSize="16sp" />
 
         <TextView
             android:id="@+id/koltuk"
             android:layout_width="285dp"
-            android:layout_height="40dp"
+            android:layout_height="25dp"
             android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="19dp"
-            android:layout_marginTop="108dp"
-            android:layout_marginEnd="20dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
             android:layout_marginBottom="15dp"
             android:textSize="16sp" />
     </RelativeLayout>
@@ -176,6 +168,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="354dp"
+        android:visibility="invisible"
         tools:visibility="invisible" />
 
 

@@ -26,7 +26,7 @@ class Activity_Admin_Add_Library : AppCompatActivity() {
         var database = FirebaseDatabase.getInstance().reference
         setContentView(binding.root)
 
-        // Data writes to db
+        //Data writes to db
         binding.btnAddLibrary.setOnClickListener {
 
             var libName = binding.txtLibraryName.text.toString()
@@ -48,8 +48,5 @@ class Activity_Admin_Add_Library : AppCompatActivity() {
         val intent = Intent(this, Activity_Admin_Menu::class.java)
         startActivity(intent)
         finish()
-
     }
-
-
 }
