@@ -2,6 +2,8 @@ package com.example.mobilelibrs
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.mobilelibrs.databinding.LayoutLmSelectDateAndTimeSlotBinding
@@ -9,53 +11,40 @@ import com.google.firebase.database.FirebaseDatabase
 
 class Activity_LM_Seelect_Date_and_Time_Slot : AppCompatActivity() {
 
-    lateinit var binding: LayoutLmSelectDateAndTimeSlotBinding
+    var libname:TextView? =null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val binding2 = LayoutLmSelectDateAndTimeSlotBinding.inflate(layoutInflater)
+        
+        //Binding to access layout
+        val binding = LayoutLmSelectDateAndTimeSlotBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        setContentView(binding2.root)
-//--
+        libname = binding.tvLibraryName as TextView
+
+        //Get database reference
         var database = FirebaseDatabase.getInstance().reference
 
-        //if btn click, user go to Choose_Table page
+        //Take the library name in l1 and print the textview
+        var ln1 = intent.getStringExtra("l1")
+        libname!!.setText("Library Name: "+ ln1)
 
-        binding2.btnSearchTable.setOnClickListener {
-//           reDirectChoose_TablePage()
-     //data aldığını diğer sayfalardan görmeki için
- //--           val getLibname = intent.getStringExtra("libName")
+        //Click button to go Choose Table page with new entries
+        binding.btnSearchTable.setOnClickListener {
+            //Take date and time slot to choose table page
+            var d1 = binding.etDate.text.toString()
+            var ts1 = binding.spinnerTimeslot.selectedItem.toString()
 
-            // binding2.txtTopic.text = getLibname
-
-            // will ingDatsend data
-            var ln1 = intent.getStringExtra("l1")
-            var sendeData = binding2.etDate.text.toString()
-
-            //****(***2satır) yoruma aldım(Beyza)Spinnerdan çekicez time ı.Silinecek spinner yapılınca
-            //            val sendingFromTimeData = binding2.etTimeFrom.text.toString()
-            //            val sendingToTimeData = binding2.etTimeTo.text.toString()
-
-//--            database.child("reservation").push().setValue(
-//--                Reservation(getLibname, sendingDateData, sendingFromTimeData, sendingToTimeData, 1))
-
+            //database.child("reservation").push().setValue(
+            //Reservation(getLibname, sendingDateData, sendingFromTimeData, sendingToTimeData, 1))
 
             val newIntent = Intent(this, Activity_LM_Choose_Table::class.java)
- //spinnerdan çekilcek
-            newIntent.putExtra("l2", ln1 )
-            newIntent.putExtra("d1", sendeData )
-
-            //(***2satır)bunlar spinneerdan alınacağı için silinecek yorum aldım.
-  //          newIntent.putExtra("fT1", sendingFromTimeData)
-  //          newIntent.putExtra("tT1", sendingToTimeData)
-
+            //Send these data to Choose Table page
+            newIntent.putExtra("l2", ln1)
+            newIntent.putExtra("d1", d1)
+            newIntent.putExtra("ts1", ts1)
             startActivity(newIntent)
             finish()
-
         }
-    }
-
-    fun reDirectChoose_TablePage() {
-
     }
 }

@@ -19,7 +19,7 @@ class Activity_LM_QR : AppCompatActivity() {
 
     var libname:TextView? =null
     var tarih:TextView? = null
-    var saat:TextView? =null  // 2 times have time from and to
+    var saat:TextView? =null
     var koltuk:TextView? =null
 
     override fun onCreate(savedInstanceState: Bundle?) {

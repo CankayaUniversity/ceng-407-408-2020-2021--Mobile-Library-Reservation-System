@@ -20,50 +20,41 @@ import com.example.mobilelibrs.databinding.LayoutLmListLibrariesBinding
 
 class Activity_LM_List_Libraries : AppCompatActivity() {
 
-    lateinit var binding4: LayoutLmListLibrariesBinding
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val binding2 = LayoutLmListLibrariesBinding.inflate(layoutInflater)
-        binding2.txtAreaLiblist.movementMethod = ScrollingMovementMethod()
-        // get db reference
+        //Binding to access layout
+        val binding = LayoutLmListLibrariesBinding.inflate(layoutInflater)
+        binding.txtAreaLiblist.movementMethod = ScrollingMovementMethod()
+        setContentView(binding.root)
+
+        //Get database reference
         var database = FirebaseDatabase.getInstance().reference.child("library")
-        setContentView(binding2.root)
-        // click make reservation button, view list libraries.
 
 
-        //--new
-        binding2.btnNext.setOnClickListener() {
+        binding.btnNext.setOnClickListener() {
+            //Select a library name from spinner
+            var ln1 = binding.spinner.selectedItem.toString()
 
-//            reDirect_LM_Select_Date_Time_Slot()
-
-
-            // will send data
-
-            //VERİLERİ SPİNNERDAN ALLLLL!!!!!
-            var ln1 = binding2.spinner.selectedItem.toString()
-
-
+            //Take the library name in l1 and send it to select date and time slot page
             val newIntent = Intent(this, Activity_LM_Seelect_Date_and_Time_Slot::class.java)
             newIntent.putExtra("l1", ln1)
-
             startActivity(newIntent)
             finish()
         }
-        //--new
 
-        // All data is in getData variable
-        var getData = object : ValueEventListener {
-            //bu method veritabanında veri varsa anında görüntülüyor
+        //BU KISIM KÜTÜPHANE İSİMLERİ DATABASEDEN ÇEKİLECEĞİ ZAMAN KULLANILABİLİR.
+        //All data is in getData variable
+        /* var getData = object : ValueEventListener {
+            //All data is shown if they exist
             override fun onDataChange(snapshot: DataSnapshot) {
-                var sb = StringBuilder() // convert all data as text
+                var sb = StringBuilder()  //Convert all data as text
                 for (i in snapshot.children) {
-                    // path: database de tutulan değişkenin ismi
+                    //Path: Databasede tutulan değişkenin ismi
                     var lname = i.child("libraryName").getValue().toString()
                     sb.append("Library Name: $lname \n\n")
                 }
-                binding2.txtAreaLiblist.setText(sb)
+                binding.txtAreaLiblist.setText(sb)
             }
 
             override fun onCancelled(error: DatabaseError) {
@@ -71,16 +62,6 @@ class Activity_LM_List_Libraries : AppCompatActivity() {
             }
         }
         database.addValueEventListener(getData)
-        database.addListenerForSingleValueEvent(getData)
-
-        var database2 = FirebaseDatabase.getInstance().reference
-
-
+        database.addListenerForSingleValueEvent(getData)*/
     }
-
-
-    fun reDirect_LM_Select_Date_Time_Slot() {
-
-    }
-
 }

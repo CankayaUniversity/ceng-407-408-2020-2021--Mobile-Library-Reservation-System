@@ -16,44 +16,33 @@ class Activity_LM_Choose_Table : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val binding4 = LayoutLmChooseTableBinding.inflate(layoutInflater)
-        setContentView(binding4.root)
+        //Binding to access layout
+        val binding = LayoutLmChooseTableBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        //Get database reference
         var database = FirebaseDatabase.getInstance().reference
 
 
-        // click make reservation button, go to qr code page.
-        binding4.btnMakeReservation.setOnClickListener(){
-//            reDirect_QrCodePage()
-
-            //?????? table name binding ile çekilecek.Şimdilik elle giriyorum
-            var tableNo = 1
-
+        //Click the button to go QR code page
+        binding.btnMakeReservation.setOnClickListener(){
+            //Take library name, date, time slot and table no
             val ln3 = intent.getStringExtra("l2")
-            var d3 = intent.getStringExtra("d1")
- //           val ft3 = intent.getStringExtra("fT1")
- //           val tt3 = intent.getStringExtra("tT1")
-
+            val d3 = intent.getStringExtra("d1")
+            val ft3 = intent.getStringExtra("ts1")
+            val tableNo = 1
 
             val newIntent = Intent(this, Activity_LM_QR::class.java)
-
+            //Send library name, date, time slot and table no to QR code page
             newIntent.putExtra("l4", ln3)
             newIntent.putExtra("d4", d3)
-//            newIntent.putExtra("fT4", ft3)
-//            newIntent.putExtra("tT4", tt3)
+            newIntent.putExtra("fT4", ft3)
             newIntent.putExtra("tb1", tableNo.toString())
-            //putExtra içinde veri string olması gerek.DEğilse toString() ile çevirebiliriz.
+            //putExtra içinde veri string olması gerek.Değilse toString() ile çevirebiliriz.
 
             startActivity(newIntent)
-// qr kod da alınırsa finish yoruma al
+            // qr kod da alınırsa finish yoruma al(anlamadım:Burcu)
             finish()
         }
-
     }
-
-
-    fun reDirect_QrCodePage() {
-
-
-    }
-
 }

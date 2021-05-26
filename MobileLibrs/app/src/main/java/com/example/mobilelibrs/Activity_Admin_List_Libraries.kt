@@ -15,28 +15,28 @@ class Activity_Admin_List_Libraries : AppCompatActivity() {
     lateinit var binding: LayoutAdminListLibrariesBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//       setContentView(R.layout.activity_admin_liblist)
 
-        val binding2 = LayoutAdminListLibrariesBinding.inflate(layoutInflater)
+        //Layout connection by using binding
+        val binding = LayoutAdminListLibrariesBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
+        //Firebase access variable
         var database = FirebaseDatabase.getInstance().reference
 
-        setContentView(binding2.root)
 
-        // All data is in getData variable
+        //All data is in getData variable
         var getData = object : ValueEventListener {
-            //bu method veritabanında veri varsa anında görüntülüyor
+            //All data is shown if they exist
             override fun onDataChange(snapshot: DataSnapshot) {
-                var sb = StringBuilder() // metin birleştirme sınıfı
+                var sb = StringBuilder() //Metin birleştirme sınıfı
                 for (i in snapshot.children) {
-                    // path: datebase de tutulan değişkenin ismi
+                    //Path: Datebasede tutulan değişkenin ismi
                     var lname = i.child("libraryName").getValue()
                     var laddress = i.child("libraryAddress").getValue()
                     var lcap = i.child("libraryCapacity").getValue()
                     sb.append("${i.key}) Name: $lname \n Address: $laddress \n Capacity: $lcap \n\n")
                 }
-                binding2.AdminLibList.setText(sb)
-
+                binding.AdminLibList.setText(sb)
             }
 
             override fun onCancelled(error: DatabaseError) {
@@ -46,11 +46,9 @@ class Activity_Admin_List_Libraries : AppCompatActivity() {
         database.addValueEventListener(getData)
         database.addListenerForSingleValueEvent(getData)
 
-        binding2.buttonLmBack.setOnClickListener {
+        binding.buttonLmBack.setOnClickListener {
             reDirectBackAdminMenuPage()
         }
-
-
     }
 
     fun reDirectBackAdminMenuPage() {

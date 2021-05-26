@@ -21,7 +21,6 @@ class Activity_First_Page : AppCompatActivity() {
         btn_signup.setOnClickListener {
             reDirectSignUpPage()
         }
-
     }
 
     fun reDirectSignUpPage() {

@@ -15,12 +15,13 @@ public class Activity_Admin_Menu : AppCompatActivity() {
         val btn_listLibraries = findViewById<Button>(R.id.btn_admin_menu_list_libraries)
         val btn_addLibrary = findViewById<Button>(R.id.btn_admin_menu_add_library)
         val btn_exit_menu = findViewById<Button>(R.id.btn_menu_exit)
-        // click list libraries button, go to libraries list page
+
+        //Click list libraries button, go to libraries list page
         btn_listLibraries.setOnClickListener {
             reDirectListLibrariesPage()
         }
 
-        // click add library button, go to add library page
+        //Click add library button, go to add library page
         btn_addLibrary.setOnClickListener {
             reDirectAddLibraryPage()
         }
@@ -28,7 +29,6 @@ public class Activity_Admin_Menu : AppCompatActivity() {
         btn_exit_menu.setOnClickListener {
             reDirectLoginPage()
         }
-
     }
 
     fun reDirectLoginPage() {
@@ -48,5 +48,4 @@ public class Activity_Admin_Menu : AppCompatActivity() {
         startActivity(intent)
         finish()
     }
-
 }
