@@ -1,5 +1,6 @@
 package com.example.mobilelibrs
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
@@ -18,6 +19,7 @@ class Activity_LM_QR : AppCompatActivity() {
     var tvqrinfo: TextView? = null
     var button: Button? = null
     var imageView: ImageView? = null
+    var next_button: Button? = null
 
     var libname: TextView? = null
     var tarih: TextView? = null
@@ -33,6 +35,7 @@ class Activity_LM_QR : AppCompatActivity() {
 
         tvqrinfo = findViewById<View>(R.id.tv_qr_info) as TextView
         imageView = findViewById<View>(R.id.imageview) as ImageView
+        next_button = findViewById<View>(R.id.btn_next) as Button
 
         libname = findViewById<View>(R.id.lname) as TextView
         tarih = findViewById<View>(R.id.tarih) as TextView
@@ -70,5 +73,16 @@ class Activity_LM_QR : AppCompatActivity() {
         } catch (e: Exception) {
             e.printStackTrace()
         }
+        // Click button, Go to Lm Menu Page
+        next_button!!.setOnClickListener {
+            reDirectLMMenuPage()
+        }
+    }
+
+    // Go to Lm Menu Page
+    fun reDirectLMMenuPage() {
+        val intent = Intent(this, Activity_LM_Menu::class.java)
+        startActivity(intent)
+        finish()
     }
 }
