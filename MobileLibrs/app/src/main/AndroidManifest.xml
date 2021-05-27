@@ -21,9 +21,9 @@
 
         <!-- User's Menu Pages -->
 
-      <!--  <activity android:name=".Activity_First_Page"> </activity>-->
+        <!--   <activity android:name=".Activity_First_Page"> </activity>-->
 
-      <!--  <activity android:name=".Activity_Admin_Menu"> </activity>-->
+        <activity android:name=".Activity_Admin_Menu"> </activity>
         <activity android:name=".Activity_Librarian_Menu"> </activity>
         <activity android:name=".Activity_LM_Menu"> </activity>
 

@@ -4,10 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.text.method.ScrollingMovementMethod
 import android.view.View
-import android.widget.AdapterView
-import android.widget.ArrayAdapter
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -22,7 +19,7 @@ import com.google.firebase.ktx.Firebase
 
 class Activity_LM_List_Libraries : AppCompatActivity() {
 
-
+    var lmID: TextView? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -30,6 +27,11 @@ class Activity_LM_List_Libraries : AppCompatActivity() {
         val binding = LayoutLmListLibrariesBinding.inflate(layoutInflater)
         binding.txtAreaLiblist.movementMethod = ScrollingMovementMethod()
         setContentView(binding.root)
+
+        /*//Show lmID in textview
+        lmID = findViewById<Button>(R.id.tv_lmID_list_lib ) as TextView
+        var lmID2 = intent.getStringExtra("userId1")
+        lmID!!.setText("User"+ lmID2)*/
 
         //Get database reference
         var database = FirebaseDatabase.getInstance().reference.child("library")
@@ -48,7 +50,7 @@ class Activity_LM_List_Libraries : AppCompatActivity() {
 
         //BU KISIM KÜTÜPHANE İSİMLERİ DATABASEDEN ÇEKİLECEĞİ ZAMAN KULLANILABİLİR.
         //All data is in getData variable
-        /* var getData = object : ValueEventListener {
+         var getData = object : ValueEventListener {
             //All data is shown if they exist
             override fun onDataChange(snapshot: DataSnapshot) {
                 var sb = StringBuilder()  //Convert all data as text
@@ -65,6 +67,6 @@ class Activity_LM_List_Libraries : AppCompatActivity() {
             }
         }
         database.addValueEventListener(getData)
-        database.addListenerForSingleValueEvent(getData)*/
+        database.addListenerForSingleValueEvent(getData)
     }
 }

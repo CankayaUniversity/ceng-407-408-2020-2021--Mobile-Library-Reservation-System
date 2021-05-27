@@ -10,12 +10,18 @@ import com.google.android.gms.tasks.OnFailureListener
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
+import java.lang.StringBuilder
+import kotlin.math.log
 
 class Activity_Login : AppCompatActivity() {
 
     // Firebase
     private lateinit var mAuthListener: FirebaseAuth.AuthStateListener
-
+    var flag = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.layout_login)
@@ -26,7 +32,7 @@ class Activity_Login : AppCompatActivity() {
         var etPassword = findViewById<EditText>(R.id.etPassword)
         var btnEmail_sign_up_button = findViewById<TextView>(R.id.btn_sign_up)
         var tvresend_verification_email = findViewById<TextView>(R.id.tvresend_verification_email)
-        var flag = 0
+
 
 
         btnEmail_sign_up_button.setOnClickListener {
@@ -37,17 +43,17 @@ class Activity_Login : AppCompatActivity() {
         btnEmail_sign_in_button.setOnClickListener {
 
             // this email for login admin menu page
-            if(etEmail.text.toString().equals("a@gmail.com"))
-                flag=1
+            if (etEmail.text.toString().equals("a@gmail.com"))
+                flag = 1
             // this email for login lm menu page
-            if(etEmail.text.toString().equals("lm@gmail.com"))
-                flag=2
+            if (etEmail.text.toString().equals("lm@gmail.com"))
+                flag = 2
             // this email for librarian admin menu page
-            if(etEmail.text.toString().equals("lb@gmail.com"))
-                flag=3
+            if (etEmail.text.toString().equals("lb@gmail.com"))
+                flag = 3
             if (etEmail.text.isNotEmpty() && etPassword.text.isNotEmpty()) {
                 showProgressbar()
-                if(flag == 1) {
+                if (flag == 1) {
                     FirebaseAuth.getInstance().signInWithEmailAndPassword(
                         etEmail.text.toString(),
                         etPassword.text.toString()
@@ -55,11 +61,75 @@ class Activity_Login : AppCompatActivity() {
                         .addOnCompleteListener(object : OnCompleteListener<AuthResult> {
                             override fun onComplete(p0: Task<AuthResult>) {
                                 // if user is admin
-                                reDirect_Admin_MenuPage()
+                                // reDirect_Admin_MenuPage()
                                 closeProgressBar()
                                 Toast.makeText(
                                     this@Activity_Login,
                                     "Admin Login Successful: " + p0.isSuccessful,
+                                    Toast.LENGTH_LONG
+                                ).show()
+
+                            }
+
+                        })
+                        .addOnFailureListener(object : OnFailureListener {
+                            override fun onFailure(p0: Exception) {
+                                Toast.makeText(
+                                    this@Activity_Login,
+                                    "Login Failed: " + p0.message,
+                                    Toast.LENGTH_SHORT
+                                ).show()
+                                closeProgressBar()
+                            }
+                        })
+
+                    /*  //Get database reference
+                      var database = FirebaseDatabase.getInstance().reference.child("user")
+
+                      var getData = object : ValueEventListener {
+                          //All data is shown if they exist
+                          override fun onDataChange(snapshot: DataSnapshot) {
+
+                              for (i in snapshot.children) {
+                                  //Path: Databasede tutulan değişkenin ismi
+                                  var userEmail = i.child("userEmail").getValue().toString()
+                                  var userPassword = i.child("userPassword").getValue().toString()
+
+                                  if (etEmail.text.toString().equals("a@gmail.com") && userPassword == etPassword.text.toString()){
+                                      var userId= i.child("userId").getValue().toString()
+
+                                      Toast.makeText(this@Activity_Login, userId, Toast.LENGTH_LONG).show()
+
+                                     /* val newIntent = Intent(this@Activity_Login, Activity_LM_Seelect_Date_and_Time_Slot::class.java)
+                                      newIntent.putExtra("userId", userId)
+                                      startActivity(newIntent)
+                                      finish()*/
+                                  }
+                              }
+
+                          }
+
+                          override fun onCancelled(error: DatabaseError) {
+                              TODO("Not yet implemented")
+                          }
+                      }
+                      database.addValueEventListener(getData)
+                      database.addListenerForSingleValueEvent(getData)*/
+
+
+                }
+                if (flag == 2) {
+                    FirebaseAuth.getInstance().signInWithEmailAndPassword(
+                        etEmail.text.toString(),
+                        etPassword.text.toString()
+                    )
+                        .addOnCompleteListener(object : OnCompleteListener<AuthResult> {
+                            override fun onComplete(p0: Task<AuthResult>) {
+                                // if user is LM
+                                closeProgressBar()
+                                Toast.makeText(
+                                    this@Activity_Login,
+                                    "Library Member Login Successful: " + p0.isSuccessful,
                                     Toast.LENGTH_SHORT
                                 ).show()
                             }
@@ -75,66 +145,36 @@ class Activity_Login : AppCompatActivity() {
                                 closeProgressBar()
                             }
                         })
-                    }
-                    if (flag == 2) {
-                        FirebaseAuth.getInstance().signInWithEmailAndPassword(
-                            etEmail.text.toString(),
-                            etPassword.text.toString()
-                        )
-                            .addOnCompleteListener(object : OnCompleteListener<AuthResult> {
-                                override fun onComplete(p0: Task<AuthResult>) {
-                                    // if user is LM
-                                    reDirect_LM_MenuPage()
-                                    closeProgressBar()
-                                    Toast.makeText(
-                                        this@Activity_Login,
-                                        "Library Member Login Successful: " + p0.isSuccessful,
-                                        Toast.LENGTH_SHORT
-                                    ).show()
-                                }
+                }
 
-                            })
-                            .addOnFailureListener(object : OnFailureListener {
-                                override fun onFailure(p0: Exception) {
-                                    Toast.makeText(
-                                        this@Activity_Login,
-                                        "Login Failed: " + p0.message,
-                                        Toast.LENGTH_SHORT
-                                    ).show()
-                                    closeProgressBar()
-                                }
-                            })
-                    }
+                if (flag == 3) {
+                    FirebaseAuth.getInstance().signInWithEmailAndPassword(
+                        etEmail.text.toString(),
+                        etPassword.text.toString()
+                    )
+                        .addOnCompleteListener(object : OnCompleteListener<AuthResult> {
+                            override fun onComplete(p0: Task<AuthResult>) {
+                                // if user is librarian
+                                closeProgressBar()
+                                Toast.makeText(
+                                    this@Activity_Login,
+                                    "Librarian Login Successful: " + p0.isSuccessful,
+                                    Toast.LENGTH_SHORT
+                                ).show()
+                            }
 
-                    if (flag == 3) {
-                        FirebaseAuth.getInstance().signInWithEmailAndPassword(
-                            etEmail.text.toString(),
-                            etPassword.text.toString()
-                        )
-                            .addOnCompleteListener(object : OnCompleteListener<AuthResult> {
-                                override fun onComplete(p0: Task<AuthResult>) {
-                                    // if user is librarian
-                                    reDirect_Librarian_MenuPage()
-                                    closeProgressBar()
-                                    Toast.makeText(
-                                        this@Activity_Login,
-                                        "Librarian Login Successful: " + p0.isSuccessful,
-                                        Toast.LENGTH_SHORT
-                                    ).show()
-                                }
-
-                            })
-                            .addOnFailureListener(object : OnFailureListener {
-                                override fun onFailure(p0: Exception) {
-                                    Toast.makeText(
-                                        this@Activity_Login,
-                                        "Login Failed: " + p0.message,
-                                        Toast.LENGTH_SHORT
-                                    ).show()
-                                    closeProgressBar()
-                                }
-                            })
-                    }
+                        })
+                        .addOnFailureListener(object : OnFailureListener {
+                            override fun onFailure(p0: Exception) {
+                                Toast.makeText(
+                                    this@Activity_Login,
+                                    "Login Failed: " + p0.message,
+                                    Toast.LENGTH_SHORT
+                                ).show()
+                                closeProgressBar()
+                            }
+                        })
+                }
 
             } else {
                 Toast.makeText(this, "Please fill in the blank fields.", Toast.LENGTH_LONG).show()
@@ -173,16 +213,60 @@ class Activity_Login : AppCompatActivity() {
             override fun onAuthStateChanged(p0: FirebaseAuth) {
                 var user = p0.currentUser
 
-                if (user != null) {
+                if (user != null && flag==1) {
 
-                    if (user.isEmailVerified) {
-                        Toast.makeText(this@Activity_Login, "E-mail is confirmed. : " + user.uid, Toast.LENGTH_LONG).show()
-                    } else {
-                        Toast.makeText(this@Activity_Login, "Please confirm your e-mail. : ", Toast.LENGTH_LONG).show()
-                        FirebaseAuth.getInstance().signOut()
-                    }
-                } else {
-                    Toast.makeText(this@Activity_Login, "EXIT WAS DONE. : ", Toast.LENGTH_LONG).show()
+
+                    Toast.makeText(
+                        this@Activity_Login,
+                        "Please confirm your e-mail. : " + user.uid,
+                        Toast.LENGTH_LONG
+                    ).show()
+
+                    //user.uid değerini al databaseden
+                    val userId = user.uid
+                    val newIntent = Intent(this@Activity_Login, Activity_Admin_Menu::class.java)
+                    newIntent.putExtra("userId", userId)
+                    startActivity(newIntent)
+                    finish()
+                    FirebaseAuth.getInstance().signOut()
+
+                }
+                if (user != null && flag==2) {
+
+                    Toast.makeText(
+                        this@Activity_Login,
+                        "Please confirm your e-mail. : " + user.uid,
+                        Toast.LENGTH_LONG
+                    ).show()
+
+                    //user.uid değerini al databaseden
+                    val userId = user.uid
+                    val newIntent = Intent(this@Activity_Login, Activity_LM_Menu::class.java)
+                    newIntent.putExtra("userId", userId)
+                    startActivity(newIntent)
+                    finish()
+                    FirebaseAuth.getInstance().signOut()
+
+                }
+                if (user != null && flag==3) {
+
+                    Toast.makeText(
+                        this@Activity_Login,
+                        "Please confirm your e-mail. : " + user.uid,
+                        Toast.LENGTH_LONG
+                    ).show()
+
+                    //user.uid değerini al databaseden
+                    val userId = user.uid
+                    val newIntent = Intent(this@Activity_Login, Activity_Librarian_Menu::class.java)
+                    newIntent.putExtra("userId", userId)
+                    startActivity(newIntent)
+                    finish()
+                    FirebaseAuth.getInstance().signOut()
+
+                }else {
+                    Toast.makeText(this@Activity_Login, "EXIT WAS DONE. : ", Toast.LENGTH_LONG)
+                        .show()
                 }
             }
         }

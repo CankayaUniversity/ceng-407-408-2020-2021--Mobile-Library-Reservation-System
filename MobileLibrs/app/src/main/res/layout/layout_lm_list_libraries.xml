@@ -96,6 +96,12 @@
             android:entries="@array/libraryName"
             />
 
+        <TextView
+            android:id="@+id/tv_lmID_list_lib"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
+
     </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
