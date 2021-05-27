@@ -1,5 +1,6 @@
 package com.example.mobilelibrs
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.method.ScrollingMovementMethod
 import android.view.View
@@ -14,7 +15,11 @@ import java.lang.StringBuilder
 import com.example.mobilelibrs.databinding.LayoutLmListReservationsBinding
 
 class Activity_LM_List_Reservations : AppCompatActivity() {
-
+    var libName: String=""
+    var date:String=""
+    var toTime:String=""
+    var fromTime:String=""
+    var tableNo:String=""
     var lmID: TextView? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,10 +32,10 @@ class Activity_LM_List_Reservations : AppCompatActivity() {
         binding.tvReservation3.movementMethod = ScrollingMovementMethod()
         binding.tvReservation4.movementMethod = ScrollingMovementMethod()
 
-        /*//Show lmID in textview
+        //Show lmID in textview
         lmID = binding.tvLmIDResList as TextView
         var lmID2 = intent.getStringExtra("userId1")
-        lmID!!.setText("User"+ lmID2)*/
+        lmID!!.setText("User"+ lmID2)
 
         //Get DB Reference
         val database = FirebaseDatabase.getInstance().reference.child("reservation")
@@ -47,19 +52,20 @@ class Activity_LM_List_Reservations : AppCompatActivity() {
 
                 for (i in snapshot.children) {
                     // path: database de tutulan değişkenin ismi
-                    val libName = i.child("libName").getValue().toString()
+                    libName = i.child("libName").getValue().toString()
                     sb.append("Library: $libName \n")
 
-                    val fromtime = i.child("fromtime").getValue().toString()
-                    sb.append("Time: $fromtime - ")
+                    fromTime = i.child("fromtime").getValue().toString()
+                    sb.append("Time: $fromTime - ")
 
-                    val totime = i.child("totime").getValue().toString()
-                    sb.append("$totime \n")
+                    toTime = i.child("totime").getValue().toString()
+                    sb.append("$toTime \n")
 
-                    val date = i.child("date").getValue().toString()
+                    date = i.child("date").getValue().toString()
                     sb.append("Date: $date   ")
-                    val tableno = i.child("tableNo").getValue().toString()
-                    sb.append("Table: $tableno\n\n")
+
+                    tableNo = i.child("tableNo").getValue().toString()
+                    sb.append("Table: $tableNo\n\n")
 
                     //Max 4 reservation added
                     if (j == 1) {
@@ -92,5 +98,53 @@ class Activity_LM_List_Reservations : AppCompatActivity() {
         }
         database.addValueEventListener(getData)
         database.addListenerForSingleValueEvent(getData)
+
+        binding.btnQR1.setOnClickListener(){
+            val newIntent = Intent(this@Activity_LM_List_Reservations, Activity_LM_QR::class.java)
+            newIntent.putExtra("userId4", lmID2)
+            newIntent.putExtra("ln4", libName)
+            newIntent.putExtra("d4", date)
+            newIntent.putExtra("ts4", toTime)
+            newIntent.putExtra("fromTime", fromTime)
+            newIntent.putExtra("tn4", tableNo)
+            startActivity(newIntent)
+            finish()
+        }
+
+        binding.btnQR2.setOnClickListener(){
+            val newIntent = Intent(this@Activity_LM_List_Reservations, Activity_LM_QR::class.java)
+            newIntent.putExtra("userId4", lmID2)
+            newIntent.putExtra("ln4", libName)
+            newIntent.putExtra("d4", date)
+            newIntent.putExtra("ts4", toTime)
+            newIntent.putExtra("fromTime", fromTime)
+            newIntent.putExtra("tn4", tableNo)
+            startActivity(newIntent)
+            finish()
+        }
+
+        binding.btnQR3.setOnClickListener(){
+            val newIntent = Intent(this@Activity_LM_List_Reservations, Activity_LM_QR::class.java)
+            newIntent.putExtra("userId4", lmID2)
+            newIntent.putExtra("ln4", libName)
+            newIntent.putExtra("d4", date)
+            newIntent.putExtra("ts4", toTime)
+            newIntent.putExtra("fromTime", fromTime)
+            newIntent.putExtra("tn4", tableNo)
+            startActivity(newIntent)
+            finish()
+        }
+
+        binding.btnQR4.setOnClickListener(){
+            val newIntent = Intent(this@Activity_LM_List_Reservations, Activity_LM_QR::class.java)
+            newIntent.putExtra("userId4", lmID2)
+            newIntent.putExtra("ln4", libName)
+            newIntent.putExtra("d4", date)
+            newIntent.putExtra("ts4", toTime)
+            newIntent.putExtra("fromTime", fromTime)
+            newIntent.putExtra("tn4", tableNo)
+            startActivity(newIntent)
+            finish()
+        }
     }
 }

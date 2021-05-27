@@ -38,18 +38,20 @@ class Activity_LM_QR : AppCompatActivity() {
         tarih = findViewById<View>(R.id.tarih) as TextView
         saat = findViewById<View>(R.id.saat) as TextView
         koltuk = findViewById<View>(R.id.koltuk) as TextView
-        lmID = findViewById<View>(R.id.koltuk) as TextView
+        lmID = findViewById<View>(R.id.tv_lmID_qr_code) as TextView
 
         val libraryName5 = intent.getStringExtra("ln4")
         val date5 = intent.getStringExtra("d4")
         val timeSlot5 = intent.getStringExtra("ts4")
         val tableNo5 = intent.getStringExtra("tn4")
+        val lmID5 = intent.getStringExtra("userId4")
 
         //Print the values to the textviews
         libname!!.setText("Library Name: " + libraryName5)
         tarih!!.setText("Date: " + date5)
         saat!!.setText("TimeSlot: " + timeSlot5)
         koltuk!!.setText("Table: " + tableNo5)
+        lmID!!.setText("Library Name: "+ lmID5)
         tvqrinfo!!.setText(libraryName5 + date5 + timeSlot5 + tableNo5)
 
 
