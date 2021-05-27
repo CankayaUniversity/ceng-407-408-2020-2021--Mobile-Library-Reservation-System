@@ -46,7 +46,7 @@ class Activity_Login : AppCompatActivity() {
             if (etEmail.text.toString().equals("a@gmail.com"))
                 flag = 1
             // this email for login lm menu page
-            else if (!etEmail.text.toString().equals("a@gmail.com") || !etEmail.text.toString().equals("lb@gmail.com")  )
+            else if (!etEmail.text.toString().equals("a@gmail.com") && !etEmail.text.toString().equals("lb@gmail.com")  )
                 flag = 2
             // this email for librarian admin menu page
             else if (etEmail.text.toString().equals("lb@gmail.com"))
