@@ -83,7 +83,7 @@ class Activity_Register : AppCompatActivity() {
 
                     FirebaseDatabase.getInstance().reference
                         .child("user")
-                        .child(FirebaseAuth.getInstance().currentUser.uid)
+                        .child(FirebaseAuth.getInstance().currentUser!!.uid)
                         .setValue(newUser).addOnCompleteListener{  task->
                             if(task.isSuccessful){
                                 Toast.makeText(this, "Successful :" + v.isSuccessful, Toast.LENGTH_SHORT).show()
