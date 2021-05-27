@@ -244,7 +244,8 @@
         android:id="@+id/tv_lmID_res_list"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:visibility="invisible"
+        tools:visibility="invisible" />
 
 
 </RelativeLayout>

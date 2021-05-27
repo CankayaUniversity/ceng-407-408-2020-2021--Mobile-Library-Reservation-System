@@ -28,6 +28,12 @@ class Activity_LM_List_Libraries : AppCompatActivity() {
         binding.txtAreaLiblist.movementMethod = ScrollingMovementMethod()
         setContentView(binding.root)
 
+        binding.txtAreaLiblist.setText("- LIBRARY RESERVATION RULES -\n" +
+                "\n" +
+                "1) A maximum of 4 reservations can be made.\n\n" +
+                "2) If 3 reservations are not reached, the user gets a punishmentpoint.\n\n" +
+                "3) It is obligatory to scan the QR code generated at the end of the reservation to the librarian.")
+
         //Show lmID in textview
         lmID = binding.tvLmIDListLib  as TextView
         val lmID1 = intent.getStringExtra("userId1")
@@ -50,7 +56,7 @@ class Activity_LM_List_Libraries : AppCompatActivity() {
         }
 
         //BU KISIM KÜTÜPHANE İSİMLERİ DATABASEDEN ÇEKİLECEĞİ ZAMAN KULLANILABİLİR.
-        //All data is in getData variable
+/*        //All data is in getData variable
          var getData = object : ValueEventListener {
             //All data is shown if they exist
             override fun onDataChange(snapshot: DataSnapshot) {
@@ -69,5 +75,7 @@ class Activity_LM_List_Libraries : AppCompatActivity() {
         }
         database.addValueEventListener(getData)
         database.addListenerForSingleValueEvent(getData)
+
+ */
     }
 }

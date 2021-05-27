@@ -47,18 +47,6 @@
             android:textStyle="bold" />
 
         <Button
-            android:id="@+id/btn_Back"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="40dp"
-            android:layout_marginEnd="280dp"
-            android:layout_marginBottom="21dp"
-            android:text="Back" />
-
-        <Button
             android:id="@+id/btn_next"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -100,7 +88,13 @@
             android:id="@+id/tv_lmID_list_lib"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="354dp"
+            android:layout_marginBottom="731dp"
+            android:text="TextView"
+            android:visibility="invisible"
+            tools:visibility="invisible" />
 
     </RelativeLayout>
 

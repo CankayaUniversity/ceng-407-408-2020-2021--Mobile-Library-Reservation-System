@@ -130,11 +130,10 @@
                 android:layout_width="278dp"
                 android:layout_height="57dp"
                 android:textColor="#F4F4F4"
-                android:textSize="30sp"
+                android:textSize="23sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.632"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.063" />
@@ -200,8 +199,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="TextView"
+            android:visibility="invisible"
             tools:layout_editor_absoluteX="71dp"
-            tools:layout_editor_absoluteY="11dp" />
+            tools:layout_editor_absoluteY="11dp"
+            tools:visibility="invisible" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 

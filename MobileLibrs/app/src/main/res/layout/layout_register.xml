@@ -10,6 +10,7 @@
     android:textAlignment="inherit"
     tools:context=".Activity_Register">
 
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_register2"
         android:layout_width="91dp"
@@ -19,8 +20,8 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="273dp"
         android:layout_marginTop="124dp"
-        android:layout_marginEnd="47dp"
-        android:layout_marginBottom="75dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="57dp"
         android:background="@color/mlrs_blue"
         android:radius="11dp"
         android:text="SIGN IN"
@@ -29,7 +30,6 @@
         android:textSize="16sp"
         android:textStyle="bold" />
 
-
     <EditText
         android:id="@+id/et_input_email"
         android:layout_width="236dp"
@@ -37,10 +37,10 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="52dp"
+        android:layout_marginStart="50dp"
         android:layout_marginLeft="5dp"
         android:layout_marginTop="287dp"
-        android:layout_marginEnd="47dp"
+        android:layout_marginEnd="50dp"
         android:background="#56CCF2"
         android:hint="@string/prompt_email"
         android:inputType="textEmailAddress"
@@ -96,7 +96,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="80dp"
-        android:layout_marginTop="42dp"
+        android:layout_marginTop="21dp"
         android:layout_marginEnd="80dp"
         android:background="@color/mlrs_white_button"
         android:radius="11dp"
@@ -111,24 +111,8 @@
         android:layout_width="match_parent"
         android:layout_height="285dp"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="0dp"
+        android:layout_marginEnd="2dp"
         app:srcCompat="@drawable/register_logo_mlrs" />
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/textView2"
-        android:layout_width="226dp"
-        android:layout_height="38dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="620dp"
-        android:layout_marginEnd="150dp"
-        android:layout_marginBottom="165dp"
-        android:fontFamily="sans-serif-black"
-        android:text="Already have an account?"
-        android:textSize="18sp" />
 
     <ProgressBar
         android:id="@+id/progressBar"
