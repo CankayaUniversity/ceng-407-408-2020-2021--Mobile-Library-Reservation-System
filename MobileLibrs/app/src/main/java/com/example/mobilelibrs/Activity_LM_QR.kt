@@ -23,6 +23,7 @@ class Activity_LM_QR : AppCompatActivity() {
     var tarih: TextView? = null
     var saat: TextView? = null
     var koltuk: TextView? = null
+    var lmID: TextView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,8 +36,9 @@ class Activity_LM_QR : AppCompatActivity() {
 
         libname = findViewById<View>(R.id.lname) as TextView
         tarih = findViewById<View>(R.id.tarih) as TextView
-        saat = findViewById<View>(R.id.saat) as TextView  // 2 times have time from and to
+        saat = findViewById<View>(R.id.saat) as TextView
         koltuk = findViewById<View>(R.id.koltuk) as TextView
+        lmID = findViewById<View>(R.id.koltuk) as TextView
 
         val libraryName5 = intent.getStringExtra("ln4")
         val date5 = intent.getStringExtra("d4")

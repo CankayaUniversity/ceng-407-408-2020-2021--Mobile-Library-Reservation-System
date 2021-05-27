@@ -17,7 +17,7 @@ class Activity_LM_Menu  : AppCompatActivity() {
         val btn_listReservation = findViewById<Button>(R.id.btn_lm_menu_list_reservation)
         val btn_exit_menu = findViewById<Button>(R.id.btn_menu_exit)
 
-        //Show adminID in textview
+        //Show lmID in textview
         lmID = findViewById<Button>(R.id.tv_lmID)  as TextView
         val lmID1 = intent.getStringExtra("userId")
         lmID!!.setText("Library Name: "+ lmID1)

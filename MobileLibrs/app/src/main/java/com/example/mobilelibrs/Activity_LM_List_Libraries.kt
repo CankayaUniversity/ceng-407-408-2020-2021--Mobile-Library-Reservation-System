@@ -28,13 +28,13 @@ class Activity_LM_List_Libraries : AppCompatActivity() {
         binding.txtAreaLiblist.movementMethod = ScrollingMovementMethod()
         setContentView(binding.root)
 
-        /*//Show lmID in textview
-        lmID = findViewById<Button>(R.id.tv_lmID_list_lib ) as TextView
-        var lmID2 = intent.getStringExtra("userId1")
-        lmID!!.setText("User"+ lmID2)*/
+        //Show lmID in textview
+        lmID = binding.tvLmIDListLib  as TextView
+        val lmID1 = intent.getStringExtra("userId1")
+        lmID!!.setText("User"+ lmID1)
 
         //Get database reference
-        var database = FirebaseDatabase.getInstance().reference.child("library")
+        val database = FirebaseDatabase.getInstance().reference.child("library")
 
 
         binding.btnNext.setOnClickListener() {
@@ -44,6 +44,7 @@ class Activity_LM_List_Libraries : AppCompatActivity() {
             //Take the library name in l1 and send it to select date and time slot page
             val newIntent = Intent(this, Activity_LM_Seelect_Date_and_Time_Slot::class.java)
             newIntent.putExtra("ln1", libraryName1)
+            newIntent.putExtra("userId2", lmID1)
             startActivity(newIntent)
             finish()
         }

@@ -12,6 +12,7 @@ import com.google.firebase.database.FirebaseDatabase
 class Activity_LM_Seelect_Date_and_Time_Slot : AppCompatActivity() {
 
     var libname:TextView? =null
+    var lmID: TextView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,14 +21,19 @@ class Activity_LM_Seelect_Date_and_Time_Slot : AppCompatActivity() {
         val binding = LayoutLmSelectDateAndTimeSlotBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        //Take the library name in l1 and print the textview
         libname = binding.tvLibraryName as TextView
+        var libraryName2 = intent.getStringExtra("ln1")
+        libname!!.setText("Library Name: "+ libraryName2)
+
+        //Show lmID in textview
+        lmID = binding.tvLmIDSelectDateTimeSlot  as TextView
+        var lmID2 = intent.getStringExtra("userId2")
+        lmID!!.setText("User"+ lmID2)
 
         //Get database reference
         var database = FirebaseDatabase.getInstance().reference
 
-        //Take the library name in l1 and print the textview
-        var libraryName2 = intent.getStringExtra("ln1")
-        libname!!.setText("Library Name: "+ libraryName2)
 
         //Click button to go Choose Table page with new entries
         binding.btnSearchTable.setOnClickListener {
@@ -43,6 +49,7 @@ class Activity_LM_Seelect_Date_and_Time_Slot : AppCompatActivity() {
             newIntent.putExtra("ln2", libraryName2)
             newIntent.putExtra("d2", date2)
             newIntent.putExtra("ts2", timeslot2)
+            newIntent.putExtra("userId3", lmID2)
             startActivity(newIntent)
             finish()
         }
