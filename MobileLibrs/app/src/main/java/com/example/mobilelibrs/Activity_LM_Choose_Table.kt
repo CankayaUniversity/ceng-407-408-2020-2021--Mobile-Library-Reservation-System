@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.mobilelibrs.databinding.LayoutDenemeBinding
 import com.example.mobilelibrs.databinding.LayoutLmChooseTableBinding
 
 import com.example.mobilelibrs.databinding.LayoutLmListLibrariesBinding
@@ -47,6 +46,11 @@ class Activity_LM_Choose_Table : AppCompatActivity() {
             newIntent.putExtra("ts4", timeSlot3)
             newIntent.putExtra("tn4", tableNo3.toString())
             newIntent.putExtra("userId4", lmID4)
+
+            database.child("reservation").push().setValue(
+            Reservation(libraryName3, date3, timeSlot3, 1))
+
+
             //putExtra içinde veri string olması gerek.Değilse toString() ile çevirebiliriz.
             startActivity(newIntent)
             finish()

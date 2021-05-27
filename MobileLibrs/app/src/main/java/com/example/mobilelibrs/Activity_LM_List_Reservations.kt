@@ -73,7 +73,7 @@ class Activity_LM_List_Reservations : AppCompatActivity() {
                         binding.btnCancel1.setVisibility(View.VISIBLE)
                         binding.btnQR1.setVisibility(View.VISIBLE)
                     }
-                    if (j == 1) {
+                    if (j == 2) {
                         binding.tvReservation2.setText(sb)
                         binding.btnCancel2.setVisibility(View.VISIBLE)
                         binding.btnQR2.setVisibility(View.VISIBLE)

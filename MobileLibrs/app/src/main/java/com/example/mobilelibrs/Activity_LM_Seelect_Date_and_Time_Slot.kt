@@ -41,9 +41,6 @@ class Activity_LM_Seelect_Date_and_Time_Slot : AppCompatActivity() {
             var date2 = binding.etDate.text.toString()
             var timeslot2 = binding.spinnerTimeslot.selectedItem.toString()
 
-            //database.child("reservation").push().setValue(
-            //Reservation(getLibname, sendingDateData, sendingFromTimeData, sendingToTimeData, 1))
-
             val newIntent = Intent(this, Activity_LM_Choose_Table::class.java)
             //Send these data to Choose Table page
             newIntent.putExtra("ln2", libraryName2)
