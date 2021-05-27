@@ -99,6 +99,7 @@ class Activity_LM_List_Reservations : AppCompatActivity() {
         database.addValueEventListener(getData)
         database.addListenerForSingleValueEvent(getData)
 
+        //QR CODE DETAILS PAGE
         binding.btnQR1.setOnClickListener(){
             val newIntent = Intent(this@Activity_LM_List_Reservations, Activity_LM_QR::class.java)
             newIntent.putExtra("userId4", lmID2)
