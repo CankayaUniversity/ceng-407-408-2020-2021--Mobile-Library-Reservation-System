@@ -46,11 +46,14 @@ class Activity_Login : AppCompatActivity() {
             if (etEmail.text.toString().equals("a@gmail.com"))
                 flag = 1
             // this email for login lm menu page
-            if (!etEmail.text.toString().equals("a@gmail.com") || !etEmail.text.toString().equals("lb@gmail.com")  )
+            else if (!etEmail.text.toString().equals("a@gmail.com") || !etEmail.text.toString().equals("lb@gmail.com")  )
                 flag = 2
             // this email for librarian admin menu page
-            if (etEmail.text.toString().equals("lb@gmail.com"))
+            else if (etEmail.text.toString().equals("lb@gmail.com"))
                 flag = 3
+            else
+                flag = 4
+
             if (etEmail.text.isNotEmpty() && etPassword.text.isNotEmpty()) {
                 showProgressbar()
                 if (flag == 1) {
@@ -83,38 +86,6 @@ class Activity_Login : AppCompatActivity() {
                             }
                         })
 
-                    /*  //Get database reference
-                      var database = FirebaseDatabase.getInstance().reference.child("user")
-
-                      var getData = object : ValueEventListener {
-                          //All data is shown if they exist
-                          override fun onDataChange(snapshot: DataSnapshot) {
-
-                              for (i in snapshot.children) {
-                                  //Path: Databasede tutulan değişkenin ismi
-                                  var userEmail = i.child("userEmail").getValue().toString()
-                                  var userPassword = i.child("userPassword").getValue().toString()
-
-                                  if (etEmail.text.toString().equals("a@gmail.com") && userPassword == etPassword.text.toString()){
-                                      var userId= i.child("userId").getValue().toString()
-
-                                      Toast.makeText(this@Activity_Login, userId, Toast.LENGTH_LONG).show()
-
-                                     /* val newIntent = Intent(this@Activity_Login, Activity_LM_Seelect_Date_and_Time_Slot::class.java)
-                                      newIntent.putExtra("userId", userId)
-                                      startActivity(newIntent)
-                                      finish()*/
-                                  }
-                              }
-
-                          }
-
-                          override fun onCancelled(error: DatabaseError) {
-                              TODO("Not yet implemented")
-                          }
-                      }
-                      database.addValueEventListener(getData)
-                      database.addListenerForSingleValueEvent(getData)*/
 
 
                 }

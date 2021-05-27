@@ -50,5 +50,4 @@ class Activity_LM_Menu  : AppCompatActivity() {
         startActivity(intent)
         finish()
     }
-
 }
