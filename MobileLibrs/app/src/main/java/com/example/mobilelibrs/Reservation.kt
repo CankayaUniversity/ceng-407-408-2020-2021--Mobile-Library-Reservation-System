@@ -4,8 +4,6 @@ class Reservation {
     var libName:String=""
     var date:String=""
     var timeSlot:String=""
-    var fromtime:String=""
-    var totime:String=""
     var tableNo:Int=0
 
 
