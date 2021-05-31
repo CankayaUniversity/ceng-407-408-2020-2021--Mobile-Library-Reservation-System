@@ -8,11 +8,13 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.mobilelibrs.databinding.LayoutLmSelectDateAndTimeSlotBinding
 import com.google.firebase.database.FirebaseDatabase
+import java.util.*
 
 class Activity_LM_Seelect_Date_and_Time_Slot : AppCompatActivity() {
 
     var libname:TextView? =null
     var lmID: TextView? = null
+    var datePicker: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,6 +22,20 @@ class Activity_LM_Seelect_Date_and_Time_Slot : AppCompatActivity() {
         //Binding to access layout
         val binding = LayoutLmSelectDateAndTimeSlotBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        // Calendar for Date Picker
+        val today = Calendar.getInstance()
+        binding.datePicker.init(today.get(Calendar.YEAR), today.get(Calendar.MONTH),
+            today.get(Calendar.DAY_OF_MONTH)
+
+        ) { view, year, month, day ->
+            val month = month + 1
+            datePicker = "$day/$month/$year"
+            val msg = "You Selected: $day/$month/$year"
+            Toast.makeText(this, msg, Toast.LENGTH_SHORT).show()
+        }
+
+        //Get database reference
+        var database = FirebaseDatabase.getInstance().reference
 
         //Take the library name in l1 and print the textview
         libname = binding.tvLibraryName as TextView
@@ -31,15 +47,11 @@ class Activity_LM_Seelect_Date_and_Time_Slot : AppCompatActivity() {
         var lmID2 = intent.getStringExtra("userId2")
         lmID!!.setText("User"+ lmID2)
 
-        //Get database reference
-        var database = FirebaseDatabase.getInstance().reference
-        
-
 
         //Click button to go Choose Table page with new entries
         binding.btnSearchTable.setOnClickListener {
             //Take date and time slot to choose table page
-            var date2 = binding.etDate.text.toString()
+            var date2 = datePicker
             var timeslot2 = binding.spinnerTimeslot.selectedItem.toString()
 
             val newIntent = Intent(this, Activity_LM_Choose_Table::class.java)
