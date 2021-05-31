@@ -14,6 +14,7 @@ import com.google.firebase.database.FirebaseDatabase
 class Activity_LM_Choose_Table : AppCompatActivity() {
 
     var lmID: TextView? = null
+    var libDateTimeInfo: TextView? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -35,6 +36,9 @@ class Activity_LM_Choose_Table : AppCompatActivity() {
         //Get database reference
         var database = FirebaseDatabase.getInstance().reference
 
+        libDateTimeInfo = binding.tvWriteInfo as TextView
+        //Print the values to the textviews
+        libDateTimeInfo!!.setText("Library Name: "+libraryName3+"\nDate: "+date3+"\nTimeSlot: " + timeSlot3)
 
         //Click the button to go QR code page
         binding.btnMakeReservation.setOnClickListener(){

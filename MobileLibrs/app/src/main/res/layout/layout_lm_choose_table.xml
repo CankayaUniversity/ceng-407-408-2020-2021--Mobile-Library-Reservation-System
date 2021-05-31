@@ -30,7 +30,7 @@
         app:layout_constraintVertical_bias="0.407">
 
         <TextView
-            android:id="@+id/textView15"
+            android:id="@+id/textViewtopic"
             android:layout_width="277dp"
             android:layout_height="30dp"
             android:layout_marginBottom="228dp"
@@ -59,7 +59,7 @@
             app:layout_constraintVertical_bias="0.296" />
 
         <TextView
-            android:id="@+id/tvLibraryName"
+            android:id="@+id/tvWriteInfo"
             android:layout_width="272dp"
             android:layout_height="89dp"
             android:background="@drawable/qrkod"
@@ -73,7 +73,7 @@
             app:layout_constraintVertical_bias="0.063" />
 
         <TextView
-            android:id="@+id/textView13"
+            android:id="@+id/line"
             android:layout_width="317dp"
             android:layout_height="5dp"
             android:background="#000000"
@@ -86,7 +86,7 @@
             app:layout_constraintVertical_bias="0.375" />
 
         <Spinner
-            android:id="@+id/spinner_timeslot"
+            android:id="@+id/spinner_table"
             android:layout_width="277dp"
             android:layout_height="30dp"
             android:entries="@array/table"
@@ -95,7 +95,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.507"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView15"
+            app:layout_constraintTop_toBottomOf="@+id/textViewtopic"
             app:layout_constraintVertical_bias="0.05" />
 
         <Button
@@ -128,7 +128,7 @@
         app:srcCompat="@drawable/read_book" />
 
     <TextView
-        android:id="@+id/textView22"
+        android:id="@+id/topics"
         android:layout_width="305dp"
         android:layout_height="57dp"
         android:layout_alignParentEnd="true"
