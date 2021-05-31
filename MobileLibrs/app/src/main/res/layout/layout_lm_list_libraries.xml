@@ -81,7 +81,6 @@
             android:layout_marginStart="30dp"
             android:layout_marginEnd="30dp"
             android:layout_marginBottom="556dp"
-            android:entries="@array/libraryName"
             />
 
         <TextView
