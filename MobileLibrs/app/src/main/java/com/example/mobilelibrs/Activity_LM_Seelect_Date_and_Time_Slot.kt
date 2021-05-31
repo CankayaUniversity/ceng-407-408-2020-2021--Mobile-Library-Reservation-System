@@ -23,11 +23,13 @@ class Activity_LM_Seelect_Date_and_Time_Slot : AppCompatActivity() {
         //Binding to access layout
         val binding = LayoutLmSelectDateAndTimeSlotBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        //-- Date Control start
         // Calendar for Date Picker
         // current datetime
         // Date control okey
         var current = LocalDate.now()
         val today = Calendar.getInstance()
+        var Getdate: String? = null
         binding.datePicker.init(today.get(Calendar.YEAR), today.get(Calendar.MONTH),
             today.get(Calendar.DAY_OF_MONTH)
 
@@ -43,10 +45,13 @@ class Activity_LM_Seelect_Date_and_Time_Slot : AppCompatActivity() {
                 Toast.makeText(this, "Error date!!Please you must change.", Toast.LENGTH_LONG)
                     .show()
             }
-            else
+            else {
+                Getdate = datePicker
                 Toast.makeText(this, "Date okey.", Toast.LENGTH_LONG)
                     .show()
+            }
         }
+        //--Date control END
 
         //Get database reference
         var database = FirebaseDatabase.getInstance().reference
@@ -65,7 +70,7 @@ class Activity_LM_Seelect_Date_and_Time_Slot : AppCompatActivity() {
         //Click button to go Choose Table page with new entries
         binding.btnSearchTable.setOnClickListener {
             //Take date and time slot to choose table page
-            var date2 = datePicker
+            var date2 = Getdate
             var timeslot2 = binding.spinnerTimeslot.selectedItem.toString()
 
             val newIntent = Intent(this, Activity_LM_Choose_Table::class.java)
