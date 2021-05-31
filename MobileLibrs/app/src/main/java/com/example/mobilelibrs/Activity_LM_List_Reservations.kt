@@ -147,5 +147,11 @@ class Activity_LM_List_Reservations : AppCompatActivity() {
             startActivity(newIntent)
             finish()
         }
+
+        binding.btnBack.setOnClickListener(){
+            val intent = Intent(this, Activity_LM_Menu::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
 }

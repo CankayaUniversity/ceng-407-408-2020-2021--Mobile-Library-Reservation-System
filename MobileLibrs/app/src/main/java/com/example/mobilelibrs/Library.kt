@@ -6,7 +6,6 @@ class Library {
     var LibraryAddress: String = ""
     var LibraryCapacity: Int = 0
 
-    var libNameSpinner: String = ""
     var LibraryList = ArrayList<Library>()
 
     // var LibraryList = ArrayList<Library>()
@@ -18,15 +17,6 @@ class Library {
         this.LibraryCapacity = libCapacity
         LibraryList.add(Library(LibraryName,LibraryAddress,LibraryCapacity))
         //     LibraryList.add(Library(LibraryName, LibraryAddress, LibraryCapacity, libraryNo))
-    }
-
-    fun setLibName(ln:String)
-    {
-        libNameSpinner = ln
-    }
-    fun getLibName(): String
-    {
-        return libNameSpinner
     }
 
 

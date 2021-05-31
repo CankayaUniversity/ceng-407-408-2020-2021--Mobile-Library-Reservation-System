@@ -54,7 +54,7 @@ class Activity_LM_List_Libraries : AppCompatActivity() {
         binding.spinner.adapter = adapter
 
         val newsRef = database.child("library")
-
+        // Db den veri çekildi, spinner array listte depolandı.
         val valueEventListener: ValueEventListener = object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 for (libName in dataSnapshot.children) {
@@ -70,18 +70,12 @@ class Activity_LM_List_Libraries : AppCompatActivity() {
         }
         newsRef.addListenerForSingleValueEvent(valueEventListener)
 
-
-
-
+        // spinner da seçilen veri onItemSelected içinde alındı.
         binding.spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener
         {
             override fun onItemSelected( parent: AdapterView<*>,  view: View,  position: Int,  id: Long ) {
                 libNameSpinner = spinnerArrayList[position]
-                println("Evet girdim." + libNameSpinner)
-     //           l1.setLibName(libraryName)
-
             }
-
             override fun onNothingSelected(parent: AdapterView<*>) {
 
             }
@@ -109,35 +103,12 @@ class Activity_LM_List_Libraries : AppCompatActivity() {
             val newIntent = Intent(this, Activity_LM_Seelect_Date_and_Time_Slot::class.java)
             newIntent.putExtra("ln1", libraryName1)
             newIntent.putExtra("userId2", lmID1)
-
+            // spinner array list her sayfa başladığında temizlenir.
             spinnerArrayList.clear()
 
             startActivity(newIntent)
             finish()
         }
-
-        //BU KISIM KÜTÜPHANE İSİMLERİ DATABASEDEN ÇEKİLECEĞİ ZAMAN KULLANILABİLİR.
-/*        //All data is in getData variable
-         var getData = object : ValueEventListener {
-            //All data is shown if they exist
-            override fun onDataChange(snapshot: DataSnapshot) {
-                var sb = StringBuilder()  //Convert all data as text
-                for (i in snapshot.children) {
-                    //Path: Databasede tutulan değişkenin ismi
-                    var lname = i.child("libraryName").getValue().toString()
-                    sb.append("Library Name: $lname \n\n")
-                }
-                binding.txtAreaLiblist.setText(sb)
-            }
-
-            override fun onCancelled(error: DatabaseError) {
-                TODO("Not yet implemented")
-            }
-        }
-        database.addValueEventListener(getData)
-        database.addListenerForSingleValueEvent(getData)
-
- */
     }
 
 }
