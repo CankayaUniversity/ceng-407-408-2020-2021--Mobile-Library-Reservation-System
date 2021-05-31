@@ -13,13 +13,7 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
-import java.lang.StringBuilder
-import com.example.mobilelibrs.Library
-import com.example.mobilelibrs.databinding.LayoutAdminAddLibraryBinding
-import com.example.mobilelibrs.databinding.LayoutLmChooseTableBinding
 import com.example.mobilelibrs.databinding.LayoutLmListLibrariesBinding
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.ktx.Firebase
 
 class Activity_LM_List_Libraries : AppCompatActivity() {
 
@@ -27,13 +21,9 @@ class Activity_LM_List_Libraries : AppCompatActivity() {
 
 
     var lmID: TextView? = null
-    var spinner: Spinner? = null
-    var spinnerArrayList = ArrayList<String>()//Creating an empty arraylis
-
+    var spinnerArrayList = ArrayList<String>() // Creating an empty arraylist
     var database = FirebaseDatabase.getInstance().reference
-
     var libNameSpinner: String = ""
-    var l1 = Library()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -53,13 +43,13 @@ class Activity_LM_List_Libraries : AppCompatActivity() {
         val adapter = ArrayAdapter(this@Activity_LM_List_Libraries, android.R.layout.simple_spinner_dropdown_item, spinnerArrayList )
         binding.spinner.adapter = adapter
 
-        val newsRef = database.child("library")
+        var newsRef = database.child("library")
         // Db den veri çekildi, spinner array listte depolandı.
         val valueEventListener: ValueEventListener = object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
-                for (libName in dataSnapshot.children) {
-                    val desc = libName.child("library").child("libraryName").getValue(String::class.java)
-                    spinnerArrayList.add(libName.value.toString())
+                for (lib in dataSnapshot.children) {
+                    val libName = lib.child("libraryName").getValue(String::class.java)
+                    spinnerArrayList.add(libName.toString())
                 }
                 adapter.notifyDataSetChanged()
             }

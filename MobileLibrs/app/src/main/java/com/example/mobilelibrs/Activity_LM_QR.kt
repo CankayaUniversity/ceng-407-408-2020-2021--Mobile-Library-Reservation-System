@@ -54,7 +54,7 @@ class Activity_LM_QR : AppCompatActivity() {
         tarih!!.setText("Date: " + date5)
         saat!!.setText("TimeSlot: " + timeSlot5)
         koltuk!!.setText("Table: " + tableNo5)
-        lmID!!.setText("Lm Id: "+ lmID5)
+        lmID!!.setText("User Id: "+ lmID5)
         tvqrinfo!!.setText(libraryName5 + date5 + timeSlot5 + tableNo5)
 
 
