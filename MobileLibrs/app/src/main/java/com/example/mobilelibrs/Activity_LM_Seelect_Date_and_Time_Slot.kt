@@ -2,12 +2,13 @@ package com.example.mobilelibrs
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.mobilelibrs.databinding.LayoutLmSelectDateAndTimeSlotBinding
 import com.google.firebase.database.FirebaseDatabase
+import java.text.SimpleDateFormat
+import java.time.LocalDate
 import java.util.*
 
 class Activity_LM_Seelect_Date_and_Time_Slot : AppCompatActivity() {
@@ -23,15 +24,28 @@ class Activity_LM_Seelect_Date_and_Time_Slot : AppCompatActivity() {
         val binding = LayoutLmSelectDateAndTimeSlotBinding.inflate(layoutInflater)
         setContentView(binding.root)
         // Calendar for Date Picker
+        // current datetime
+        // Date control okey
+        var current = LocalDate.now()
         val today = Calendar.getInstance()
         binding.datePicker.init(today.get(Calendar.YEAR), today.get(Calendar.MONTH),
             today.get(Calendar.DAY_OF_MONTH)
 
         ) { view, year, month, day ->
-            val month = month + 1
-            datePicker = "$day/$month/$year"
-            val msg = "You Selected: $day/$month/$year"
-            Toast.makeText(this, msg, Toast.LENGTH_SHORT).show()
+            var sdf = SimpleDateFormat("yyyy-MM-dd")
+//            val month = month + 1
+            datePicker = "$year-$month-$day"
+            var date1: Date = sdf.parse(datePicker)
+            var date2: Date = sdf.parse(current.toString())
+
+            if(date1!!.before(date2) || (date1!!.equals(date2)))
+            {
+                Toast.makeText(this, "Error date!!Please you must change.", Toast.LENGTH_LONG)
+                    .show()
+            }
+            else
+                Toast.makeText(this, "Date okey.", Toast.LENGTH_LONG)
+                    .show()
         }
 
         //Get database reference
