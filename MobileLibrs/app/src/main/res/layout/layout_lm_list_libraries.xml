@@ -69,7 +69,7 @@
             android:scrollbars="vertical"
             android:textAlignment="textStart"
             android:textColor="@color/mlrs_white_button"
-            android:textSize="23sp" />
+            android:textSize="20sp" />
 
         <Spinner
             android:id="@+id/spinner"

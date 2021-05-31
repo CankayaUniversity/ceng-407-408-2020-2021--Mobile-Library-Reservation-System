@@ -28,7 +28,7 @@ class Activity_LM_List_Libraries : AppCompatActivity() {
         binding.txtAreaLiblist.movementMethod = ScrollingMovementMethod()
         setContentView(binding.root)
 
-        binding.txtAreaLiblist.setText("- LIBRARY RESERVATION RULES -\n" +
+        binding.txtAreaLiblist.setText("\n\n- LIBRARY RESERVATION RULES -\n" +
                 "\n" +
                 "1) A maximum of 4 reservations can be made.\n\n" +
                 "2) If 3 reservations are not reached, the user gets a punishmentpoint.\n\n" +
