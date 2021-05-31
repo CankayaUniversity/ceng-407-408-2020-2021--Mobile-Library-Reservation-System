@@ -12,166 +12,109 @@
     tools:context=".Activity_LM_Choose_Table">
 
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="127dp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="342dp"
+        android:layout_height="440dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="22dp"
-        android:layout_marginEnd="22dp"
-        android:layout_marginBottom="128dp"
-        android:background="@drawable/sekil">
-
-        <Button
-            android:id="@+id/T0"
-            android:layout_width="55dp"
-            android:layout_height="50dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="13dp"
-            android:layout_marginBottom="60dp"
-            android:text="1"
-            android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/t6"
-            android:layout_width="55dp"
-            android:layout_height="50dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="13dp"
-            android:layout_marginBottom="5dp"
-            android:text="6"
-            android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/t7"
-            android:layout_width="55dp"
-            android:layout_height="50dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="83dp"
-            android:layout_marginBottom="5dp"
-            android:text="7"
-            android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/t8"
-            android:layout_width="55dp"
-            android:layout_height="50dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="158dp"
-            android:layout_marginBottom="5dp"
-            android:text="8"
-            android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/t9"
-            android:layout_width="55dp"
-            android:layout_height="50dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="232dp"
-            android:layout_marginBottom="5dp"
-            android:text="9"
-            android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/t10"
-            android:layout_width="55dp"
-            android:layout_height="50dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="300dp"
-            android:layout_marginBottom="5dp"
-            android:text="10"
-            android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/t2"
-            android:layout_width="55dp"
-            android:layout_height="50dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="81dp"
-            android:layout_marginBottom="60dp"
-            android:text="2"
-            android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/t3"
-            android:layout_width="55dp"
-            android:layout_height="50dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="158dp"
-            android:layout_marginBottom="60dp"
-            android:text="3"
-            android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/t4"
-            android:layout_width="55dp"
-            android:layout_height="50dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="231dp"
-            android:layout_marginBottom="60dp"
-            android:text="4"
-            android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/t5"
-            android:layout_width="55dp"
-            android:layout_height="50dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="299dp"
-            android:layout_marginBottom="60dp"
-            android:text="5"
-            android:textStyle="bold" />
-    </RelativeLayout>
-
-    <Button
-        android:id="@+id/btn_make_reservation"
-        style="?android:textAppearanceSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="63dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="83dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="83dp"
-        android:layout_marginBottom="47dp"
-        android:backgroundTint="@color/mlrs_white_button"
-        android:text="@string/make_reservation"
-        android:textColor="@color/Black"
-        android:textSize="18sp"
-        android:textStyle="bold" />
-
-
-    <EditText
-        android:id="@+id/et_choose_table_date"
-        android:layout_width="wrap_content"
-        android:layout_height="376dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="37dp"
-        android:layout_marginEnd="51dp"
-        android:layout_marginBottom="279dp"
-        android:background="#C2C2C2"
-        android:ems="10"
-        android:inputType="date"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="176dp"
+        android:background="@color/mlrs_lightBlue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.447"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.169" />
+        app:layout_constraintVertical_bias="0.407">
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="277dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="228dp"
+            android:text="  Table"
+            android:textColor="#100F0F"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="171dp"
+            android:layout_height="29dp"
+            android:text="   Please, select table"
+            android:textColor="#100F0F"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.296" />
+
+        <TextView
+            android:id="@+id/tvLibraryName"
+            android:layout_width="272dp"
+            android:layout_height="89dp"
+            android:background="@drawable/qrkod"
+            android:textColor="#F4F4F4"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.063" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="317dp"
+            android:layout_height="5dp"
+            android:background="#000000"
+            android:backgroundTint="#0E0E0E"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.52"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.375" />
+
+        <Spinner
+            android:id="@+id/spinner_timeslot"
+            android:layout_width="277dp"
+            android:layout_height="30dp"
+            android:entries="@array/table"
+            android:fadeScrollbars="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.507"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView15"
+            app:layout_constraintVertical_bias="0.05" />
+
+        <Button
+            android:id="@+id/btn_make_reservation"
+            style="?android:textAppearanceSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="63dp"
+            android:layout_marginBottom="36dp"
+            android:backgroundTint="@color/mlrs_white_button"
+            android:text="@string/make_reservation"
+            android:textColor="@color/Black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     <ImageView
         android:id="@+id/imageView4"
