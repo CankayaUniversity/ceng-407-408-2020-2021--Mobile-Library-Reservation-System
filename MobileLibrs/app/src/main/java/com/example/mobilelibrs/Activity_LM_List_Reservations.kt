@@ -17,8 +17,7 @@ import com.example.mobilelibrs.databinding.LayoutLmListReservationsBinding
 class Activity_LM_List_Reservations : AppCompatActivity() {
     var libName: String=""
     var date:String=""
-    var toTime:String=""
-    var fromTime:String=""
+    var timeSlot:String=""
     var tableNo:String=""
     var lmID: TextView? = null
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -51,15 +50,17 @@ class Activity_LM_List_Reservations : AppCompatActivity() {
                 var j = 1
 
                 for (i in snapshot.children) {
+
+                    //Buraya res id gelecek
+
+
                     // path: database de tutulan değişkenin ismi
                     libName = i.child("libName").getValue().toString()
                     sb.append("Library: $libName \n")
 
-                    fromTime = i.child("fromtime").getValue().toString()
-                    sb.append("Time: $fromTime - ")
+                    timeSlot = i.child("fromtime").getValue().toString()
+                    sb.append("Time: $timeSlot - ")
 
-                    toTime = i.child("totime").getValue().toString()
-                    sb.append("$toTime \n")
 
                     date = i.child("date").getValue().toString()
                     sb.append("Date: $date   ")
@@ -73,7 +74,7 @@ class Activity_LM_List_Reservations : AppCompatActivity() {
                         binding.btnCancel1.setVisibility(View.VISIBLE)
                         binding.btnQR1.setVisibility(View.VISIBLE)
                     }
-                    if (j == 2) {
+                    if (j == 1) {
                         binding.tvReservation2.setText(sb)
                         binding.btnCancel2.setVisibility(View.VISIBLE)
                         binding.btnQR2.setVisibility(View.VISIBLE)
@@ -105,8 +106,7 @@ class Activity_LM_List_Reservations : AppCompatActivity() {
             newIntent.putExtra("userId4", lmID2)
             newIntent.putExtra("ln4", libName)
             newIntent.putExtra("d4", date)
-            newIntent.putExtra("ts4", toTime)
-            newIntent.putExtra("fromTime", fromTime)
+            newIntent.putExtra("ts4", timeSlot)
             newIntent.putExtra("tn4", tableNo)
             startActivity(newIntent)
             finish()
@@ -117,8 +117,7 @@ class Activity_LM_List_Reservations : AppCompatActivity() {
             newIntent.putExtra("userId4", lmID2)
             newIntent.putExtra("ln4", libName)
             newIntent.putExtra("d4", date)
-            newIntent.putExtra("ts4", toTime)
-            newIntent.putExtra("fromTime", fromTime)
+            newIntent.putExtra("ts4", timeSlot)
             newIntent.putExtra("tn4", tableNo)
             startActivity(newIntent)
             finish()
@@ -129,8 +128,7 @@ class Activity_LM_List_Reservations : AppCompatActivity() {
             newIntent.putExtra("userId4", lmID2)
             newIntent.putExtra("ln4", libName)
             newIntent.putExtra("d4", date)
-            newIntent.putExtra("ts4", toTime)
-            newIntent.putExtra("fromTime", fromTime)
+            newIntent.putExtra("ts4", timeSlot)
             newIntent.putExtra("tn4", tableNo)
             startActivity(newIntent)
             finish()
@@ -141,17 +139,36 @@ class Activity_LM_List_Reservations : AppCompatActivity() {
             newIntent.putExtra("userId4", lmID2)
             newIntent.putExtra("ln4", libName)
             newIntent.putExtra("d4", date)
-            newIntent.putExtra("ts4", toTime)
-            newIntent.putExtra("fromTime", fromTime)
+            newIntent.putExtra("ts4", timeSlot)
             newIntent.putExtra("tn4", tableNo)
             startActivity(newIntent)
             finish()
         }
+        binding.btnCancel1.setOnClickListener(){
+            //Buraya res id gelecek
 
-        binding.btnBack.setOnClickListener(){
-            val intent = Intent(this, Activity_LM_Menu::class.java)
-            startActivity(intent)
-            finish()
+            binding.tvReservation1.setText("")
+            binding.btnCancel1.setVisibility(View.INVISIBLE)
+            binding.btnQR1.setVisibility(View.INVISIBLE)
         }
+        binding.btnCancel2.setOnClickListener(){
+            binding.tvReservation2.setText("")
+            binding.btnCancel1.setVisibility(View.INVISIBLE)
+            binding.btnQR1.setVisibility(View.INVISIBLE)
+
+        }
+        binding.btnCancel3.setOnClickListener(){
+            binding.tvReservation2.setText("")
+            binding.btnCancel1.setVisibility(View.INVISIBLE)
+            binding.btnQR1.setVisibility(View.INVISIBLE)
+
+        }
+        binding.btnCancel4.setOnClickListener(){
+            binding.tvReservation2.setText("")
+            binding.btnCancel1.setVisibility(View.INVISIBLE)
+            binding.btnQR1.setVisibility(View.INVISIBLE)
+
+        }
+
     }
 }
