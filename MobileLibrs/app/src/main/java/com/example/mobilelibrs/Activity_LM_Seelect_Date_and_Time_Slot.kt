@@ -1,7 +1,11 @@
 package com.example.mobilelibrs
 
+import android.R
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -16,6 +20,11 @@ class Activity_LM_Seelect_Date_and_Time_Slot : AppCompatActivity() {
     var libname:TextView? =null
     var lmID: TextView? = null
     var datePicker: String? = null
+
+    //***Deneme 1 Haziran 2021
+    var spinnerArrayList = ArrayList<String>() // Creating an empty arraylist
+    var TimeSlotArrayList = ArrayList<String>()
+    //***
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -53,8 +62,10 @@ class Activity_LM_Seelect_Date_and_Time_Slot : AppCompatActivity() {
         }
         //--Date control END
 
+
         //Get database reference
         var database = FirebaseDatabase.getInstance().reference
+
 
         //Take the library name in l1 and print the textview
         libname = binding.tvLibraryName as TextView
@@ -67,11 +78,46 @@ class Activity_LM_Seelect_Date_and_Time_Slot : AppCompatActivity() {
         lmID!!.setText("User"+ lmID2)
 
 
+
+        //***
+
+
+        TimeSlotArrayList = ArrayList<String>() // initialize
+        TimeSlotArrayList.add("9:00-10:00")
+        TimeSlotArrayList.add("10:00-11:00")
+
+        var libName = libraryName2
+        var date3 = Getdate
+        var timeslot3 = binding.spinnerTimeslot.selectedItem.toString()
+
+        val adapter = ArrayAdapter(this, R.layout.simple_spinner_dropdown_item,  TimeSlotArrayList )
+        binding.spinnerTimeslot.adapter = adapter
+        // spinner da seçilen veri onItemSelected içinde alındı.
+        binding.spinnerTimeslot.onItemSelectedListener = object : AdapterView.OnItemSelectedListener
+        {
+            override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long ) {
+                timeslot3 =  TimeSlotArrayList[position]
+            }
+            override fun onNothingSelected(parent: AdapterView<*>) {
+
+            }
+        }
+        // Db ye ekler
+        if (date3 != null) {
+            database.child("dates").child(libName).child(date3).push().setValue(Date(timeslot3))
+        }
+
+
+        //***
+
+
+
+
         //Click button to go Choose Table page with new entries
         binding.btnSearchTable.setOnClickListener {
             //Take date and time slot to choose table page
             var date2 = Getdate
-            var timeslot2 = binding.spinnerTimeslot.selectedItem.toString()
+            var timeslot2 = timeslot3
 
             val newIntent = Intent(this, Activity_LM_Choose_Table::class.java)
             //Send these data to Choose Table page
