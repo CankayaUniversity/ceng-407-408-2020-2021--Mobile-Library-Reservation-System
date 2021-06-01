@@ -14,6 +14,7 @@ import com.google.firebase.database.FirebaseDatabase
 import java.text.SimpleDateFormat
 import java.time.LocalDate
 import java.util.*
+import java.util.Date
 
 class Activity_LM_Seelect_Date_and_Time_Slot : AppCompatActivity() {
 
@@ -46,8 +47,8 @@ class Activity_LM_Seelect_Date_and_Time_Slot : AppCompatActivity() {
             var sdf = SimpleDateFormat("yyyy-MM-dd")
 //            val month = month + 1
             datePicker = "$year-$month-$day"
-            var date1: Date = sdf.parse(datePicker)
-            var date2: Date = sdf.parse(current.toString())
+            var date1: java.util.Date? = sdf.parse(datePicker)
+            var date2: Date? = sdf.parse(current.toString())
 
             if(date1!!.before(date2) || (date1!!.equals(date2)))
             {
@@ -104,7 +105,7 @@ class Activity_LM_Seelect_Date_and_Time_Slot : AppCompatActivity() {
         }
         // Db ye ekler
         if (date3 != null) {
-            database.child("dates").child(libName).child(date3).push().setValue(Date(timeslot3))
+            database.child("dates").child(libName).child(date3).push().setValue(Dates(timeslot3))
         }
 
 
