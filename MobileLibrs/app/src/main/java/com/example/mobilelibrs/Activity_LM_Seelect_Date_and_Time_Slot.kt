@@ -21,6 +21,7 @@ class Activity_LM_Seelect_Date_and_Time_Slot : AppCompatActivity() {
     var libname:TextView? =null
     var lmID: TextView? = null
     var datePicker: String? = null
+    var timeslot3: String? = null
 
     //***Deneme 1 Haziran 2021
     var spinnerArrayList = ArrayList<String>() // Creating an empty arraylist
@@ -45,9 +46,9 @@ class Activity_LM_Seelect_Date_and_Time_Slot : AppCompatActivity() {
 
         ) { view, year, month, day ->
             var sdf = SimpleDateFormat("yyyy-MM-dd")
-//            val month = month + 1
+            val month = month + 1
             datePicker = "$year-$month-$day"
-            var date1: java.util.Date? = sdf.parse(datePicker)
+            var date1: Date? = sdf.parse(datePicker.toString())
             var date2: Date? = sdf.parse(current.toString())
 
             if(date1!!.before(date2) || (date1!!.equals(date2)))
@@ -89,7 +90,7 @@ class Activity_LM_Seelect_Date_and_Time_Slot : AppCompatActivity() {
 
         var libName = libraryName2
         var date3 = Getdate
-        var timeslot3 = binding.spinnerTimeslot.selectedItem.toString()
+//        var timeslot3 = binding.spinnerTimeslot.selectedItem.toString()
 
         val adapter = ArrayAdapter(this, R.layout.simple_spinner_dropdown_item,  TimeSlotArrayList )
         binding.spinnerTimeslot.adapter = adapter
@@ -97,16 +98,15 @@ class Activity_LM_Seelect_Date_and_Time_Slot : AppCompatActivity() {
         binding.spinnerTimeslot.onItemSelectedListener = object : AdapterView.OnItemSelectedListener
         {
             override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long ) {
-                timeslot3 =  TimeSlotArrayList[position]
+               var timeslot1 =  TimeSlotArrayList[position]
+               timeslot3 = timeslot1
+
             }
             override fun onNothingSelected(parent: AdapterView<*>) {
 
             }
         }
-        // Db ye ekler
-        if (date3 != null) {
-            database.child("dates").child(libName).child(date3).push().setValue(Dates(timeslot3))
-        }
+        database.child("dates").push().setValue(Dates(timeslot3.toString()))
 
 
         //***

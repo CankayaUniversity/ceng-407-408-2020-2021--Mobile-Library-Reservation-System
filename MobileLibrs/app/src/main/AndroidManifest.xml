@@ -11,7 +11,7 @@
         android:theme="@style/Theme.MobileLibrs">
 
         <!--First Page-->
-        <activity android:name=".Activity_First_Page">
+        <activity android:name=".Activity_LM_List_Libraries">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
