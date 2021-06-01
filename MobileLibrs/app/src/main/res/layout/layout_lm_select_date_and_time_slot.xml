@@ -191,7 +191,6 @@
                 android:id="@+id/spinner_timeslot"
                 android:layout_width="253dp"
                 android:layout_height="31dp"
-                android:entries="@array/timeSlot"
                 android:fadeScrollbars="true"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
