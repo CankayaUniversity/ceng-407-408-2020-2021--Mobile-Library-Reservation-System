@@ -53,7 +53,7 @@ class Activity_LM_Seelect_Date_and_Time_Slot : AppCompatActivity() {
 
             if(date1!!.before(date2) || (date1!!.equals(date2)))
             {
-                Toast.makeText(this, "Error date!!Please you must change.", Toast.LENGTH_LONG)
+                Toast.makeText(this, "Error date!!Please you must change.", Toast.LENGTH_SHORT)
                     .show()
             }
             else {
