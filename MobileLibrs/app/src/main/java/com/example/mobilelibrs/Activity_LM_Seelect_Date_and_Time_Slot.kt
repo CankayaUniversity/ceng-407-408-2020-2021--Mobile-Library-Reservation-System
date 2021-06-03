@@ -64,7 +64,6 @@ class Activity_LM_Seelect_Date_and_Time_Slot : AppCompatActivity() {
         }
         //--Date control END
 
-
         //Get database reference
         var database = FirebaseDatabase.getInstance().reference
 
@@ -106,7 +105,7 @@ class Activity_LM_Seelect_Date_and_Time_Slot : AppCompatActivity() {
 
             }
         }
-        database.child("dates").push().setValue(Dates(timeslot3.toString()))
+//        database.child("dates").push().setValue(Dates(timeslot3.toString()))
 
 
         //***

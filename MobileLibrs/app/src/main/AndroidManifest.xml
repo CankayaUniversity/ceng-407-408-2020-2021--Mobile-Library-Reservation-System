@@ -11,7 +11,7 @@
         android:theme="@style/Theme.MobileLibrs">
 
         <!--First Page-->
-        <activity android:name=".Activity_LM_List_Libraries">
+        <activity android:name=".Activity_Admin_Add_Library">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -40,7 +40,7 @@
 
         <!--Admin Pages-->
         <activity android:name=".Activity_Admin_List_Libraries"> </activity>
-         <activity android:name=".Activity_Admin_Add_Library"> </activity>
+        <!-- <activity android:name=".Activity_Admin_Add_Library"> </activity> -->
         <activity android:name=".Activity_Admin_Change_Library_Status"> </activity>
 
         <!--Librarian Pages-->
