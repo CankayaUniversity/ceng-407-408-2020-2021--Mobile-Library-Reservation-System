@@ -11,7 +11,7 @@
         android:theme="@style/Theme.MobileLibrs">
 
         <!--First Page-->
-        <activity android:name=".Activity_Admin_Add_Library">
+        <activity android:name=".Activity_Login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,7 +28,7 @@
         <activity android:name=".Activity_LM_Menu"> </activity>
 
         <!-- User's Login_Register Pages -->
-          <activity android:name=".Activity_Login"> </activity>
+        <!--  <activity android:name=".Activity_Login"> </activity>-->
           <activity android:name=".Activity_Register"> </activity>
 
           <!--LM Pages -->

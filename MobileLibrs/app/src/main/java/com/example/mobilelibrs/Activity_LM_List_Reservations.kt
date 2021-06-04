@@ -153,19 +153,19 @@ class Activity_LM_List_Reservations : AppCompatActivity() {
         }
         binding.btnCancel2.setOnClickListener(){
             binding.tvReservation2.setText("")
-            binding.btnCancel1.setVisibility(View.INVISIBLE)
+            binding.btnCancel2.setVisibility(View.INVISIBLE)
             binding.btnQR1.setVisibility(View.INVISIBLE)
 
         }
         binding.btnCancel3.setOnClickListener(){
             binding.tvReservation2.setText("")
-            binding.btnCancel1.setVisibility(View.INVISIBLE)
+            binding.btnCancel3.setVisibility(View.INVISIBLE)
             binding.btnQR1.setVisibility(View.INVISIBLE)
 
         }
         binding.btnCancel4.setOnClickListener(){
             binding.tvReservation2.setText("")
-            binding.btnCancel1.setVisibility(View.INVISIBLE)
+            binding.btnCancel4.setVisibility(View.INVISIBLE)
             binding.btnQR1.setVisibility(View.INVISIBLE)
 
         }
