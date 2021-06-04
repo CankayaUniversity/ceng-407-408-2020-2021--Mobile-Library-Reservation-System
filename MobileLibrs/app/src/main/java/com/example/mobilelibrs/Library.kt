@@ -61,36 +61,13 @@ class Library {
     var DateList = ArrayList<String>()
     // var LibraryList = ArrayList<Library>()
 
-    var days: String? = null
-    var tables: String? = null
 
-    public class dateDetails {
-        // public Long chapterId;
-        var day: String = ""
-    }
-    public class Datess {
-        var dateDetailss = ArrayList<dateDetails>()
-    }
-    public class TableDetails {
-        // public Long chapterId;
-        var table: String = ""
-    }
-    public class Tables {
-        var dateDetailss = ArrayList<TableDetails>()
-    }
-
-    fun main(){
-
-        var result: HashMap<String, Datess> = HashMap<String, Datess>() //define empty hashmap
-        result.put()
-        result.put()
-    }
 
     constructor(libName: String, libAddress: String, libCapacity: Int) {
         this.LibraryName = libName
         this.LibraryAddress = libAddress
         this.LibraryCapacity = libCapacity
-        main()
+
     /*
 
         var dates = arrayOf("09.08.2021", "09.09.2021")
