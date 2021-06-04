@@ -11,7 +11,7 @@
         android:theme="@style/Theme.MobileLibrs">
 
         <!--First Page-->
-        <activity android:name=".Activity_Login">
+        <activity android:name=".Activity_LM_List_Reservations">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -36,7 +36,7 @@
         <activity android:name=".Activity_LM_Seelect_Date_and_Time_Slot"> </activity>
         <activity android:name=".Activity_LM_Choose_Table"> </activity>
         <activity android:name=".Activity_LM_QR"></activity>
-        <activity android:name=".Activity_LM_List_Reservations"> </activity>
+        <!--<<activity android:name=".Activity_LM_List_Reservations"> </activity> -->
 
         <!--Admin Pages-->
         <activity android:name=".Activity_Admin_List_Libraries"> </activity>

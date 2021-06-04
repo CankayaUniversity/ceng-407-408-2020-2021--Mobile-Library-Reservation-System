@@ -87,8 +87,6 @@ class Activity_LM_Seelect_Date_and_Time_Slot : AppCompatActivity() {
         TimeSlotArrayList.add("9:00-10:00")
         TimeSlotArrayList.add("10:00-11:00")
 
-        var libName = libraryName2
-        var date3 = Getdate
 //        var timeslot3 = binding.spinnerTimeslot.selectedItem.toString()
 
         val adapter = ArrayAdapter(this, R.layout.simple_spinner_dropdown_item,  TimeSlotArrayList )
