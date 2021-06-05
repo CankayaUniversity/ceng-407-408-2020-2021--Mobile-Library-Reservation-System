@@ -3,6 +3,7 @@ package com.example.mobilelibrs
 import android.content.Intent
 import android.os.Bundle
 import android.text.method.ScrollingMovementMethod
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
@@ -46,59 +47,42 @@ class Activity_LM_List_Reservations : AppCompatActivity() {
 
             //bu method veritabanında veri varsa anında görüntülüyor
             override fun onDataChange(snapshot: DataSnapshot) {
-                val sb = StringBuilder() // convert all data as text
+                val sb1 = StringBuilder() // convert all data as text
                 val sb2 = StringBuilder()
                 val sb3 = StringBuilder()
                 val sb4 = StringBuilder()
 
                 var j = 1
-
+               Log.e("mesaj", "mesaj1")
                 for (i in snapshot.children) {
-
-                    //Buraya res id gelecek
-
-
+                    Log.e("mesaj", "mesaj2")
                     // get information from db
                     libName = i.child("libName").getValue().toString()
                     timeSlot = i.child("timeSlot").getValue().toString()
                     date = i.child("date").getValue().toString()
                     tableNo = i.child("tableNo").getValue().toString()
 
-                    // Hepsinin bilgilerini ayri text adında birleştirdim:BY
-                    if(j==1)
-                    {
-                        sb.append("Library: $libName \nTime: $timeSlot\nDate: $date \nTable: $tableNo")
-                    }
-                    else if(j==2)
-                    {
-                        sb2.append("Library: $libName \nTime: $timeSlot\nDate: $date \nTable: $tableNo")
-                    }
-                    else if(j==3)
-                    {
-                        sb3.append("Library: $libName \nTime: $timeSlot\nDate: $date \nTable: $tableNo")
-                    }
-                    else if(j==4)
-                    {
-                        sb4.append("Library: $libName \nTime: $timeSlot\nDate: $date \nTable: $tableNo")
-                    }
-
                     //Max 4 reservation added
                     if (j == 1) {
-                        binding.tvReservation1.setText(sb)
+                        sb1.append("Library: $libName \nTime: $timeSlot\nDate: $date \nTable: $tableNo")
+                        binding.tvReservation1.setText(sb1)
                         binding.btnCancel1.setVisibility(View.VISIBLE)
                         binding.btnQR1.setVisibility(View.VISIBLE)
                     }
                     if (j == 2) {
+                        sb2.append("Library: $libName \nTime: $timeSlot\nDate: $date \nTable: $tableNo")
                         binding.tvReservation2.setText(sb2)
                         binding.btnCancel2.setVisibility(View.VISIBLE)
                         binding.btnQR2.setVisibility(View.VISIBLE)
                     }
                     if (j == 3) {
+                        sb3.append("Library: $libName \nTime: $timeSlot\nDate: $date \nTable: $tableNo")
                         binding.tvReservation3.setText(sb3)
                         binding.btnCancel3.setVisibility(View.VISIBLE)
                         binding.btnQR3.setVisibility(View.VISIBLE)
                     }
                     if (j == 4) {
+                        sb4.append("Library: $libName \nTime: $timeSlot\nDate: $date \nTable: $tableNo")
                         binding.tvReservation4.setText(sb4)
                         binding.btnCancel4.setVisibility(View.VISIBLE)
                         binding.btnQR4.setVisibility(View.VISIBLE)
