@@ -55,7 +55,8 @@ class Activity_LM_List_Reservations : AppCompatActivity() {
                 var j = 1
                Log.e("mesaj", "mesaj1")
                 for (i in snapshot.children) {
-                    Log.e("mesaj", "mesaj2")
+                    if(i.child("userId").getValue().toString().equals(lmID2.toString())){
+
                     // get information from db
                     libName = i.child("libName").getValue().toString()
                     timeSlot = i.child("timeSlot").getValue().toString()
@@ -88,6 +89,7 @@ class Activity_LM_List_Reservations : AppCompatActivity() {
                         binding.btnQR4.setVisibility(View.VISIBLE)
                     }
                     j++
+                    }
                 }
             }
 
