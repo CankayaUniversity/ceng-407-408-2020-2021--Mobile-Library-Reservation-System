@@ -164,7 +164,7 @@ class Activity_LM_List_Reservations : AppCompatActivity() {
             binding.btnCancel1.setVisibility(View.INVISIBLE)
             binding.btnQR1.setVisibility(View.INVISIBLE)
 
-           
+
             binding.tvReservation4.setText("")
             binding.btnCancel4.setVisibility(View.INVISIBLE)
             binding.btnQR4.setVisibility(View.INVISIBLE)
