@@ -37,6 +37,11 @@ class Activity_LM_List_Reservations : AppCompatActivity() {
         var lmID2 = intent.getStringExtra("userId1")
         lmID!!.setText("User"+ lmID2)
 
+        var res1ID=""
+        var res2ID= ""
+        var res3ID=""
+        var res4ID= ""
+
         //Get DB Reference
         val database = FirebaseDatabase.getInstance().reference.child("reservation")
         setContentView(binding.root)
@@ -63,30 +68,37 @@ class Activity_LM_List_Reservations : AppCompatActivity() {
                     date = i.child("date").getValue().toString()
                     tableNo = i.child("tableNo").getValue().toString()
 
+
                     //Max 4 reservation added
                     if (j == 1) {
                         sb1.append("Library: $libName \nTime: $timeSlot\nDate: $date \nTable: $tableNo")
                         binding.tvReservation1.setText(sb1)
                         binding.btnCancel1.setVisibility(View.VISIBLE)
                         binding.btnQR1.setVisibility(View.VISIBLE)
+                        res1ID=i.key.toString()
+
                     }
+
                     if (j == 2) {
                         sb2.append("Library: $libName \nTime: $timeSlot\nDate: $date \nTable: $tableNo")
                         binding.tvReservation2.setText(sb2)
                         binding.btnCancel2.setVisibility(View.VISIBLE)
                         binding.btnQR2.setVisibility(View.VISIBLE)
+                        res2ID=i.key.toString()
                     }
                     if (j == 3) {
                         sb3.append("Library: $libName \nTime: $timeSlot\nDate: $date \nTable: $tableNo")
                         binding.tvReservation3.setText(sb3)
                         binding.btnCancel3.setVisibility(View.VISIBLE)
                         binding.btnQR3.setVisibility(View.VISIBLE)
+                        res3ID=i.key.toString()
                     }
                     if (j == 4) {
                         sb4.append("Library: $libName \nTime: $timeSlot\nDate: $date \nTable: $tableNo")
                         binding.tvReservation4.setText(sb4)
                         binding.btnCancel4.setVisibility(View.VISIBLE)
                         binding.btnQR4.setVisibility(View.VISIBLE)
+                        res4ID=i.key.toString()
                     }
                     j++
                     }
@@ -145,25 +157,66 @@ class Activity_LM_List_Reservations : AppCompatActivity() {
             finish()
         }
         binding.btnCancel1.setOnClickListener(){
-            //Buraya res id gelecek
 
+            Log.e("Reservation 1", res1ID)
+            database.child(res1ID).removeValue()
             binding.tvReservation1.setText("")
             binding.btnCancel1.setVisibility(View.INVISIBLE)
             binding.btnQR1.setVisibility(View.INVISIBLE)
+
+             if(binding.tvReservation4.toString()!=""){
+                 binding.tvReservation4.setText("")
+                 binding.btnCancel4.setVisibility(View.INVISIBLE)
+                 binding.btnQR4.setVisibility(View.INVISIBLE)
+             }
+            else if(binding.tvReservation3.toString()!=""){
+                 binding.tvReservation3.setText("")
+                 binding.btnCancel3.setVisibility(View.INVISIBLE)
+                 binding.btnQR3.setVisibility(View.INVISIBLE)
+            }
+            else if(binding.tvReservation2.toString()!=""){
+                 binding.tvReservation2.setText("")
+                 binding.btnCancel2.setVisibility(View.INVISIBLE)
+                 binding.btnQR2.setVisibility(View.INVISIBLE)
+            }
+
         }
         binding.btnCancel2.setOnClickListener(){
+            Log.e("Reservation 2", res2ID)
+            database.child(res2ID).removeValue()
             binding.tvReservation2.setText("")
             binding.btnCancel2.setVisibility(View.INVISIBLE)
             binding.btnQR2.setVisibility(View.INVISIBLE)
 
+            if(binding.tvReservation4.toString()!=""){
+                binding.tvReservation4.setText("")
+                binding.btnCancel4.setVisibility(View.INVISIBLE)
+                binding.btnQR4.setVisibility(View.INVISIBLE)
+            }
+            else if(binding.tvReservation3.toString()!=""){
+                binding.tvReservation3.setText("")
+                binding.btnCancel3.setVisibility(View.INVISIBLE)
+                binding.btnQR3.setVisibility(View.INVISIBLE)
+            }
+
         }
         binding.btnCancel3.setOnClickListener(){
+            Log.e("Reservation 3", res3ID)
+            database.child(res3ID).removeValue()
             binding.tvReservation3.setText("")
             binding.btnCancel3.setVisibility(View.INVISIBLE)
             binding.btnQR3.setVisibility(View.INVISIBLE)
 
+            if(binding.tvReservation4.toString()!=""){
+                binding.tvReservation4.setText("")
+                binding.btnCancel4.setVisibility(View.INVISIBLE)
+                binding.btnQR4.setVisibility(View.INVISIBLE)
+            }
         }
+
         binding.btnCancel4.setOnClickListener(){
+            Log.e("Reservation 4", res4ID)
+            database.child(res4ID).removeValue()
             binding.tvReservation4.setText("")
             binding.btnCancel4.setVisibility(View.INVISIBLE)
             binding.btnQR4.setVisibility(View.INVISIBLE)

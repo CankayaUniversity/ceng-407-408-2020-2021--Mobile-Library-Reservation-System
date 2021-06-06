@@ -42,7 +42,6 @@ class Activity_LM_Menu  : AppCompatActivity() {
         btn_exit_menu.setOnClickListener {
             reDirectLoginPage()
         }
-
     }
 
     fun reDirectLoginPage() {

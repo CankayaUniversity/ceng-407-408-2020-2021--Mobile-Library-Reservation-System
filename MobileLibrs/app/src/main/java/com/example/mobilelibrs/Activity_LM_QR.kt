@@ -75,14 +75,10 @@ class Activity_LM_QR : AppCompatActivity() {
         }
         // Click button, Go to Lm Menu Page
         next_button!!.setOnClickListener {
-            reDirectLMMenuPage()
+            val newIntent = Intent(this, Activity_LM_Menu::class.java)
+            newIntent.putExtra("userId", lmID5)
+            startActivity(newIntent)
+            finish()
         }
-    }
-
-    // Go to Lm Menu Page
-    fun reDirectLMMenuPage() {
-        val intent = Intent(this, Activity_LM_Menu::class.java)
-        startActivity(intent)
-        finish()
     }
 }
