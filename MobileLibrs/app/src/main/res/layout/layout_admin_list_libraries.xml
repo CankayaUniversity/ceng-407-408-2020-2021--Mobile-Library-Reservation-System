@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/common_google_signin_btn_text_light_focused"
+    android:background="@color/mlrs_mlrs_mainpageBlue"
     android:backgroundTint="@color/mlrs_mlrs_mainpageBlue"
     tools:context=".Activity_Admin_List_Libraries">
 
@@ -12,7 +12,10 @@
         android:id="@+id/AdminLibList"
         android:layout_width="304dp"
         android:layout_height="553dp"
-        android:textSize="25sp"
+        android:textAlignment="viewStart"
+        android:textColor="#020202"
+        android:textSize="20dp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
@@ -29,6 +32,7 @@
         android:textAlignment="center"
         android:textColor="@color/common_google_signin_btn_text_dark_default"
         android:textSize="30sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/AdminLibList"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

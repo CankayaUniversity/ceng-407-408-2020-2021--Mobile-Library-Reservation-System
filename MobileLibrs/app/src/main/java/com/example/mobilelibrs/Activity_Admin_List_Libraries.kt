@@ -21,7 +21,7 @@ class Activity_Admin_List_Libraries : AppCompatActivity() {
         setContentView(binding.root)
 
         //Firebase access variable
-        var database = FirebaseDatabase.getInstance().reference
+        var database = FirebaseDatabase.getInstance().reference.child("library")
 
 
         //All data is in getData variable
