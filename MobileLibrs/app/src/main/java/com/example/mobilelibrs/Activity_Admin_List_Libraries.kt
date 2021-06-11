@@ -34,7 +34,7 @@ class Activity_Admin_List_Libraries : AppCompatActivity() {
                     var lname = i.child("libraryName").getValue()
                     var laddress = i.child("libraryAddress").getValue()
                     var lcap = i.child("libraryCapacity").getValue()
-                    sb.append("${i.key}) Name: $lname \n Address: $laddress \n Capacity: $lcap \n\n")
+                    sb.append("Name: $lname \n Address: $laddress \n Capacity: $lcap \n\n")
                 }
                 binding.AdminLibList.setText(sb)
             }
