@@ -171,10 +171,10 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="80dp"
         android:layout_marginEnd="80dp"
+        android:layout_marginBottom="178dp"
         android:textSize="16sp"
         android:textStyle="bold"
-        android:layout_marginBottom="178dp"
-        />
+        android:visibility="invisible" />
 
 
 </RelativeLayout>

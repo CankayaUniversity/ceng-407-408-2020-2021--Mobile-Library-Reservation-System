@@ -221,5 +221,11 @@ class Activity_LM_List_Reservations : AppCompatActivity() {
 
         }
 
+        binding.btnBackToLMMenu.setOnClickListener(){
+            val newIntent = Intent(this, Activity_LM_Menu::class.java)
+            newIntent.putExtra("userId", lmID2)
+            startActivity(newIntent)
+            finish()
+        }
     }
 }

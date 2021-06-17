@@ -71,11 +71,11 @@
                 android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginStart="40dp"
+                android:layout_marginStart="48dp"
                 android:layout_marginTop="330dp"
-                android:layout_marginEnd="138dp"
+                android:layout_marginEnd="130dp"
 
-                android:layout_marginBottom="204dp"
+                android:layout_marginBottom="227dp"
                 android:text="Library Capacity"
                 android:textAlignment="center"
                 android:textColor="@color/Black"
@@ -89,10 +89,10 @@
                 android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginStart="36dp"
+                android:layout_marginStart="38dp"
                 android:layout_marginTop="59dp"
-                android:layout_marginEnd="160dp"
-                android:layout_marginBottom="469dp"
+                android:layout_marginEnd="158dp"
+                android:layout_marginBottom="447dp"
                 android:text="Library Name"
                 android:textAlignment="center"
                 android:textColor="@color/Black"
@@ -119,15 +119,15 @@
             <EditText
                 android:id="@+id/txtLibraryName"
                 android:layout_width="wrap_content"
-                android:layout_height="60dp"
+                android:layout_height="51dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
 
-                android:layout_marginStart="70dp"
+                android:layout_marginStart="67dp"
                 android:layout_marginTop="100dp"
-                android:layout_marginEnd="70dp"
-                android:layout_marginBottom="423dp"
+                android:layout_marginEnd="73dp"
+                android:layout_marginBottom="395dp"
                 android:background="@color/mlrs_white_button"
                 android:ems="13"
                 android:hint=""
@@ -136,7 +136,7 @@
             <EditText
                 android:id="@+id/txtLibraryAddres"
                 android:layout_width="wrap_content"
-                android:layout_height="60dp"
+                android:layout_height="50dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
@@ -145,7 +145,7 @@
                 android:layout_marginTop="235dp"
 
                 android:layout_marginEnd="70dp"
-                android:layout_marginBottom="292dp"
+                android:layout_marginBottom="302dp"
                 android:background="@color/mlrs_white_button"
                 android:ems="13"
                 android:hint=""
@@ -154,16 +154,16 @@
             <EditText
                 android:id="@+id/txtLibraryCapacity"
                 android:layout_width="wrap_content"
-                android:layout_height="60dp"
+                android:layout_height="52dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
 
-                android:layout_marginStart="70dp"
+                android:layout_marginStart="74dp"
                 android:layout_marginTop="370dp"
 
-                android:layout_marginEnd="70dp"
-                android:layout_marginBottom="170dp"
+                android:layout_marginEnd="66dp"
+                android:layout_marginBottom="199dp"
                 android:background="@color/mlrs_white_button"
                 android:ems="13"
                 android:hint=""
@@ -177,11 +177,11 @@
                 android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginStart="98dp"
+                android:layout_marginStart="95dp"
                 android:layout_marginLeft="85dp"
                 android:layout_marginTop="455dp"
-                android:layout_marginEnd="98dp"
-                android:layout_marginBottom="58dp"
+                android:layout_marginEnd="101dp"
+                android:layout_marginBottom="104dp"
                 android:backgroundTint="@color/mlrs_white_button"
                 android:radius="50dp"
                 android:text="ADD"
@@ -207,22 +207,20 @@
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
-        </RelativeLayout>
+            <Button
+                android:id="@+id/button_ad_back"
+                android:layout_width="107dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="150dp"
+                android:layout_marginEnd="154dp"
+                android:layout_marginBottom="9dp"
+                android:background="@color/mlrs_white_button"
+                android:text="Back"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/button_ad_back"
-            android:layout_width="107dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="49dp"
-            android:layout_marginEnd="255dp"
-            android:layout_marginBottom="31dp"
-            android:background="@color/mlrs_white_button"
-            android:text="Back"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+        </RelativeLayout>
 
 
     </RelativeLayout>
