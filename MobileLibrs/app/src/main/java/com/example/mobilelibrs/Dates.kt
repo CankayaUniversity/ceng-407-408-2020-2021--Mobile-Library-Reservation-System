@@ -3,9 +3,9 @@ package com.example.mobilelibrs
 import java.util.*
 
 class Dates {
-    var libName:String=""
+
     var date: String=""
-    var timeSlot: String=""
+//    var timeSlot: String=""
     /*
     constructor(libName:String, date:String, timeSlot:String){
         this.libName=libName
@@ -13,10 +13,10 @@ class Dates {
         this.timeSlot=timeSlot
    }
 */
-    constructor(libName:String, timeSlot:String){
+    constructor(date:String){
 
-        this.libName = libName
-        this.timeSlot=timeSlot
+         var date = date
+//       this.timeSlot=timeSlot
     }
 
 }
