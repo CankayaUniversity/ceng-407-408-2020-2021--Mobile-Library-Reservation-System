@@ -15,14 +15,14 @@
     <TextView
         android:id="@+id/AreaReservation"
         android:layout_width="wrap_content"
-        android:layout_height="403dp"
+        android:layout_height="439dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="20dp"
         android:layout_marginTop="13dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginBottom="171dp"
+        android:layout_marginBottom="135dp"
         android:background="@drawable/sekil"
         android:textAlignment="center"
         android:textColor="@color/Black"
@@ -94,22 +94,22 @@
             android:layout_alignParentBottom="true"
             android:layout_marginStart="15dp"
             android:layout_marginEnd="15dp"
-            android:layout_marginBottom="77dp"
+            android:layout_marginBottom="86dp"
             android:textSize="16sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/lname"
             android:layout_width="wrap_content"
-            android:layout_height="25dp"
+            android:layout_height="55dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
             android:layout_marginStart="15dp"
             android:layout_marginEnd="15dp"
-            android:layout_marginBottom="112dp"
+            android:layout_marginBottom="118dp"
             android:textSize="16sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/saat"
@@ -150,7 +150,7 @@
         android:layout_marginStart="100dp"
         android:layout_marginTop="71dp"
         android:layout_marginEnd="100dp"
-        android:layout_marginBottom="37dp"
+        android:layout_marginBottom="43dp"
         tools:ignore="UnknownId" />
 
     <TextView
@@ -171,7 +171,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="80dp"
         android:layout_marginEnd="80dp"
-        android:layout_marginBottom="178dp"
+        android:layout_marginBottom="142dp"
         android:textSize="16sp"
         android:textStyle="bold"
         android:visibility="invisible" />

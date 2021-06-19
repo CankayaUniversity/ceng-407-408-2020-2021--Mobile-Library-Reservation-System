@@ -65,6 +65,7 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import java.time.LocalDate
 import java.util.*
 
 
@@ -115,8 +116,6 @@ class Activity_Admin_Add_Library : AppCompatActivity() {
             var libAddres = binding.txtLibraryAddres.text.toString()
             var libCapacity = binding.txtLibraryCapacity.text.toString().toInt()
 
-
-
             println("Control checkLibName = " + checkLibName)
             println("Control LibValues = " + libName)
 
@@ -124,6 +123,110 @@ class Activity_Admin_Add_Library : AppCompatActivity() {
             if (!list.contains(libName)) {
                 database.child("library").push().setValue(Library(libName, libAddres, libCapacity))
                 Toast.makeText(this, "Library succefully added..", Toast.LENGTH_LONG).show()
+
+                var dateList = Dates()
+
+                // yarının tarihi
+                var tomorrow_1 = LocalDate.now().plusDays(1)
+                // bugünden 2 sonrasının tarihi
+                var tomorrow_2 = LocalDate.now().plusDays(2)
+                // bugünden 3 sonrasının tarihi
+                var tomorrow_3 = LocalDate.now().plusDays(3)
+
+                dateList.DateTomorrow_1 = tomorrow_1.toString()
+                dateList.DateTomorrow_2 = tomorrow_2.toString()
+                dateList.DateTomorrow_3 = tomorrow_3.toString()
+
+                var timeSlotList = TimeSlots()
+
+                timeSlotList.TimeSlot_1 = "9:00-10:00"
+                timeSlotList.TimeSlot_2 = "10:00-11:00"
+                timeSlotList.TimeSlot_3 = "11:00-12:00"
+
+                var tableList = Tables()
+
+                //  1. date timeslots tables add - start
+                database.child("LibraryDateInformation")
+                    .child(libName)  // as library id
+                    .child("Dates")
+                    .child(dateList.DateTomorrow_1.toString() )
+                    .child("TimeSlots")
+                    .child(timeSlotList.TimeSlot_1.toString())
+                    .setValue(tableList)
+
+                database.child("LibraryDateInformation")
+                    .child(libName)  // as library id
+                    .child("Dates")
+                    .child(dateList.DateTomorrow_1.toString() )
+                    .child("TimeSlots")
+                    .child(timeSlotList.TimeSlot_2.toString())
+                    .setValue(tableList)
+
+                database.child("LibraryDateInformation")
+                    .child(libName)  // as library id
+                    .child("Dates")
+                    .child(dateList.DateTomorrow_1.toString() )
+                    .child("TimeSlots")
+                    .child(timeSlotList.TimeSlot_3.toString())
+                    .setValue(tableList)
+                //  1. date timeslots tables add - end
+
+                //  2. date timeslots tables add - start
+                database.child("LibraryDateInformation")
+                    .child(libName)  // as library id
+                    .child("Dates")
+                    .child(dateList.DateTomorrow_2.toString() )
+                    .child("TimeSlots")
+                    .child(timeSlotList.TimeSlot_1.toString())
+                    .setValue(tableList)
+
+                database.child("LibraryDateInformation")
+                    .child(libName)  // as library id
+                    .child("Dates")
+                    .child(dateList.DateTomorrow_2.toString() )
+                    .child("TimeSlots")
+                    .child(timeSlotList.TimeSlot_2.toString())
+                    .setValue(tableList)
+
+                database.child("LibraryDateInformation")
+                    .child(libName)  // as library id
+                    .child("Dates")
+                    .child(dateList.DateTomorrow_2.toString() )
+                    .child("TimeSlots")
+                    .child(timeSlotList.TimeSlot_3.toString())
+                    .setValue(tableList)
+                //  2. date timeslots add - end
+
+                //  3. date timeslots tables add - start
+                database.child("LibraryDateInformation")
+                    .child(libName)  // as library id
+                    .child("Dates")
+//                    .child(dateID.toString() )
+                    .child(dateList.DateTomorrow_3.toString() )
+                    .child("TimeSlots")
+                    .child(timeSlotList.TimeSlot_1.toString())
+                    .setValue(tableList)
+
+                database.child("LibraryDateInformation")
+                    .child(libName)  // as library id
+                    .child("Dates")
+//                    .child(dateID.toString() )
+                    .child(dateList.DateTomorrow_3.toString() )
+                    .child("TimeSlots")
+                    .child(timeSlotList.TimeSlot_2.toString())
+                    .setValue(tableList)
+
+                database.child("LibraryDateInformation")
+                    .child(libName)  // as library id
+                    .child("Dates")
+//                    .child(dateID.toString() )
+                    .child(dateList.DateTomorrow_3.toString() )
+                    .child("TimeSlots")
+                    .child(timeSlotList.TimeSlot_3.toString())
+                    .setValue(tableList)
+                //  3. date timeslots tables add - end
+
+
 
             } else {
                 Toast.makeText(this, "This library name has been used before ", Toast.LENGTH_LONG)
