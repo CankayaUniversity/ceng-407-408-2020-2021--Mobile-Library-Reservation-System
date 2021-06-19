@@ -14,7 +14,7 @@ class Activity_Librarian_Menu : AppCompatActivity() {
 
         val btn_exit_menu = findViewById<Button>(R.id.btn_menu_exit)
         val btn_listReservation = findViewById<Button>(R.id.btn_librarian_menu_list_reservations)
-        //val btn_editProfile = findViewById<Button>(R.id.btn_librarian_menu_edit_profile)
+        val btn_editProfile = findViewById<Button>(R.id.btn_librarian_menu_edit_profile)
 
         btn_exit_menu.setOnClickListener {
             reDirectLoginPage()
@@ -25,10 +25,10 @@ class Activity_Librarian_Menu : AppCompatActivity() {
             reDirectListReservationPage()
         }
 
-        /*Click edit profile button, go to edit profile page
+        //Click edit profile button, go to edit profile page
         btn_editProfile.setOnClickListener {
              reDirectEditProfilePage()
-        } */
+        }
     }
 
     fun reDirectListReservationPage() {
@@ -43,9 +43,9 @@ class Activity_Librarian_Menu : AppCompatActivity() {
         finish()
     }
 
-    /*fun reDirectEditProfilePage() {
-    val intent = Intent(this, Librarian_EditProfile_Activity::class.java)
+    fun reDirectEditProfilePage() {
+    val intent = Intent(this, Activity_Edit_Profile::class.java)
          startActivity(intent)
          finish()
-    }*/
+    }
 }

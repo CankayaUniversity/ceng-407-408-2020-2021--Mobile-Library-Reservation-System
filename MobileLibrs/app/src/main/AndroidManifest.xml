@@ -26,6 +26,8 @@
         <activity android:name=".Activity_Admin_Menu"> </activity>
         <activity android:name=".Activity_Librarian_Menu"> </activity>
         <activity android:name=".Activity_LM_Menu"> </activity>
+        <activity android:name=".Activity_Edit_Profile"> </activity>
+
 
         <!-- User's Login_Register Pages -->
          <activity android:name=".Activity_Login"> </activity>
