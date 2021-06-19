@@ -73,6 +73,7 @@ class Activity_LM_QR : AppCompatActivity() {
         } catch (e: Exception) {
             e.printStackTrace()
         }
+
         // Click button, Go to Lm Menu Page
         next_button!!.setOnClickListener {
             val newIntent = Intent(this, Activity_LM_Menu::class.java)
