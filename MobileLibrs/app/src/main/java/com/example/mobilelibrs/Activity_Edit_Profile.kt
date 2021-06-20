@@ -17,6 +17,7 @@ import com.google.firebase.auth.AuthCredential
 import com.google.firebase.auth.EmailAuthProvider
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.database.FirebaseDatabase
 
 
 class Activity_Edit_Profile : AppCompatActivity() {
@@ -33,6 +34,9 @@ class Activity_Edit_Profile : AppCompatActivity() {
         setContentView(R.layout.layout_reset_password)
 
         val lmID1 = intent.getStringExtra("userId1")
+        //Get database reference
+        var database = FirebaseDatabase.getInstance().reference
+
 
         // initialized variable
         auth= FirebaseAuth.getInstance()
