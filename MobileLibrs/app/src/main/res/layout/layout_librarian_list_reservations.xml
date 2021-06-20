@@ -82,7 +82,7 @@ tools:context=".Activity_Librarian_List_Reservations">
     app:layout_constraintVertical_bias="0.973" />
 
 <TextView
-    android:id="@+id/AdminLibList"
+    android:id="@+id/LibrarianResList"
     android:layout_width="336dp"
     android:layout_height="534dp"
     android:layout_marginStart="105dp"

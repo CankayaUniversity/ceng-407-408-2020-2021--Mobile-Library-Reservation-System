@@ -20,6 +20,6 @@ class Activity_Librarian_List_Reservations : AppCompatActivity() {
         //Firebase access variable
         var database = FirebaseDatabase.getInstance().reference.child("reservation")
 
-        binding.AdminLibList.movementMethod = ScrollingMovementMethod()
+        binding.LibrarianResList.movementMethod = ScrollingMovementMethod()
     }
 }
