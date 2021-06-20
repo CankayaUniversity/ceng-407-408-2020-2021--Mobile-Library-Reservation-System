@@ -5,6 +5,7 @@ import android.nfc.Tag
 import android.os.Bundle
 import android.os.PersistableBundle
 import android.util.Log
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -24,36 +25,46 @@ class Activity_Edit_Profile : AppCompatActivity() {
     var currentpassword: EditText? = null
     var newpassword: EditText? = null
     var confirmpassword: EditText? = null
+    var btnChangePassword: Button? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val binding =LayoutResetPasswordBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        // Access to layout
+        setContentView(R.layout.layout_reset_password)
+
+        // initialized variable
         auth= FirebaseAuth.getInstance()
 
-        binding.btnChangePassword.setOnClickListener(){
+        btnChangePassword = findViewById<View>(R.id.btn_change_password) as Button
+        currentpassword = findViewById<View>(R.id.et_current_password) as EditText
+        newpassword = findViewById<View>(R.id.et_new_password) as EditText
+        confirmpassword = findViewById<View>(R.id.et_confirm_password) as EditText
+
+
+        btnChangePassword!!.setOnClickListener(){
             changePassWord()
         }
-        currentpassword =binding.etCurrentPassword as EditText
-        newpassword=binding.etNewPassword as EditText
-        confirmpassword=binding.etConfirmPassword as EditText
+
     }
+
     private fun changePassWord(){
-        // edittext ler boş değilse
-        if(currentpassword!!.text!!.isNotEmpty() && newpassword!!.text.isNotEmpty() && confirmpassword!!.text.isNotEmpty()){
-            // confirmpassword eşitse newpassword
+        
+
+        if(currentpassword!!.text!!.isNotEmpty()&&
+            newpassword!!.text.isNotEmpty()&&
+            confirmpassword!!.text.isNotEmpty()){
+
             if(newpassword!!.text.toString().equals(confirmpassword!!.text.toString())){
-
-                val user: FirebaseUser? = auth.currentUser
-
-                if(user!= null && user.email != null){
-
-                    val credential:AuthCredential = EmailAuthProvider.getCredential(user.email!!, currentpassword!!.text.toString())
-
-                    user?.reauthenticate(credential)?.addOnCompleteListener {
+                val user:FirebaseUser?=auth.currentUser
+                if(user!=null&& user.email !=null){
+                    val credential:AuthCredential =EmailAuthProvider.getCredential(user.email!!,
+                        currentpassword!!.text.toString())
+                    user?.reauthenticate(credential)
+                        ?.addOnCompleteListener {
                             if (it.isSuccessful){
-                                Toast.makeText(this,"Re-Authentication success",Toast.LENGTH_SHORT).show()
-                                user?.updatePassword(newpassword!!.text.toString())?.addOnCompleteListener { task ->
+                                Toast.makeText(this,"Re-Authentication succes",Toast.LENGTH_SHORT).show()
+                                user?.updatePassword(newpassword!!.text.toString())
+                                    ?.addOnCompleteListener { task ->
                                         if (task.isSuccessful){
                                             Toast.makeText(this,"Password Changed Succesfully",Toast.LENGTH_SHORT).show()
                                             auth.signOut()

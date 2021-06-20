@@ -235,10 +235,8 @@ class Activity_Login : AppCompatActivity() {
                     finish()
                     FirebaseAuth.getInstance().signOut()
 
-                }else {
-                    Toast.makeText(this@Activity_Login, "EXIT WAS DONE. : ", Toast.LENGTH_LONG)
-                        .show()
                 }
+
             }
         }
     }
