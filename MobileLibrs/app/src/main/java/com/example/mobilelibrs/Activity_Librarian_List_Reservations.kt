@@ -11,6 +11,8 @@ class Activity_Librarian_List_Reservations : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.layout_librarian_list_reservations)
+        //Layout connection by using binding
+        val binding = LayoutLibrarianListReservationsBinding.inflate(layoutInflater)
+        setContentView(binding.root)
     }
 }
