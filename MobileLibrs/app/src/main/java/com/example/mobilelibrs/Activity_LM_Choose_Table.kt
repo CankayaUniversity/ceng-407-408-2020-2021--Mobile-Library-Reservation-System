@@ -51,9 +51,10 @@ class Activity_LM_Choose_Table : AppCompatActivity() {
             newIntent.putExtra("tn4", tableNo3.toString())
             newIntent.putExtra("userId4", lmID4)
 
+            var res_id =database.child("reservation").push().key
 
             var a =database.child("reservation").push()
-            a.setValue(Reservation(lmID4, a.toString(),libraryName3, date3, timeSlot3, 1))
+            a.setValue(Reservation(lmID4, res_id.toString() ,libraryName3, date3, timeSlot3, 1))
 
             //putExtra içinde veri string olması gerek.Değilse toString() ile çevirebiliriz.
             startActivity(newIntent)

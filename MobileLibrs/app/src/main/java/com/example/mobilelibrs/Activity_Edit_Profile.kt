@@ -33,13 +33,8 @@ class Activity_Edit_Profile : AppCompatActivity() {
         // Access to layout
         setContentView(R.layout.layout_reset_password)
 
-        val lmID1 = intent.getStringExtra("userId1")
-        //Get database reference
-        var database = FirebaseDatabase.getInstance().reference
-
-
         // initialized variable
-        auth= FirebaseAuth.getInstance()
+        auth = FirebaseAuth.getInstance()
 
         btnChangePassword = findViewById<View>(R.id.btn_change_password) as Button
         currentpassword = findViewById<View>(R.id.et_current_password) as EditText
@@ -54,16 +49,17 @@ class Activity_Edit_Profile : AppCompatActivity() {
     }
 
     private fun changePassWord(){
-        
+        val lbID1 = intent.getStringExtra("userId1")
+        //Get database reference
+        var database = FirebaseDatabase.getInstance().reference
 
-        if(currentpassword!!.text!!.isNotEmpty()&&
-            newpassword!!.text.isNotEmpty()&&
-            confirmpassword!!.text.isNotEmpty()){
+        if(currentpassword!!.text!!.isNotEmpty()&& newpassword!!.text.isNotEmpty()&& confirmpassword!!.text.isNotEmpty()){
 
             if(newpassword!!.text.toString().equals(confirmpassword!!.text.toString())){
+
                 val user:FirebaseUser?=auth.currentUser
-                if(user!=null&& user.email !=null){
-                    val credential:AuthCredential =EmailAuthProvider.getCredential(user.email!!,
+                if(user!=null && user.email !=null){
+                    val credential:AuthCredential = EmailAuthProvider.getCredential(user.email!!,
                         currentpassword!!.text.toString())
                     user?.reauthenticate(credential)
                         ?.addOnCompleteListener {
@@ -73,6 +69,9 @@ class Activity_Edit_Profile : AppCompatActivity() {
                                     ?.addOnCompleteListener { task ->
                                         if (task.isSuccessful){
                                             Toast.makeText(this,"Password Changed Succesfully",Toast.LENGTH_SHORT).show()
+
+//                                           database.child("user").child(FirebaseAuth.getInstance().currentUser!!.uid).setValue(User(123457))
+
                                             auth.signOut()
                                             startActivity(Intent(this,Activity_Login::class.java))
                                             finish()
