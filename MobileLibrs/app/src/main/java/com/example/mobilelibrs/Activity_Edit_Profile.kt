@@ -32,6 +32,8 @@ class Activity_Edit_Profile : AppCompatActivity() {
         // Access to layout
         setContentView(R.layout.layout_reset_password)
 
+        val lmID1 = intent.getStringExtra("userId1")
+
         // initialized variable
         auth= FirebaseAuth.getInstance()
 

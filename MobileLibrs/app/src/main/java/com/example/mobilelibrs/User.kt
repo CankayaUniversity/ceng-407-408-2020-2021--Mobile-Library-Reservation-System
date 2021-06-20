@@ -36,4 +36,13 @@ class User {
 
     constructor() {}
 
+
+    constructor(
+        userPassword: String,
+
+    ) {
+        this.userPassword = userPassword
+
+    }
+
 }
