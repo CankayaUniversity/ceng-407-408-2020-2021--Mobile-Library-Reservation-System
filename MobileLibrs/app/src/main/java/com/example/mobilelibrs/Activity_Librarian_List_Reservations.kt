@@ -1,5 +1,6 @@
 package com.example.mobilelibrs
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.method.ScrollingMovementMethod
 import androidx.appcompat.app.AppCompatActivity
@@ -49,5 +50,15 @@ class Activity_Librarian_List_Reservations : AppCompatActivity() {
         }
         database.addValueEventListener(getData)
         database.addListenerForSingleValueEvent(getData)
+
+        binding.buttonLmBack.setOnClickListener {
+            reDirectBackLibrarianMenuPage()
+        }
+    }
+
+    fun reDirectBackLibrarianMenuPage() {
+        val intent = Intent(this, Activity_Librarian_List_Reservations::class.java)
+        startActivity(intent)
+        finish()
     }
 }

@@ -86,6 +86,7 @@ class Activity_LM_Seelect_Date_and_Time_Slot : AppCompatActivity() {
         TimeSlotArrayList = ArrayList<String>() // initialize
         TimeSlotArrayList.add("9:00-10:00")
         TimeSlotArrayList.add("10:00-11:00")
+        TimeSlotArrayList.add("11:00-12:00")
 
 //        var timeslot3 = binding.spinnerTimeslot.selectedItem.toString()
 
@@ -107,8 +108,6 @@ class Activity_LM_Seelect_Date_and_Time_Slot : AppCompatActivity() {
 
 
         //***
-
-
 
 
         //Click button to go Choose Table page with new entries

@@ -5,11 +5,11 @@ class Reservation {
     var libName:String=""
     var date:String=""
     var timeSlot:String=""
-    var tableNo:Int=0
+    var tableNo:String=""
     var resId:String=""
 
 
-    constructor(userId:String, resId:String, libName:String, date:String, timeSlot:String, tableNo:Int){
+    constructor(userId:String, resId:String, libName:String, date:String, timeSlot:String, tableNo: String){
         this.libName=libName
         this.date=date
         this.timeSlot=timeSlot
