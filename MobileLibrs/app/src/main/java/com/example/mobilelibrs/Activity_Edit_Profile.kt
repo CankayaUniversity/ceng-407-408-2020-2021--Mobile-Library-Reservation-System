@@ -24,6 +24,7 @@ class Activity_Edit_Profile : AppCompatActivity() {
     var currentpassword: EditText? = null
     var newpassword: EditText? = null
     var confirmpassword: EditText? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding =LayoutResetPasswordBinding.inflate(layoutInflater)
@@ -38,21 +39,21 @@ class Activity_Edit_Profile : AppCompatActivity() {
         confirmpassword=binding.etConfirmPassword as EditText
     }
     private fun changePassWord(){
-        if(currentpassword!!.text!!.isNotEmpty()&&
-            newpassword!!.text.isNotEmpty()&&
-            confirmpassword!!.text.isNotEmpty()){
-
+        // edittext ler boş değilse
+        if(currentpassword!!.text!!.isNotEmpty() && newpassword!!.text.isNotEmpty() && confirmpassword!!.text.isNotEmpty()){
+            // confirmpassword eşitse newpassword
             if(newpassword!!.text.toString().equals(confirmpassword!!.text.toString())){
-                val user:FirebaseUser?=auth.currentUser
-                if(user!=null&& user.email !=null){
-                    val credential:AuthCredential =EmailAuthProvider.getCredential(user.email!!,
-                        currentpassword!!.text.toString())
-                    user?.reauthenticate(credential)
-                        ?.addOnCompleteListener {
+
+                val user: FirebaseUser? = auth.currentUser
+
+                if(user!= null && user.email != null){
+
+                    val credential:AuthCredential = EmailAuthProvider.getCredential(user.email!!, currentpassword!!.text.toString())
+
+                    user?.reauthenticate(credential)?.addOnCompleteListener {
                             if (it.isSuccessful){
-                                Toast.makeText(this,"Re-Authentication succes",Toast.LENGTH_SHORT).show()
-                                user?.updatePassword(newpassword!!.text.toString())
-                                    ?.addOnCompleteListener { task ->
+                                Toast.makeText(this,"Re-Authentication success",Toast.LENGTH_SHORT).show()
+                                user?.updatePassword(newpassword!!.text.toString())?.addOnCompleteListener { task ->
                                         if (task.isSuccessful){
                                             Toast.makeText(this,"Password Changed Succesfully",Toast.LENGTH_SHORT).show()
                                             auth.signOut()
