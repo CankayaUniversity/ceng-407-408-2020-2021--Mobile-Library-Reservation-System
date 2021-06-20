@@ -2,6 +2,7 @@ package com.example.mobilelibrs
 
 import android.content.Intent
 import android.os.Bundle
+import android.text.method.ScrollingMovementMethod
 import androidx.appcompat.app.AppCompatActivity
 import com.example.mobilelibrs.databinding.LayoutAdminListLibrariesBinding
 import com.google.firebase.database.DataSnapshot
@@ -23,7 +24,7 @@ class Activity_Admin_List_Libraries : AppCompatActivity() {
         //Firebase access variable
         var database = FirebaseDatabase.getInstance().reference.child("library")
 
-
+        binding.AdminLibList.movementMethod = ScrollingMovementMethod()
         //All data is in getData variable
         var getData = object : ValueEventListener {
             //All data is shown if they exist
@@ -34,7 +35,7 @@ class Activity_Admin_List_Libraries : AppCompatActivity() {
                     var lname = i.child("libraryName").getValue()
                     var laddress = i.child("libraryAddress").getValue()
                     var lcap = i.child("libraryCapacity").getValue()
-                    sb.append("Name: $lname \n Address: $laddress \n Capacity: $lcap \n\n")
+                    sb.append(" Name: $lname \n Address: $laddress \n Capacity: $lcap \n\n")
                 }
                 binding.AdminLibList.setText(sb)
             }
