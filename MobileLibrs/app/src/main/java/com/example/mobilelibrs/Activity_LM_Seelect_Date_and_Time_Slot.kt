@@ -19,10 +19,10 @@ import java.util.Date
 class Activity_LM_Seelect_Date_and_Time_Slot : AppCompatActivity() {
 
     var libname:TextView? =null
-    var lmID: TextView? = null
+
     var datePicker: String? = null
     var timeslot3: String? = null
-
+    var visibleS = false
     //***Deneme 1 Haziran 2021
     var spinnerArrayList = ArrayList<String>() // Creating an empty arraylist
     var TimeSlotArrayList = ArrayList<String>()
@@ -39,6 +39,12 @@ class Activity_LM_Seelect_Date_and_Time_Slot : AppCompatActivity() {
         // current datetime
         // Date control okey
         var current = LocalDate.now()
+        // yarının tarihi
+        var current_1 = LocalDate.now().plusDays(1)
+        // bugünden 2 sonrasının tarihi
+        var current_2 = LocalDate.now().plusDays(2)
+        // bugünden 3 sonrasının tarihi
+        var current_3 = LocalDate.now().plusDays(3)
         val today = Calendar.getInstance()
         var Getdate: String? = null
         binding.datePicker.init(today.get(Calendar.YEAR), today.get(Calendar.MONTH),
@@ -49,18 +55,32 @@ class Activity_LM_Seelect_Date_and_Time_Slot : AppCompatActivity() {
             val month = month + 1
             datePicker = "$year-$month-$day"
             var date1: Date? = sdf.parse(datePicker.toString())
-            var date2: Date? = sdf.parse(current.toString())
+            var c_date1: Date? = sdf.parse(current_1.toString())
+            var c_date2: Date? = sdf.parse(current_2.toString())
+            var c_date3: Date? = sdf.parse(current_3.toString())
 
-            if(date1!!.before(date2) || (date1!!.equals(date2)))
+            // date geçmiş, date bugün ,yada date bugünden sonraki 3 gün değilse hata ver
+            // invisible make res
+            if(date1!!.before(c_date1) || (date1!!.equals(current)) )
             {
                 Toast.makeText(this, "Error date !! Please you must change.", Toast.LENGTH_SHORT)
                     .show()
+                binding.btnSearchTable.setVisibility(android.view.View.INVISIBLE)
             }
-            else {
+            else if(date1!!.equals(c_date1) || date1!!.equals(c_date2) || date1!!.equals(c_date3) )
+            {
+                binding.btnSearchTable.setVisibility(android.view.View.VISIBLE)
                 Getdate = datePicker
-                Toast.makeText(this, "Date okey.", Toast.LENGTH_LONG)
+                Toast.makeText(this, "Date okey.", Toast.LENGTH_SHORT)
                     .show()
             }
+            else{
+                binding.btnSearchTable.setVisibility(android.view.View.INVISIBLE)
+                Toast.makeText(this, "Please Choose 3 days after today.", Toast.LENGTH_SHORT)
+                    .show()
+
+            }
+
         }
         //--Date control END
 
@@ -74,9 +94,9 @@ class Activity_LM_Seelect_Date_and_Time_Slot : AppCompatActivity() {
         libname!!.setText("Library Name: "+ libraryName2)
 
         //Show lmID in textview
-        lmID = binding.tvLmIDSelectDateTimeSlot  as TextView
+
         var lmID2 = intent.getStringExtra("userId2")
-        lmID!!.setText("User"+ lmID2)
+
 
 
 
@@ -106,9 +126,7 @@ class Activity_LM_Seelect_Date_and_Time_Slot : AppCompatActivity() {
                timeslot3 = timeslot1
 
             }
-            override fun onNothingSelected(parent: AdapterView<*>) {
-
-            }
+            override fun onNothingSelected(parent: AdapterView<*>) {}
         }
 //        database.child("dates").push().setValue(Dates(timeslot3.toString()))
 
@@ -117,19 +135,21 @@ class Activity_LM_Seelect_Date_and_Time_Slot : AppCompatActivity() {
 
 
         //Click button to go Choose Table page with new entries
-        binding.btnSearchTable.setOnClickListener {
-            //Take date and time slot to choose table page
-            var date2 = Getdate
-            var timeslot2 = timeslot3
 
-            val newIntent = Intent(this, Activity_LM_Choose_Table::class.java)
-            //Send these data to Choose Table page
-            newIntent.putExtra("ln2", libraryName2)
-            newIntent.putExtra("d2", date2)
-            newIntent.putExtra("ts2", timeslot2)
-            newIntent.putExtra("userId3", lmID2)
-            startActivity(newIntent)
-            finish()
+            binding.btnSearchTable.setOnClickListener {
+                //Take date and time slot to choose table page
+                var date2 = Getdate
+                var timeslot2 = timeslot3
+
+                val newIntent = Intent(this, Activity_LM_Choose_Table::class.java)
+                //Send these data to Choose Table page
+                newIntent.putExtra("ln2", libraryName2)
+                newIntent.putExtra("d2", date2)
+                newIntent.putExtra("ts2", timeslot2)
+                newIntent.putExtra("userId3", lmID2)
+                startActivity(newIntent)
+                finish()
+
         }
     }
 }

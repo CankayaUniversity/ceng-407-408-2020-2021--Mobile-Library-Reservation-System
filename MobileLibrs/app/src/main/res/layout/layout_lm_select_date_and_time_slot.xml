@@ -58,6 +58,7 @@
             android:backgroundTint="@color/mlrs_white_button"
             android:radius="50dp"
             android:text="SEARCH TABLE"
+            android:visibility="invisible"
             android:textColor="#040404"
             android:textColorHint="#2D9CDB"
             android:textSize="24sp"
@@ -97,9 +98,9 @@
 
             <TextView
                 android:id="@+id/textView12"
-                android:layout_width="171dp"
-                android:layout_height="29dp"
-                android:text="for your reservation"
+                android:layout_width="272dp"
+                android:layout_height="46dp"
+                android:text="                  for your reservation.\nPlease Choose 3 days after today."
                 android:textColor="#100F0F"
                 android:textSize="16sp"
                 android:textStyle="bold"
@@ -112,11 +113,11 @@
 
             <TextView
                 android:id="@+id/tvLibraryName"
-                android:layout_width="278dp"
-                android:layout_height="57dp"
-                android:textStyle="bold"
+                android:layout_width="277dp"
+                android:layout_height="63dp"
                 android:textColor="@color/Black"
                 android:textSize="16sp"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -133,7 +134,7 @@
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.507"
+                app:layout_constraintHorizontal_bias="0.538"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.228" />
@@ -200,16 +201,7 @@
                 app:layout_constraintVertical_bias="0.0" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <TextView
-            android:id="@+id/tv_lmID_select_date_time_slot"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="TextView"
-            android:visibility="invisible"
-            tools:layout_editor_absoluteX="71dp"
-            tools:layout_editor_absoluteY="11dp"
-            tools:visibility="invisible" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </RelativeLayout>
