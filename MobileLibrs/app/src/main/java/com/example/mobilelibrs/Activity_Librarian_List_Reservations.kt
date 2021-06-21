@@ -33,13 +33,13 @@ class Activity_Librarian_List_Reservations : AppCompatActivity() {
                 var sb = StringBuilder() //Metin birleştirme sınıfı
                 for (i in snapshot.children) {
                     //Path: Datebasede tutulan değişkenin ismi
-                    var userid = i.child("userId").getValue()
+                    //var userid = i.child("userId").getValue()
                     var lname = i.child("libName").getValue()
                     var rdate = i.child("date").getValue()
                     var rtimeslot = i.child("timeSlot").getValue()
                     var rtable = i.child("tableNo").getValue()
 
-                    sb.append("User Id: $userid \n  Name: $lname \n Date: $rdate \n TimeSlot: $rtimeslot \n Table No: $rtable \n\n")
+                    sb.append("Name: $lname \n Date: $rdate \n TimeSlot: $rtimeslot \n Table No: $rtable \n\n")
                 }
                 binding.LibrarianResList.setText(sb)
             }
