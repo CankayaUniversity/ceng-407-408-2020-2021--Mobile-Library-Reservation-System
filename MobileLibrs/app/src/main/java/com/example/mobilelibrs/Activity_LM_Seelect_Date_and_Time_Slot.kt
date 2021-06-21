@@ -87,6 +87,12 @@ class Activity_LM_Seelect_Date_and_Time_Slot : AppCompatActivity() {
         TimeSlotArrayList.add("9:00-10:00")
         TimeSlotArrayList.add("10:00-11:00")
         TimeSlotArrayList.add("11:00-12:00")
+        TimeSlotArrayList.add("13:00–14:00")
+        TimeSlotArrayList.add("14:00-15:00")
+        TimeSlotArrayList.add("15:00-16:00")
+        TimeSlotArrayList.add("17:00-18:00")
+        TimeSlotArrayList.add("18:00-19:00")
+
 
 //        var timeslot3 = binding.spinnerTimeslot.selectedItem.toString()
 
